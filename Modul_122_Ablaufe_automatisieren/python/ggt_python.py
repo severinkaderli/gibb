@@ -4,9 +4,8 @@
 #AUTHOR: Severin Kaderli
 #PURPOSE: calculate ggt in python
 #USAGE: ./ggt_python.py
-
-a = 6432
-b = 5432
+a = input("Erste Zahl angeben: ")
+b = input("Zweite Zahl angeben: ")
 
 def ggt(a, b):
 	while True:

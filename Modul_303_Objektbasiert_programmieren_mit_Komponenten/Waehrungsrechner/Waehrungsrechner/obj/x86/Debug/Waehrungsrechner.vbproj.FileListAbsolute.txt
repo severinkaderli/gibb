@@ -1,0 +1,9 @@
+C:\Module\303\Waehrungsrechner\Waehrungsrechner\bin\Debug\Waehrungsrechner.exe
+C:\Module\303\Waehrungsrechner\Waehrungsrechner\bin\Debug\Waehrungsrechner.pdb
+C:\Module\303\Waehrungsrechner\Waehrungsrechner\bin\Debug\Waehrungsrechner.xml
+C:\Module\303\Waehrungsrechner\Waehrungsrechner\obj\x86\Debug\Waehrungsrechner.Form1.resources
+C:\Module\303\Waehrungsrechner\Waehrungsrechner\obj\x86\Debug\Waehrungsrechner.Resources.resources
+C:\Module\303\Waehrungsrechner\Waehrungsrechner\obj\x86\Debug\Waehrungsrechner.vbproj.GenerateResource.Cache
+C:\Module\303\Waehrungsrechner\Waehrungsrechner\obj\x86\Debug\Waehrungsrechner.exe
+C:\Module\303\Waehrungsrechner\Waehrungsrechner\obj\x86\Debug\Waehrungsrechner.xml
+C:\Module\303\Waehrungsrechner\Waehrungsrechner\obj\x86\Debug\Waehrungsrechner.pdb
