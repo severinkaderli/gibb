@@ -1,10 +1,10 @@
 #!/usr/bin/python3.4
 #
-#SCRIPT: DatenMigration.py
+#SCRIPT: DatenMigrationOO.py
 #AUTHOR: Severin Kaderli
 #PURPOSE: Validates csv file
-#USAGE: ./DatenMigration.py
-import re
+#USAGE: ./DatenMigrationOO.py
+import validierung
 import csv
 
 with open('Data1.csv', newline='') as f:
@@ -27,7 +27,7 @@ with open('Data1.csv', newline='') as f:
 					print("FEHLER: Zeile " + str(rownr) + ", Spalte " + str(colnr) + ": " + str(col))
 			if colnr == 4:
 				#PLZ und Ort
-				if not re.search('^\d{4}\s\w{2,}$', col):
+				if not validate.place(col):
 					print("FEHLER: Zeile " + str(rownr) + ", Spalte " + str(colnr) + ": " + str(col))
 			if colnr == 5:
 				#Telefonnummer
@@ -47,4 +47,3 @@ with open('Data1.csv', newline='') as f:
 					print("FEHLER: Zeile " + str(rownr) + ", Spalte " + str(colnr) + ": " + str(col))
 			colnr+=1
 		rownr+=1
-			
