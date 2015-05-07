@@ -38,7 +38,9 @@ class Validator:
 		else:
 			return True
 	def ip4(self, string):
-		if not re.search('^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$', string):
+		#This is a simpler solution but allows ip address like 999.999.999.999
+		#if not re.search('^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$', string): 
+		if not re.search('^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$', string):
 			return False
 		else:
 			return True
