@@ -1,9 +1,0 @@
-C:\Module\303\ProgressbarTest\ProgressbarTest\bin\Debug\ProgressbarTest.exe
-C:\Module\303\ProgressbarTest\ProgressbarTest\bin\Debug\ProgressbarTest.pdb
-C:\Module\303\ProgressbarTest\ProgressbarTest\bin\Debug\ProgressbarTest.xml
-C:\Module\303\ProgressbarTest\ProgressbarTest\obj\x86\Debug\ProgressbarTest.Form1.resources
-C:\Module\303\ProgressbarTest\ProgressbarTest\obj\x86\Debug\ProgressbarTest.Resources.resources
-C:\Module\303\ProgressbarTest\ProgressbarTest\obj\x86\Debug\ProgressbarTest.vbproj.GenerateResource.Cache
-C:\Module\303\ProgressbarTest\ProgressbarTest\obj\x86\Debug\ProgressbarTest.exe
-C:\Module\303\ProgressbarTest\ProgressbarTest\obj\x86\Debug\ProgressbarTest.xml
-C:\Module\303\ProgressbarTest\ProgressbarTest\obj\x86\Debug\ProgressbarTest.pdb

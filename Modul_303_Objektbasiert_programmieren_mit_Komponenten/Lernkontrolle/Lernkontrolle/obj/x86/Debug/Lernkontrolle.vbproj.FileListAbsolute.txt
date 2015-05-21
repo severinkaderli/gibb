@@ -1,9 +1,0 @@
-C:\Module\303\Lernkontrolle\Lernkontrolle\bin\Debug\Lernkontrolle.exe
-C:\Module\303\Lernkontrolle\Lernkontrolle\bin\Debug\Lernkontrolle.pdb
-C:\Module\303\Lernkontrolle\Lernkontrolle\bin\Debug\Lernkontrolle.xml
-C:\Module\303\Lernkontrolle\Lernkontrolle\obj\x86\Debug\Lernkontrolle.frmLernkontrolle.resources
-C:\Module\303\Lernkontrolle\Lernkontrolle\obj\x86\Debug\Lernkontrolle.Resources.resources
-C:\Module\303\Lernkontrolle\Lernkontrolle\obj\x86\Debug\Lernkontrolle.vbproj.GenerateResource.Cache
-C:\Module\303\Lernkontrolle\Lernkontrolle\obj\x86\Debug\Lernkontrolle.exe
-C:\Module\303\Lernkontrolle\Lernkontrolle\obj\x86\Debug\Lernkontrolle.xml
-C:\Module\303\Lernkontrolle\Lernkontrolle\obj\x86\Debug\Lernkontrolle.pdb

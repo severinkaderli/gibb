@@ -1,0 +1,9 @@
+C:\Module\303\Bildbetrachter\Bildbetrachter\bin\Debug\Bildbetrachter.exe
+C:\Module\303\Bildbetrachter\Bildbetrachter\bin\Debug\Bildbetrachter.pdb
+C:\Module\303\Bildbetrachter\Bildbetrachter\bin\Debug\Bildbetrachter.xml
+C:\Module\303\Bildbetrachter\Bildbetrachter\obj\x86\Debug\Bildbetrachter.Form1.resources
+C:\Module\303\Bildbetrachter\Bildbetrachter\obj\x86\Debug\Bildbetrachter.Resources.resources
+C:\Module\303\Bildbetrachter\Bildbetrachter\obj\x86\Debug\Bildbetrachter.vbproj.GenerateResource.Cache
+C:\Module\303\Bildbetrachter\Bildbetrachter\obj\x86\Debug\Bildbetrachter.exe
+C:\Module\303\Bildbetrachter\Bildbetrachter\obj\x86\Debug\Bildbetrachter.xml
+C:\Module\303\Bildbetrachter\Bildbetrachter\obj\x86\Debug\Bildbetrachter.pdb

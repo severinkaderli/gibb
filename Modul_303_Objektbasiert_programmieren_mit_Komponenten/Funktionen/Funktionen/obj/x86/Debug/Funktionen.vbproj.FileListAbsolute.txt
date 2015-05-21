@@ -1,9 +1,0 @@
-C:\Module\303\Funktionen\Funktionen\bin\Debug\Funktionen.exe
-C:\Module\303\Funktionen\Funktionen\bin\Debug\Funktionen.pdb
-C:\Module\303\Funktionen\Funktionen\bin\Debug\Funktionen.xml
-C:\Module\303\Funktionen\Funktionen\obj\x86\Debug\Funktionen.frmUhr.resources
-C:\Module\303\Funktionen\Funktionen\obj\x86\Debug\Funktionen.Resources.resources
-C:\Module\303\Funktionen\Funktionen\obj\x86\Debug\Funktionen.vbproj.GenerateResource.Cache
-C:\Module\303\Funktionen\Funktionen\obj\x86\Debug\Funktionen.exe
-C:\Module\303\Funktionen\Funktionen\obj\x86\Debug\Funktionen.xml
-C:\Module\303\Funktionen\Funktionen\obj\x86\Debug\Funktionen.pdb

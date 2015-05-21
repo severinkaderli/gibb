@@ -1,9 +1,0 @@
-C:\Module\303\HalloVello\HalloVello\bin\Debug\HalloVello.exe
-C:\Module\303\HalloVello\HalloVello\bin\Debug\HalloVello.pdb
-C:\Module\303\HalloVello\HalloVello\bin\Debug\HalloVello.xml
-C:\Module\303\HalloVello\HalloVello\obj\x86\Debug\HalloVello.Form1.resources
-C:\Module\303\HalloVello\HalloVello\obj\x86\Debug\HalloVello.Resources.resources
-C:\Module\303\HalloVello\HalloVello\obj\x86\Debug\HalloVello.vbproj.GenerateResource.Cache
-C:\Module\303\HalloVello\HalloVello\obj\x86\Debug\HalloVello.exe
-C:\Module\303\HalloVello\HalloVello\obj\x86\Debug\HalloVello.xml
-C:\Module\303\HalloVello\HalloVello\obj\x86\Debug\HalloVello.pdb

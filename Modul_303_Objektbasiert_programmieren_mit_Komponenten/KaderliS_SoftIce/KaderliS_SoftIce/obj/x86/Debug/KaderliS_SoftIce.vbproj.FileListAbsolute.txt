@@ -1,9 +1,0 @@
-C:\Module\303\KaderliS_SoftIce\KaderliS_SoftIce\bin\Debug\KaderliS_SoftIce.exe
-C:\Module\303\KaderliS_SoftIce\KaderliS_SoftIce\bin\Debug\KaderliS_SoftIce.pdb
-C:\Module\303\KaderliS_SoftIce\KaderliS_SoftIce\bin\Debug\KaderliS_SoftIce.xml
-C:\Module\303\KaderliS_SoftIce\KaderliS_SoftIce\obj\x86\Debug\KaderliS_SoftIce.frmSoftIce.resources
-C:\Module\303\KaderliS_SoftIce\KaderliS_SoftIce\obj\x86\Debug\KaderliS_SoftIce.Resources.resources
-C:\Module\303\KaderliS_SoftIce\KaderliS_SoftIce\obj\x86\Debug\KaderliS_SoftIce.vbproj.GenerateResource.Cache
-C:\Module\303\KaderliS_SoftIce\KaderliS_SoftIce\obj\x86\Debug\KaderliS_SoftIce.exe
-C:\Module\303\KaderliS_SoftIce\KaderliS_SoftIce\obj\x86\Debug\KaderliS_SoftIce.xml
-C:\Module\303\KaderliS_SoftIce\KaderliS_SoftIce\obj\x86\Debug\KaderliS_SoftIce.pdb
