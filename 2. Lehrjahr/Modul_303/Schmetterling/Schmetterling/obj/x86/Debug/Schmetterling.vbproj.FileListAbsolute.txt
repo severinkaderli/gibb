@@ -1,0 +1,9 @@
+C:\Module\303\Schmetterling\Schmetterling\bin\Debug\Schmetterling.exe
+C:\Module\303\Schmetterling\Schmetterling\bin\Debug\Schmetterling.pdb
+C:\Module\303\Schmetterling\Schmetterling\bin\Debug\Schmetterling.xml
+C:\Module\303\Schmetterling\Schmetterling\obj\x86\Debug\Schmetterling.frmSchmetterling.resources
+C:\Module\303\Schmetterling\Schmetterling\obj\x86\Debug\Schmetterling.Resources.resources
+C:\Module\303\Schmetterling\Schmetterling\obj\x86\Debug\Schmetterling.vbproj.GenerateResource.Cache
+C:\Module\303\Schmetterling\Schmetterling\obj\x86\Debug\Schmetterling.exe
+C:\Module\303\Schmetterling\Schmetterling\obj\x86\Debug\Schmetterling.xml
+C:\Module\303\Schmetterling\Schmetterling\obj\x86\Debug\Schmetterling.pdb

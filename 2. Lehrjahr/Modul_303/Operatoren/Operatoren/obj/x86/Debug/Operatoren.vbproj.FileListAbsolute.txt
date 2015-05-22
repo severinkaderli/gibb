@@ -1,0 +1,9 @@
+C:\Module\303\Operatoren\Operatoren\obj\x86\Debug\Operatoren.Form1.resources
+C:\Module\303\Operatoren\Operatoren\obj\x86\Debug\Operatoren.Resources.resources
+C:\Module\303\Operatoren\Operatoren\obj\x86\Debug\Operatoren.vbproj.GenerateResource.Cache
+C:\Module\303\Operatoren\Operatoren\bin\Debug\Operatoren.exe
+C:\Module\303\Operatoren\Operatoren\bin\Debug\Operatoren.pdb
+C:\Module\303\Operatoren\Operatoren\bin\Debug\Operatoren.xml
+C:\Module\303\Operatoren\Operatoren\obj\x86\Debug\Operatoren.exe
+C:\Module\303\Operatoren\Operatoren\obj\x86\Debug\Operatoren.xml
+C:\Module\303\Operatoren\Operatoren\obj\x86\Debug\Operatoren.pdb
