@@ -1,0 +1,9 @@
+C:\Module\318\Tetris\Tetris\obj\x86\Debug\Tetris.Form1.resources
+C:\Module\318\Tetris\Tetris\obj\x86\Debug\Tetris.Resources.resources
+C:\Module\318\Tetris\Tetris\obj\x86\Debug\Tetris.vbproj.GenerateResource.Cache
+C:\Module\318\Tetris\Tetris\bin\Debug\Tetris.exe
+C:\Module\318\Tetris\Tetris\bin\Debug\Tetris.pdb
+C:\Module\318\Tetris\Tetris\bin\Debug\Tetris.xml
+C:\Module\318\Tetris\Tetris\obj\x86\Debug\Tetris.exe
+C:\Module\318\Tetris\Tetris\obj\x86\Debug\Tetris.xml
+C:\Module\318\Tetris\Tetris\obj\x86\Debug\Tetris.pdb

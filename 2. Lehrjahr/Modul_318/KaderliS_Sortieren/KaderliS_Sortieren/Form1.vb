@@ -84,10 +84,6 @@
         'Worte zurück in String schreiben
         If optWord.Checked Then
             WorteSchreiben(strSort, Wort)
-            Console.WriteLine(Wort(0))
-            Console.WriteLine(Wort(1))
-            Console.WriteLine(Wort(2))
-            Console.WriteLine(Wort(3))
         End If
         txtSorted.Text = strSort
 
