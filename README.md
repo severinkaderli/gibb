@@ -10,3 +10,16 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
 ###2. Lehrjahr
 * Modul 122
   * Scripts 
+* Modul 123
+  * Dokumentation Freigaben & Berechtigungen
+* Modul 303
+  * VB-Programme
+  * Softice-Automat
+* Modul 318
+  * VB-Programme
+  * Sortierprogramm
+
+###3. Lehrjahr
+* Modul 133
+* Modul 913
+* Modul 226
