@@ -9,7 +9,9 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
 
 ###2. Lehrjahr
 * Modul 122
-  * Scripts 
+  * Bash-Scripts
+  * Python-Scripts
+  * Programmdokumentation
 * Modul 123
   * Dokumentation Freigaben & Berechtigungen
 * Modul 303
@@ -22,5 +24,6 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
 
 ###3. Lehrjahr
 * Modul 133
-* Modul 913
+  * Webzeugs
 * Modul 226
+  * Java
