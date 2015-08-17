@@ -18,6 +18,7 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
 * Modul 318
   * VB-Programme
   * Sortierprogramm
+* Spicker Abschlussprüfung
 
 ###3. Lehrjahr
 * Modul 133
