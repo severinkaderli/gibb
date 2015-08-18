@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aufgabe 4.2</title>
+		<style>
+			table tr th, table tr td {
+				padding: 5px 10px;
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+
+			tr:nth-child(even) {
+				background-color: lightgray;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			var ARRAY_SIZE = 100;
+			var person = new Array();
+			for(var i=0;i<ARRAY_SIZE;i++) {
+				person[i] = new Array();
+				person[i]["name"] = "Benutzer Nr. " + parseInt(i+1);	
+				person[i]["anschrift"] = "Anschrift Nr. " + parseInt(i+1);	
+				person[i]["plz"] = "PLZ Nr. " + parseInt(i+1);	
+				person[i]["ort"] = "Ort Nr. " + parseInt(i+1);	
+			}
+
+			var output = "";
+			output = "<table><tr><th>Name</th><th>Anschrift</th><th>PLZ</th><th>Ort</th></tr>";
+			for(var i=0;i<person.length;i++) {
+				output += "<tr><td>" + person[i]["name"] + "</td><td>" + person[i]["anschrift"] +"</td><td>" + person[i]["plz"] +"</td><td>" + person[i]["ort"] +"</td></tr>"
+			}
+			output += "</table>";
+			document.write(output);
+		</script>
+	</body>
+</html>

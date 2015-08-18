@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript - Begr&uuml;ssung</title>
+</head>
+<body >
+	<div id="content">
+		<!-- Content is coming here... -->
+	</div>
+	<script>
+		//Declare variables
+		var visitor_name = "";
+		var siezen = false;
+
+		//Turn a string bold
+		function makeBold(string) {
+			return "<strong>" + string + "</strong>";
+		}
+
+		//Display greeting text
+		function greet(name, siezen) {
+			visitor_name = name;
+			siezen = siezen;
+			var anrede = "dich";
+			if(siezen) {
+				anrede = "Sie";
+			}
+			document.getElementById('content').innerHTML = "Wir begr&uuml;ssen " + anrede + " mit dem Namen: " + makeBold(visitor_name) + " auf unserer Seite!";
+		}
+
+		//Main logic
+		var name = prompt("Bitte Namen angeben!");
+		var siezen = confirm('Wollen Sie gesiezt werden?');
+		greet(name, siezen);
+		
+	</script>
+</body>
+</html>

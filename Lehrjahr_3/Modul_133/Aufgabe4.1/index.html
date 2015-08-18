@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aufgabe 4.1</title>
+		<style>
+			table tr th, table tr td {
+				padding: 5px 10px;
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content"></div>
+		<script>
+			var person = new Array();
+			person["name"] = "Kaderli";	
+			person["anschrift"] = "Herr";	
+			person["plz"] = "3627";	
+			person["ort"] = "Heimberg";	
+
+			document.getElementById('content').innerHTML = "<table><tr><th>Name</th><th>Anschrift</th><th>PLZ</th><th>Ort</th></tr><tr><td>" + person["name"] + "</td><td>" + person["anschrift"] +"</td><td>" + person["plz"] +"</td><td>" + person["ort"] +"</td></tr></table>"
+			
+		</script>
+	</body>
+</html>

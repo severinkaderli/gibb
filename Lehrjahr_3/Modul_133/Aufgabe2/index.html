@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript - For-Loop - Zahlenreihe</title>
+</head>
+<body >
+	<div id="content">
+
+	</div>
+	<script>
+		//Print a number pyramid
+		var el = document.getElementById('content');
+		el.innerHTML += '<h1>For-Loop: Zahlenfolge</h1>'
+		for(var j=0; j<10;j++) {
+			for(var i=0; i<=j;i++) {
+				el.innerHTML += i;
+			}
+			el.innerHTML += "<br>";
+		}
+	</script>
+</body>
+</html>
