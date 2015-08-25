@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Aufgabe 4.2 (2)</title>
+		<style>
+			table tr th, table tr td {
+				padding: 5px 10px;
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+
+			tr:nth-child(even) {
+				background-color: lightgray;
+			}
+		</style>
+		<script>
+		var person = [];
+
+		function createTable() {
+			
+			//Populate array
+			person.push([]);
+			person[person.length-1]['name'] = document.getElementById('input1').value;
+			person[person.length-1]['anschrift'] = document.getElementById('input2').value;
+			person[person.length-1]['plz'] = document.getElementById('input3').value;
+			person[person.length-1]['ort'] = document.getElementById('input4').value;
+			
+			//Generate output
+			var output = "<table><tr><th>Name</th><th>Anschrift</th><th>PLZ</th><th>Ort</th></tr>";
+			for(var i=0;i<person.length;i++) {
+				output += "<tr><td>" + person[i]["name"] + "</td><td>" + person[i]["anschrift"] +"</td><td>" + person[i]["plz"] +"</td><td>" + person[i]["ort"] +"</td></tr>";
+			}
+			output += "</table>";
+
+			//Write output
+			document.getElementById('content').innerHTML = output;
+
+			//Clear inputs
+			document.getElementById('input1').value = '';
+			document.getElementById('input2').value = '';
+			document.getElementById('input3').value = '';
+			document.getElementById('input4').value = '';
+		}
+		</script>
+	</head>
+	<body>
+		<input id="input1" type="text" placeholder="Name" /><br>
+		<input id="input2" type="text" placeholder="Anschrift" /><br>
+		<input id="input3" type="text" placeholder="PLZ" /><br>
+		<input id="input4" type="text" placeholder="Ort" /><br>
+		<button onclick="createTable();">Hinzufügen</button>
+		<div id="content">
+			<table><tr><th>Name</th><th>Anschrift</th><th>PLZ</th><th>Ort</th></tr></table>
+		</div>
+	</body>
+</html>
