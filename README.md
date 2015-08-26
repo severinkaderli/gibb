@@ -28,6 +28,6 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
 
 ###3. Lehrjahr
 * Modul 133
-  * Webzeugs
+  * Arbeitsblätter Aufgaben
 * Modul 226
-  * Java
+  * Buch & Arbeitsblätter Aufgaben
