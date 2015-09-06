@@ -1,0 +1,15 @@
+
+public class TestKonto {
+
+	public static void main(String[] args) {
+		Konto k1 = new Konto(1);
+		Konto k2 = new Konto(2.5);
+		
+		k1.einzahlen(2.50);
+		k1.einzahlen(5);
+		k1.getSaldo();
+		k1.verzinsen(365);
+
+	}
+
+}

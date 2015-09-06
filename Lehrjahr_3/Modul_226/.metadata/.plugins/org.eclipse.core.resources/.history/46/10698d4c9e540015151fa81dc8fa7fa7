@@ -1,0 +1,10 @@
+/**
+ * 
+ * @author Severin Kaderli
+ *
+ */
+public class Kunde {
+	private String name;
+	private String vorname;
+	private int kundennr;
+}

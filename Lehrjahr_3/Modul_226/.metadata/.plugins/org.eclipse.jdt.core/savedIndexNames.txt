@@ -1,0 +1,5 @@
+INDEX VERSION 1.127+C:\Users\Severin Kaderli\git\gibb\Lehrjahr_3\Modul_226\.metadata\.plugins\org.eclipse.jdt.core
+1046119504.index
+1230877894.index
+959922249.index
+3610845541.index
