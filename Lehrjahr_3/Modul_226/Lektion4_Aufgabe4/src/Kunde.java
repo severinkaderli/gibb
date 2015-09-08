@@ -13,4 +13,16 @@ public class Kunde {
 		this.vorname = vorname;
 		this.kundennr = kundennr;
 	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public String getVorname() {
+		return vorname;
+	}
+	
+	public int getKundennr() {
+		return kundennr;
+	}
 }
