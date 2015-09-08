@@ -7,7 +7,7 @@ public class Tier {
 		this.name = name;
 		this.age = age;
 	}
-	
+
 	public void greet() {
 		System.out.println("Hallo! Ich heisse " + name + " und bin " + age + " Jahre alt.");
 	}
