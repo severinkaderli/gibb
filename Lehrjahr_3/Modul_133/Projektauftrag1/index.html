@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Projektauftrag 1 - Severin Kaderli</title>
+	<style>
+
+		.formgroup {
+			margin-bottom: 10px;
+		}
+
+		.formgroup label:first-child {
+			width: 200px;
+			display: block;
+			float: left;
+
+		}
+	</style>
+	<script src="js/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+	<h1>Anmeldung</h1>
+	<form id="loginForm" method="POST" action="">
+		<div class="formgroup">
+			<label for="username">Benutzername</label>
+			<input type="email" pattern="^[a-zA-Z0-9-_\.]{3,}@{1}[a-zA-Z0-9-_\.]{3,}\.[a-z]{2,}$" placeholder="name@example.com" id="username" name="username">
+		</div>
+		<div class="formgroup">
+			<label for="password">Passwort</label>
+			<input type="password" id="password" name="password">
+		</div>
+		<div class="formgroup">
+			<label for="password2">Passwort wiederholen</label>
+			<input type="password2" id="password2" name="password2">
+		</div>
+		<div class="formgroup">
+			<label>Optionen</label>
+			<label for="male">Männlich</label><input checked id="male" type="radio" name="options">
+			<label for="female">Weiblich</label><input id="female" type="radio" name="options">
+		</div>
+		<div class="formgroup">
+			<label>Checkbox</label>
+			<label for="html">HTML</label><input id="html" checked type="checkbox" name="checkbox">
+			<label for="css">CSS</label><input id="css" type="checkbox" name="checkbox">
+			<label for="js">JS</label><input id="js" type="checkbox" name="checkbox">
+			<label for="php">PHP</label><input id="php" type="checkbox" name="checkbox">
+		</div>
+		<div class="formgroup">
+			<label for="username">Auswahlliste</label>
+			<select>
+				<option selected>Sport</option>
+				<option>Musik</option>
+				<option>Computer</option>
+			</select>
+		</div>
+		<div class="formgroup">
+			<input id="btnSubmit" type="submit" value="senden">
+			<input id="btnReset" type="reset" value="reset">
+		</div>
+	</form>
+	
+	<script>
+		$(document).ready(function() {
+
+			/**
+			 * Validates a string with a regex pattern
+			 * 
+			 * @param regExp a RegExp-Object
+			 * @param string The string to validate
+			 * @return bool
+			 */
+			function validate(regExp, string) {
+				if(!regExp.test(string)) {
+					return false;
+				}
+
+				return true;
+			}
+
+			$('#loginForm').submit(function() {
+				//TODO: Print messages out nicely
+				console.log('submitted');
+				
+				
+				//Check if username is a valid email address using a standard js selector
+				//Fix the regex
+				if(!validate(new RegExp(/^[a-zA-Z0-9-_\.]{3,}@{1}[a-zA-Z0-9-_\.]{3,}\.[a-z]{2,}$/i), document.getElementById('username').value)) {
+					console.log('username not valid');
+					return false;
+				}
+
+				//Check if password is valid using a jquery selector ()[]{}?!$%&/=*+~,.;:<>-_
+				//TODO: Fix the regex
+				if(!validate(new RegExp(/^[a-zA-Z0-9]{9,}$/i), $('#password').val())) {
+					console.log('password not valid');
+					return false;
+				}
+
+				//Check if passwords match using plain javascript
+				if(document.getElementById('password').value != document.getElementById('password2').value) {
+					console.log('passwörter stimmen nicht überein');
+					return false;
+				}
+
+				//Check checkboxes using jQuery
+
+
+				
+
+
+				return false;
+
+
+			});
+
+			//Message with reset button
+			$('#btnReset').click(function() {
+				return confirm('Möchten Sie wirklich alle Informationen zurücksetzen?');
+			});
+		});
+	</script>
+
+</body>
+</html>
