@@ -25,4 +25,8 @@ public class Konto {
 		
 		return saldo;
 	}
+	
+	public Kunde getKunde() {
+		return inhaber;
+	}
 }
