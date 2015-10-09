@@ -1,42 +1,76 @@
-*.pydevproject
-.metadata
-.gradle
+# OS specific
+ehthumbs.db
+Thumbs.db
+.DS_Store
+Desktop.ini
+*.lnk
+
+
+# Compiled / Installer
 bin/
+build/
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Archives 
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Composer
+vendor/
+composer.lock
+composer.phar
+
+# Gulp
+node_modules/
+.sass-cache/
+gulp-cache/
+
+# Bower
+bower_components/
+
+# Temporary / Backup
 tmp/
 *.tmp
 *.bak
 *.swp
-*~.nib
-*.db
+$RECYCLE.BIN/
+
+# IDE / Framework specific
+.idea/
+_ide_helper.php
+.env
+.env.php
+.env.*.php
+/bootstrap/compiled.php
+Homestead.yaml
+*.pydevproject
+.metadata
+.gradle
 local.properties
 .settings/
 .loadpath
-
-# Eclipse Core
 .project
-
-# External tool builders
 .externalToolBuilders/
-
-# Locally stored "Eclipse launch configurations"
 *.launch
-
-# CDT-specific
 .cproject
-
-# JDT-specific (Eclipse Java Development Tools)
 .classpath
-
-# Java annotation processor (APT)
 .factorypath
-
-# PDT-specific
 .buildpath
-
-# sbteclipse plugin
 .target
-
-# TeXlipse plugin
 .texlipse
-
 .recommenders/
