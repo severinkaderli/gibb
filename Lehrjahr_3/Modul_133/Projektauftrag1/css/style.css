@@ -1,0 +1,40 @@
+.formgroup {
+	margin-bottom: 10px;
+}
+
+.formgroup label {
+	width: 200px;
+	display: block;
+	float: left;
+}
+
+.formgroup label.inline {
+	display: inline-block;
+	width: auto;
+	float: none;
+}
+
+/*Alert boxes for success and error messages*/
+.alert {
+	box-sizing: border-box;
+	display: none;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 15px;
+	margin: 5px 0;
+	width: 100%;
+	font-size: 0.9em;
+}
+
+.alert--success {
+	color: #3c763d;
+	background: #dff0d8;
+	border-color: #3c763d;
+}
+
+.alert--error {
+	color: #a94442;
+	background: #f2dede;
+	border-color: #a94442;
+}
+
