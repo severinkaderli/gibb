@@ -15,8 +15,8 @@
 	<form id="loginForm" method="POST" action="">
 		<div class="formgroup">
 			<label for="username">Benutzername</label>
-			<!-- Check if password is valid using HTML5 pattern attribute -->
-			<input type="email" pattern="^[a-zA-Z0-9-_\.]{2,}@{1}[a-zA-Z0-9-_\.]{2,}\.[a-z]{2,}$" placeholder="name@example.com" id="username" name="username" required>
+			<!-- Using email input type for checking email -->
+			<input type="email" placeholder="name@example.com" id="username" name="username" required>
 		</div>
 		<div class="formgroup">
 			<label for="password">Passwort</label>
