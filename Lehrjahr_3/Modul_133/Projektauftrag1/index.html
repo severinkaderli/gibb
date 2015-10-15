@@ -10,35 +10,55 @@
 	<script src="js/main.js"></script>
 </head>
 <body>
-	<h1>Anmeldung</h1>
-	<div id="errors" class="alert alert--error"></div>
+	<h1>Anmeldung/Login</h1>
+	<h2>Login</h2>
+	<div id="loginError" class="alert alert--error"></div>
+	<div id="loginInput" class="alert alert--success"></div>
 	<form id="loginForm" method="POST" action="">
-		<div class="formgroup">
+		<div class="form-group">
+			<label for="loginUsername">Benutzername</label>
+			<!-- Using email input type for checking email -->
+			<input placeholder="name@example.com" id="loginUsername" name="loginUsername" required>
+		</div>
+		<div class="form-group">
+			<label for="loginPassword">Passwort</label>
+			<input type="password" id="loginPassword" name="loginPassword" required>
+		</div>
+		<div class="form-group">
+			<input id="loginSubmit" type="submit" value="Login">
+			<input id="loginReset" type="reset" value="Reset">
+		</div>
+	</form>
+
+	<h2>Registrierung</h2>
+	<div id="errors" class="alert alert--error"></div>
+	<form id="registerForm" method="POST" action="">
+		<div class="form-group">
 			<label for="username">Benutzername</label>
 			<!-- Using email input type for checking email -->
 			<input type="email" placeholder="name@example.com" id="username" name="username" required>
 		</div>
-		<div class="formgroup">
+		<div class="form-group">
 			<label for="password">Passwort</label>
 			<input type="password" id="password" name="password" required>
 		</div>
-		<div class="formgroup">
+		<div class="form-group">
 			<label for="password_confirmation">Passwort wiederholen</label>
 			<input type="password" id="password_confirmation" name="password_confirmation" required>
 		</div>
-		<div class="formgroup">
+		<div class="form-group">
 			<label>Optionen</label>
 			<label class="inline" for="male">Männlich</label><input checked id="male" type="radio" name="options" required>
 			<label class="inline" for="female">Weiblich</label><input id="female" type="radio" name="options" required>
 		</div>
-		<div class="formgroup">
+		<div class="form-group">
 			<label>Checkbox</label>
 			<label class="inline" for="html">HTML</label><input id="html" checked type="checkbox" name="checkbox">
 			<label class="inline" for="css">CSS</label><input id="css" type="checkbox" name="checkbox">
 			<label class="inline" for="js">JS</label><input id="js" type="checkbox" name="checkbox">
 			<label class="inline" for="php">PHP</label><input id="php" type="checkbox" name="checkbox">
 		</div>
-		<div class="formgroup">
+		<div class="form-group">
 			<label for="username">Auswahlliste</label>
 			<select>
 				<option selected>Sport</option>
@@ -46,9 +66,9 @@
 				<option>Computer</option>
 			</select>
 		</div>
-		<div class="formgroup">
-			<input id="btnSubmit" type="submit" value="senden">
-			<input id="btnReset" type="reset" value="reset">
+		<div class="form-group">
+			<input id="btnSubmit" type="submit" value="Registrieren">
+			<input id="btnReset" type="reset" value="Reset">
 		</div>
 	</form>
 </body>

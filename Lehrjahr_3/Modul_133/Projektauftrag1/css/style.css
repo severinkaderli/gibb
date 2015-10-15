@@ -1,14 +1,14 @@
-.formgroup {
+.form-group {
 	margin-bottom: 10px;
 }
 
-.formgroup label {
+.form-group label {
 	width: 200px;
 	display: block;
 	float: left;
 }
 
-.formgroup label.inline {
+.form-group label.inline {
 	display: inline-block;
 	width: auto;
 	float: none;
@@ -17,13 +17,17 @@
 /*Alert boxes for success and error messages*/
 .alert {
 	box-sizing: border-box;
-	display: none;
 	border: 1px solid black;
 	border-radius: 5px;
 	padding: 15px;
 	margin: 5px 0;
 	width: 100%;
 	font-size: 0.9em;
+	display:block;
+}
+
+.alert:empty {
+	display: none;
 }
 
 .alert--success {
