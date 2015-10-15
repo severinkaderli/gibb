@@ -26,12 +26,13 @@
 		</div>
 		<div class="form-group">
 			<input id="loginSubmit" type="submit" value="Login">
-			<input id="loginReset" type="reset" value="Reset">
+			<input class="btnReset" id="loginReset" type="reset" value="Reset">
 		</div>
 	</form>
 
 	<h2>Registrierung</h2>
-	<div id="errors" class="alert alert--error"></div>
+    <div id="registerError" class="alert alert--error"></div>
+    <div id="registerInput" class="alert alert--success"></div>
 	<form id="registerForm" method="POST" action="">
 		<div class="form-group">
 			<label for="username">Benutzername</label>
@@ -47,28 +48,28 @@
 			<input type="password" id="password_confirmation" name="password_confirmation" required>
 		</div>
 		<div class="form-group">
-			<label>Optionen</label>
-			<label class="inline" for="male">Männlich</label><input checked id="male" type="radio" name="options" required>
-			<label class="inline" for="female">Weiblich</label><input id="female" type="radio" name="options" required>
+			<label>Geschlecht</label>
+			<label class="inline" for="male">Männlich</label><input checked id="male" type="radio" name="gender" value="M&auml;nnlich" required>
+			<label class="inline" for="female">Weiblich</label><input id="female" type="radio" name="gender" value="Weiblich" required>
 		</div>
 		<div class="form-group">
-			<label>Checkbox</label>
-			<label class="inline" for="html">HTML</label><input id="html" checked type="checkbox" name="checkbox">
-			<label class="inline" for="css">CSS</label><input id="css" type="checkbox" name="checkbox">
-			<label class="inline" for="js">JS</label><input id="js" type="checkbox" name="checkbox">
-			<label class="inline" for="php">PHP</label><input id="php" type="checkbox" name="checkbox">
+			<label>Lieblingssprachen</label>
+			<label class="inline" for="html">HTML</label><input class="check" id="html" checked type="checkbox" name="hobby" value="HTML">
+			<label class="inline" for="css">CSS</label><input class="check" id="css" type="checkbox" name="hobby" value="CSS">
+			<label class="inline" for="js">JS</label><input class="check" id="js" type="checkbox" name="hobby" value="JS">
+			<label class="inline" for="php">PHP</label><input class="check" id="php" type="checkbox" name="hobby" value="PHP">
 		</div>
 		<div class="form-group">
-			<label for="username">Auswahlliste</label>
-			<select>
-				<option selected>Sport</option>
-				<option>Musik</option>
-				<option>Computer</option>
+			<label for="hobby">Hobby</label>
+			<select id="hobby" name="hobby">
+				<option selected value="Sport">Sport</option>
+				<option value="Musik">Musik</option>
+				<option value="Computer">Computer</option>
 			</select>
 		</div>
 		<div class="form-group">
 			<input id="btnSubmit" type="submit" value="Registrieren">
-			<input id="btnReset" type="reset" value="Reset">
+			<input class="btnReset" id="btnReset" type="reset" value="Reset">
 		</div>
 	</form>
 </body>
