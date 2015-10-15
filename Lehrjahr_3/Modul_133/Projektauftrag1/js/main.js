@@ -19,7 +19,7 @@ $(document).ready(function() {
      * @param outputElement | jQuery Selector of the output element
      */
     function displayError(errors, outputElement) {
-        var output = "<strong>Es sind Fehler aufgetreten:</strong><br>";
+        var output = "<strong>Es sind Fehler bei der Validierung aufgetreten:</strong><br>";
         errors.forEach(function(value) {
             output += value + "<br>";
         });
@@ -160,7 +160,16 @@ $(document).ready(function() {
             output += "Benutzername: " + $("#username").val() + "<br>";
             output += "Passwort: ***************" + "<br>";
             output += "Geschlecht: " + $('input[type="radio"][name="gender"]:checked').val() + "<br>";
-            output += "Lieblingssprachen: " + "<br>";
+
+            //Print out all selected languages
+            output += "Lieblingssprachen: ";
+            $('.check:checked').each(function() {
+               output += $(this).val() + ", ";
+            });
+            //Remove any trailing commas
+            output = output.replace(/,\s*$/, "");
+            output += "<br>";
+
             output += "Hobby: " + $("#hobby").val() + "<br>";
             $("#registerInput").html(output);
         }
@@ -172,7 +181,6 @@ $(document).ready(function() {
      * Display a user confirm when a user presses on one of the rest buttons
      */
     $(".btnReset").click(function() {
-        //TODO: Adjust this message
-       return confirm("Sind sie Sicher?");
+       return confirm("Es werden alle Felder zurückgesetzt! Sind Sie sicher?");
     });
 });

@@ -1,3 +1,7 @@
+body {
+    font-family: Verdana, sans-serif;
+}
+
 .form-group {
 	margin-bottom: 10px;
 }
