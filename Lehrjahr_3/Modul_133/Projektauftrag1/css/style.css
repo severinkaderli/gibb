@@ -1,15 +1,33 @@
+/**
+ * Author: Severin Kaderli
+ * Copyright: Severin Kaderli
+ */
+
+/**
+ * General styles
+ */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Verdana, sans-serif;
 }
 
+/**
+ * Forms
+ */
 .form-group {
 	margin-bottom: 10px;
+    max-width: 100%;
 }
 
 .form-group label {
 	width: 200px;
+    max-width: 100%;
 	display: block;
 	float: left;
+    padding: 5px;
 }
 
 .form-group label.inline {
@@ -18,7 +36,39 @@ body {
 	float: none;
 }
 
-/*Alert boxes for success and error messages*/
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+
+.form-group input[type="submit"],
+.form-group input[type="reset"] {
+    padding: 5px 10px;
+    font-size: 0.9em;
+    border: 1px solid #aaa;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover,
+.form-group input[type="reset"]:hover {
+    background-color: #bbb;
+}
+
+@media screen and (max-width: 450px) {
+    .form-group label {
+        width: 100%;
+    }
+}
+
+/**
+ * Alerts
+ */
 .alert {
 	box-sizing: border-box;
 	border: 1px solid black;
@@ -30,6 +80,7 @@ body {
 	display:block;
 }
 
+/*Don't display messages if they're empty*/
 .alert:empty {
 	display: none;
 }

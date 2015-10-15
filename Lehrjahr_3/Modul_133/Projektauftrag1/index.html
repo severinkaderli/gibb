@@ -10,7 +10,8 @@
 	<script src="js/main.js"></script>
 </head>
 <body>
-	<h1>Anmeldung/Login</h1>
+	<h1>Anmeldung / Login</h1>
+    <!-- Login Form -->
 	<h2>Login</h2>
 	<div id="loginError" class="alert alert--error"></div>
 	<div id="loginInput" class="alert alert--success"></div>
@@ -18,7 +19,7 @@
 		<div class="form-group">
 			<label for="loginUsername">Benutzername</label>
 			<!-- Using email input type for checking email -->
-			<input placeholder="name@example.com" id="loginUsername" name="loginUsername" required>
+			<input type="email" placeholder="name@example.com" id="loginUsername" name="loginUsername" required>
 		</div>
 		<div class="form-group">
 			<label for="loginPassword">Passwort</label>
@@ -30,6 +31,7 @@
 		</div>
 	</form>
 
+    <!-- Register Form -->
 	<h2>Registrierung</h2>
     <div id="registerError" class="alert alert--error"></div>
     <div id="registerInput" class="alert alert--success"></div>

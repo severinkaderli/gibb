@@ -1,3 +1,7 @@
+/**
+ * Author: Severin Kaderli
+ * Copyright: 2015
+ */
 $(document).ready(function() {
 
 	/**
@@ -31,24 +35,22 @@ $(document).ready(function() {
      *
      * @type {RegExp}
      */
-	var PASSWORD_EXPRESSION = /^[a-zA-Z0-9]{9,}$/i;
+	var PASSWORD_EXPRESSION = /^[a-zA-Z\(\)\[\]\{\}\?!\$%&\/=\*\+~,\.;:<>\-_]{9,}$/i;
 
     /**
      * The regular expression to validate an email address
      *
      * @type {RegExp}
      */
-	var EMAIL_EXPRESSION = /^[a-zA-Z0-9-_\.]{3,}@{1}[a-zA-Z0-9-_\.]{3,}\.[a-z]{2,}$/i;
+	var EMAIL_EXPRESSION = /^[a-zA-Z0-9-_\.]{2,}@[a-zA-Z0-9-_\.]{2,}\.[a-z]{2,}$/i;
 
     /**
      * Object which holds messages for the different errors
      */
-    //TODO: Adjust some of the messages
     var ERROR_MESSAGE = {
-        username: "Der Benutzername ist keine valide E-Mail Adresse",
-        password: "Das Passwort entspricht nicht den Vorschriften!",
+        username: "Der Benutzername muss eine valide E-Mail Adresse sein.",
+        password: "Das Passwort entspricht nicht den Vorschriften.",
         comparePassword: "Die Passwörter stimmen nicht überein.",
-        gender: "Mindestens ein Geschlecht muss ausgewählt sein.",
         language: "Mindestens eine Sprache muss ausgewählt sein."
     };
 
@@ -121,19 +123,11 @@ $(document).ready(function() {
         }
 
         /**
-         * Check if atleast one gender is selected, normally the HTML5 required
-         * attribute should be enough for this, but this is for cases where HTML5
-         * is not supported.
-         */
-        if(!$("#male").is(":checked") && !$("#female").is(":checked")) {
-            errors.push(ERROR_MESSAGE.gender);
-        }
-
-        /**
          * Check if atleast one language is selected
          * I'm looping through each checkbox to look if atleat one it's checked
          * that way you can add more checkboxes in the future and the
-         * validation will still work.
+         * validation will still work. I'm using jQuery here to check if
+         * the checkbox is really checked.
          */
         var isChecked = false;
 
@@ -154,7 +148,7 @@ $(document).ready(function() {
         $("#registerInput").html("");
         var output = "";
         if(errors.length > 0){
-            displayError(errors, $("#registernError"));
+            displayError(errors, $("#registerError"));
         } else {
             output += "<strong>Ihre Eingaben:</strong><br>";
             output += "Benutzername: " + $("#username").val() + "<br>";
