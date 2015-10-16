@@ -124,10 +124,10 @@ $(document).ready(function() {
 
         /**
          * Check if atleast one language is selected
-         * I'm looping through each checkbox to look if atleat one it's checked
+         * I'm looping through each checkbox to look if atleast one is checked
          * that way you can add more checkboxes in the future and the
          * validation will still work. I'm using jQuery here to check if
-         * the checkbox is really checked.
+         * the checkbox is checked.
          */
         var isChecked = false;
 
