@@ -151,7 +151,7 @@ $(document).ready(function() {
 	            output += "Hobby: " + $("#hobby").val() + "<br>";
             }
            
-            $("#registerInput").html(output);
+            $("#alertInput").html(output);
         }
 
         return false;
