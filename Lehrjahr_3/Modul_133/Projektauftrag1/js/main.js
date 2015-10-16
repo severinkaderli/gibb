@@ -57,48 +57,24 @@ $(document).ready(function() {
     /**
      * Validate the login form
      */
+    //TODO: Make this validte "both" forms
     $('#loginForm').submit(function() {
 
-        var errors = [];
+		/**
+		 * Check if form is in login or register mode
+		 *  This will determine which inputs to validate
+		 */
+		var isLogin = false;
 
-        /**
-         * Check if username is a valid email address using plain javascript
-         */
-        if(!validate(EMAIL_EXPRESSION, document.getElementById("loginUsername").value)) {
-            errors.push(ERROR_MESSAGE.username);
-        }
-
-        /**
-         * Check if the password is valid using a jQuery selector
-         */
-        if(!validate(PASSWORD_EXPRESSION, $('#loginPassword').val())) {
-            errors.push(ERROR_MESSAGE.password);
-        }
-
-        /**
-         * Either display errors if there are any or show the input of the user
-         */
-        $("#loginError").html("");
-        $("#loginInput").html("");
-        var output = "";
-        if(errors.length > 0){
-            displayError(errors, $("#loginError"));
-        } else {
-            output += "<strong>Ihre Eingaben:</strong><br>";
-            output += "Benutzername: " + $("#loginUsername").val() + "<br>";
-            output += "Passwort: ***************";
-            $("#loginInput").html(output);
-        }
-
-        return false;
-    });
-
-    /**
-     * Validate the register form
-     */
-    $('#registerForm').submit(function() {
-
-        var errors = [];
+		//Check if it's register or login
+		if($(".formChange").is(":checked")) {
+			isLogin = true;
+		}
+		
+		/**
+		 * Array to hold the current validation errors 
+		 */
+        var errors = [];  
 
         /**
          * Check if username is a valid email address using plain javascript
@@ -114,57 +90,67 @@ $(document).ready(function() {
             errors.push(ERROR_MESSAGE.password);
         }
 
-        /**
+         /**
          * Check if the confirmation password is the same as the first one
-         * using plain javascript
+         * using plain javascript. This is only needed in register mode
          */
-        if(document.getElementById("password").value != document.getElementById("password_confirmation").value) {
-            errors.push(ERROR_MESSAGE.comparePassword);
+        if(!isLogin) {
+        	if(document.getElementById("password").value != document.getElementById("password_confirmation").value) {
+           		errors.push(ERROR_MESSAGE.comparePassword);
+        	}
         }
-
+        
         /**
          * Check if atleast one language is selected
          * I'm looping through each checkbox to look if atleast one is checked
          * that way you can add more checkboxes in the future and the
          * validation will still work. I'm using jQuery here to check if
-         * the checkbox is checked.
+         * the checkbox is checked. This check is only needed in register mode.
          */
-        var isChecked = false;
+        if(!isLogin) {
+        	var isChecked = false;
 
-        $(".check").each(function() {
-           if($(this).is(":checked")) {
-               isChecked = true;
-           }
-        });
-
-        if(!isChecked) {
-            errors.push(ERROR_MESSAGE.language);
+	        $(".check").each(function() {
+	           if($(this).is(":checked")) {
+	               isChecked = true;
+	           }
+	        });
+	
+	        if(!isChecked) {
+	            errors.push(ERROR_MESSAGE.language);
+	        }
         }
-
+        
         /**
          * Either display errors if there are any or show the input of the user
+         * if all inputs are valid.
          */
-        $("#registerError").html("");
-        $("#registerInput").html("");
+        $("#alertError").html("");
+        $("#alertInput").html("");
         var output = "";
         if(errors.length > 0){
-            displayError(errors, $("#registerError"));
+            displayError(errors, $("#alertError"));
         } else {
             output += "<strong>Ihre Eingaben:</strong><br>";
             output += "Benutzername: " + $("#username").val() + "<br>";
             output += "Passwort: ***************" + "<br>";
-            output += "Geschlecht: " + $('input[type="radio"][name="gender"]:checked').val() + "<br>";
+            
+            //Only show certain inputs in register mode
+            if(!isLogin) {
+            	 output += "Geschlecht: " + $('input[type="radio"][name="gender"]:checked').val() + "<br>";
 
-            //Print out all selected languages
-            output += "Lieblingssprachen: ";
-            $('.check:checked').each(function() {
-               output += $(this).val() + ", ";
-            });
-            //Remove any trailing commas
-            output = output.replace(/,\s*$/, "");
-            output += "<br>";
-
-            output += "Hobby: " + $("#hobby").val() + "<br>";
+	            //Print out all selected languages
+	            output += "Lieblingssprachen: ";
+	            $('.check:checked').each(function() {
+	               output += $(this).val() + ", ";
+	            });
+	            //Remove any trailing commas
+	            output = output.replace(/,\s*$/, "");
+	            output += "<br>";
+	
+	            output += "Hobby: " + $("#hobby").val() + "<br>";
+            }
+           
             $("#registerInput").html(output);
         }
 
@@ -172,9 +158,26 @@ $(document).ready(function() {
     });
 
     /**
-     * Display a user confirm when a user presses on one of the rest buttons
+     * Ask user for confirmation before resetting all form data
      */
     $(".btnReset").click(function() {
        return confirm("Es werden alle Felder zurückgesetzt! Sind Sie sicher?");
+    });
+      
+    /**
+     * Change form mode between login and register 
+     */
+    $(".formChange").change(function() {
+    	if($(this).is(":checked")) {
+    		$(".password_confirmation").hide();
+    		$(".gender").hide();
+    		$(".languages").hide();
+    		$(".hobbies").hide();
+    	} else {
+    		$(".password_confirmation").show();
+    		$(".gender").show();
+    		$(".languages").show();
+    		$(".hobbies").show();
+    	}
     });
 });
