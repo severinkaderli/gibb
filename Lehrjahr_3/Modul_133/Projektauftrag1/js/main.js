@@ -24,9 +24,9 @@ $(document).ready(function() {
      */
     function displayError(errors, outputElement) {
         var output = "<strong>Es sind Fehler bei der Validierung aufgetreten:</strong><br>";
-        errors.forEach(function(value) {
-            output += value + "<br>";
-        });
+        for(var i = 0; i < errors.length; i++) {
+            output += errors[i] + "<br>";
+        }
         outputElement.html(output);
     }
 
@@ -57,19 +57,13 @@ $(document).ready(function() {
     /**
      * Validate the login form
      */
-    //TODO: Make this validte "both" forms
     $('#loginForm').submit(function() {
 
 		/**
 		 * Check if form is in login or register mode
 		 *  This will determine which inputs to validate
 		 */
-		var isLogin = false;
-
-		//Check if it's register or login
-		if($(".formChange").is(":checked")) {
-			isLogin = true;
-		}
+		var isLogin = $("#formChange").is(":checked");
 		
 		/**
 		 * Array to hold the current validation errors 
@@ -110,7 +104,7 @@ $(document).ready(function() {
         if(!isLogin) {
         	var isChecked = false;
 
-	        $(".check").each(function() {
+	        $("input[name='hobby']").each(function() {
 	           if($(this).is(":checked")) {
 	               isChecked = true;
 	           }
@@ -141,13 +135,13 @@ $(document).ready(function() {
 
 	            //Print out all selected languages
 	            output += "Lieblingssprachen: ";
-	            $('.check:checked').each(function() {
+	            $("input[name='hobby']:checked").each(function() {
 	               output += $(this).val() + ", ";
 	            });
-	            //Remove any trailing commas
+	            //Remove trailing comma
 	            output = output.replace(/,\s*$/, "");
+
 	            output += "<br>";
-	
 	            output += "Hobby: " + $("#hobby").val() + "<br>";
             }
            
@@ -167,17 +161,11 @@ $(document).ready(function() {
     /**
      * Change form mode between login and register 
      */
-    $(".formChange").change(function() {
+    $("#formChange").change(function() {
     	if($(this).is(":checked")) {
-    		$(".password_confirmation").hide();
-    		$(".gender").hide();
-    		$(".languages").hide();
-    		$(".hobbies").hide();
+            $(".input--register").hide();
     	} else {
-    		$(".password_confirmation").show();
-    		$(".gender").show();
-    		$(".languages").show();
-    		$(".hobbies").show();
+            $(".input--register").show();
     	}
     });
 });
