@@ -30,6 +30,6 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
 * Modul 133
   * Arbeitsblätter Aufgaben
   * Projekte
-    * Formularvalidierung
+    * Formular-Validierung
 * Modul 226
   * Buch & Arbeitsblätter Aufgaben
