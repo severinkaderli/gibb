@@ -1,0 +1,12 @@
+package ch.severinkaderli.grafik;
+
+public class Zeichnung {
+
+		private Vector shapes = new Vector();
+		
+		public Zeichnung() {
+			
+		}
+		
+
+}

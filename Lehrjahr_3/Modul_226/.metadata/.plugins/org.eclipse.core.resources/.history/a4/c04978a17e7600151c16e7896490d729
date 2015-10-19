@@ -1,0 +1,14 @@
+package ch.severinkaderli.grafik;
+
+import java.util.List;
+
+public class Zeichnung {
+
+		private List<Figur> shapes;
+		
+		public Zeichnung(List<Figur> shapes) {
+			this.shapes = shapes;
+		}
+		
+
+}

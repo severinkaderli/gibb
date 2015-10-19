@@ -1,0 +1,14 @@
+package ch.severinkaderli.grafik;
+
+import java.util.Vector;
+
+public class Zeichnung {
+
+		private Vector shapes = new Vector();
+		
+		public Zeichnung(Vector<Shape> shapes) {
+			this.shapes = shapes;
+		}
+		
+
+}

@@ -49,27 +49,3 @@ tmp/
 *.swp
 $RECYCLE.BIN/
 
-# IDE / Framework specific
-.idea/
-_ide_helper.php
-.env
-.env.php
-.env.*.php
-/bootstrap/compiled.php
-Homestead.yaml
-*.pydevproject
-.metadata
-.gradle
-local.properties
-.settings/
-.loadpath
-.project
-.externalToolBuilders/
-*.launch
-.cproject
-.classpath
-.factorypath
-.buildpath
-.target
-.texlipse
-.recommenders/
