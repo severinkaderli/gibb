@@ -1,0 +1,10 @@
+package figuren;
+
+public class Kreis extends Figur {
+	public int radius;
+	
+	public Kreis(int x, int y, int radius) {
+		super(x, y);
+		this.radius = radius;
+	}
+}

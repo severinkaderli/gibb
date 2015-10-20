@@ -1,0 +1,13 @@
+package figuren;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Figur figur = new Rechteck();
+		
+		figur.x = 2;
+		figur.height = 3;
+
+	}
+
+}

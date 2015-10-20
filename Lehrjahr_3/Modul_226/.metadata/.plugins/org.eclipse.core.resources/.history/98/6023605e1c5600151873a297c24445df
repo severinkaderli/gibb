@@ -1,0 +1,5 @@
+package figuren;
+
+public class Kreis {
+	public int radius;
+}

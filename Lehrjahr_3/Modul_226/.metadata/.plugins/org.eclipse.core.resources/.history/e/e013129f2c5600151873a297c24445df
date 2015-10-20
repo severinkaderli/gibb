@@ -1,0 +1,15 @@
+
+public class Vogel {
+	
+	private anzahlFluegel;
+	
+	public Vogel() {
+		super(name, age);
+		this.anzahlFluegel = anzahlFluegel;
+	}
+	
+	public fly() {
+		System.out.println("Hui... Ich habe " + anzahlFluegel + "!");
+		
+	}
+}

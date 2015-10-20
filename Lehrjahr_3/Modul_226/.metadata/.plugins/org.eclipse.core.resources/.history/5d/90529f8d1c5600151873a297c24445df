@@ -1,0 +1,10 @@
+package figuren;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Rechteck r1 = new Rechteck();
+
+	}
+
+}

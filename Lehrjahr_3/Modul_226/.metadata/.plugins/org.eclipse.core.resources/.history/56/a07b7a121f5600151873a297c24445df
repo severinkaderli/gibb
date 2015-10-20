@@ -1,0 +1,6 @@
+package figuren;
+
+public class Figur {
+	public int x;
+	public int y;
+}

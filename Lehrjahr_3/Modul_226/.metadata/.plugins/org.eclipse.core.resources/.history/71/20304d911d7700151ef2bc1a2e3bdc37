@@ -1,0 +1,15 @@
+package ch.severinkaderli.grafik;
+
+import java.util.Arrays;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Zeichnung zeichnung = new Zeichnung(new ArrayList<Figur>());
+		
+		Zeichenbrett z = new Zeichenbrett();
+		z.zeige(zeichnung);
+	}
+
+}

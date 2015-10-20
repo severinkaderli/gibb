@@ -1,0 +1,8 @@
+package figuren;
+
+public class Rechteck extends Figur {
+
+	public int width;
+	public int height;
+	
+}

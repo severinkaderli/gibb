@@ -1,0 +1,31 @@
+/**
+ * Name: Kaderli Severin
+ * Klasse: 2013.5k
+ * Datum: 8. September 2015
+ * Serie A
+ *
+ */
+public class MusterMaster {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public void muster(int breite, int hoehe) {
+		
+		for(int i=0; i<hoehe;i++) {
+			
+			//Print pipes
+			
+			if(i>0) {
+				System.out.println("|");
+			}
+			
+			System.out.println(" ");
+			
+			//Print minus and plus
+		}
+	}
+
+}

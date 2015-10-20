@@ -1,0 +1,7 @@
+
+public class Fisch {
+	
+	public void swim() {
+		System.out.println("Blub. Ich schwimme mit meinen " + flossen + " Flossen.");
+	}
+}
