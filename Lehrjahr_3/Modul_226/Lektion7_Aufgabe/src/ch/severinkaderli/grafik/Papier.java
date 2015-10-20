@@ -84,11 +84,23 @@ public class Papier extends JPanel implements MouseListener, KeyListener {
 		switch(currentMode) {
 		case RECTANGLE:
 		default:
+			//TODO: Get this calculation right...
+			int tmp = 0;
+			int width = e.getX() - x;
+			int height = e.getY() - y;
 			
-			int x2 = e.getX() - x;
-			int y2 = e.getY() - y;
-
-			figur = new Rechteck(x, y, x2, y2);
+			
+			/*if(x2 < x) {}
+				tmp = x2;
+				x = x2;
+				x2 = tmp;
+			if(y2 < y) {
+				tmp = y2;
+				y = y2;
+				y2 = tmp;
+			}*/
+			
+			figur = new Rechteck(x, y, width, height);
 			
 			break;
 		case LINE:
@@ -98,7 +110,11 @@ public class Papier extends JPanel implements MouseListener, KeyListener {
 			break;
 		case CIRCLE:
 			
-			figur = new Kreis(x, y, Math.abs(x - e.getX()));
+			//Calculate radius exactly
+			int dx = Math.abs(e.getX()) - x;
+			int dy = Math.abs(e.getY()) - y;
+			int radius = (int)Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
+			figur = new Kreis(x, y, radius);
 			break;			
 		}
 		

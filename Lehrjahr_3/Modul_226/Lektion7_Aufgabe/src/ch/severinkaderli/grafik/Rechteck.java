@@ -22,6 +22,7 @@ public class Rechteck extends Figur {
 	}
 
 	public void zeichne(Graphics g) {
+		
 		g.drawRect(this.x, this.y, this.width, this.height);
 	}
 }
