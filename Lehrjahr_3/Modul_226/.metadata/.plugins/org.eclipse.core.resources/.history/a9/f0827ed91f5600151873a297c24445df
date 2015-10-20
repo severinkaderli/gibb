@@ -1,7 +1,0 @@
-package figuren;
-
-public class Linie extends Figur {
-	public int length;
-	public int angle;
-	
-}

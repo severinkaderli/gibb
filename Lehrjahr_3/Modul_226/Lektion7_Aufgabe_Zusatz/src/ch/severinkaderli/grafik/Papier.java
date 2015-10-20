@@ -69,9 +69,19 @@ public class Papier extends JPanel {
 			switch (currentMode) {
 			case RECTANGLE:
 			default:
-				// TODO: Get Calculation for negative values right
 				int width = e.getX() - x;
 				int height = e.getY() - y;
+				
+				//Account for negative widths and heights
+				if(height < 0) {
+					y += height;
+					height = -height;
+				}
+				
+				if(width < 0) {
+					x += width;
+					width = -width;
+				}
 
 				figur = new Rechteck(x, y, width, height);
 
@@ -83,7 +93,7 @@ public class Papier extends JPanel {
 				break;
 			case CIRCLE:
 
-				// Calculate radius with the pythogeroas theorem
+				//Pythagorean theorem
 				int dx = Math.abs(e.getX()) - x;
 				int dy = Math.abs(e.getY()) - y;
 				int radius = (int) Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
