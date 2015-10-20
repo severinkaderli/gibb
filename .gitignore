@@ -5,6 +5,9 @@ Thumbs.db
 Desktop.ini
 *.lnk
 
+#Eclipse
+.metadata/
+
 
 # Compiled / Installer
 bin/
