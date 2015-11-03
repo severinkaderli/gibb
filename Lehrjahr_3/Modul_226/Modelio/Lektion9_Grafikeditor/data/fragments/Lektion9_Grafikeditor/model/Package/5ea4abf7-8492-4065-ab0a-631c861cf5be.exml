@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="javax" version="3">
+  <DEPS>
+    <ID name="javax" mc="Package" uid="5ea4abf7-8492-4065-ab0a-631c861cf5be"/>
+    <COMPID name="swing" mc="Package" uid="016d1eb1-606e-4852-8963-ac214b00e165"/>
+    <FOREIGNID name="JavaExtern" mc="TagType" uid="003800a8-0000-0197-0000-000000000000"/>
+    <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="javax" mc="Package" uid="5ea4abf7-8492-4065-ab0a-631c861cf5be"/>
+    <PID name="lektion9_grafikeditor" mc="Package" uid="3d150dd2-0986-4917-a529-6619d44d7391"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[javax]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="swing" mc="Package" uid="016d1eb1-606e-4852-8963-ac214b00e165"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Tag">
+        <OBJECT>
+          <ID name="" mc="TaggedValue" uid="4b0c0194-32c0-4bcb-a068-ff574cfb3adb"/>
+          <PID name="javax" mc="Package" uid="5ea4abf7-8492-4065-ab0a-631c861cf5be"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Definition">
+              <FOREIGNID name="JavaExtern" mc="TagType" uid="003800a8-0000-0197-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

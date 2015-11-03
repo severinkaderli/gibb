@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Lektion9_Grafikeditor" version="3">
+  <DEPS>
+    <ID name="Lektion9_Grafikeditor" mc="Project" uid="95dc00b0-1b23-4cba-a327-198692b9fffc"/>
+    <COMPID name="Lektion9_Grafikeditor" mc="DiagramSet" uid="a4601c0d-bc31-403f-807f-8887623cb631"/>
+    <COMPID name="lektion9_grafikeditor" mc="Package" uid="3d150dd2-0986-4917-a529-6619d44d7391"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Lektion9_Grafikeditor" mc="Project" uid="95dc00b0-1b23-4cba-a327-198692b9fffc"/>
+    <ATTRIBUTES>
+      <ATT name="ProjectContext"></ATT>
+      <ATT name="ProjectDescr"></ATT>
+      <ATT name="Name"><![CDATA[Lektion9_Grafikeditor]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="DiagramRoot">
+        <COMPID name="Lektion9_Grafikeditor" mc="DiagramSet" uid="a4601c0d-bc31-403f-807f-8887623cb631"/>
+      </COMP>
+      <COMP relation="Model">
+        <COMPID name="lektion9_grafikeditor" mc="Package" uid="3d150dd2-0986-4917-a529-6619d44d7391"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

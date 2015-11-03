@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="event" version="3">
+  <DEPS>
+    <ID name="event" mc="Package" uid="29feba44-9378-446b-b1e5-ec5edaa3a76c"/>
+    <COMPID name="KeyAdapter" mc="Class" uid="6ebdc8e2-5afa-4530-ab4a-2d40d146a046"/>
+    <COMPID name="KeyEvent" mc="Class" uid="54349177-5d30-423f-96ec-c313cbe748a8"/>
+    <COMPID name="MouseAdapter" mc="Class" uid="61547f5b-b133-4b8e-8ab5-8c417341cec0"/>
+    <COMPID name="MouseEvent" mc="Class" uid="96059c19-9637-4541-8e30-5e75fb9a2f0c"/>
+    <FOREIGNID name="JavaExtern" mc="TagType" uid="003800a8-0000-0197-0000-000000000000"/>
+    <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="event" mc="Package" uid="29feba44-9378-446b-b1e5-ec5edaa3a76c"/>
+    <PID name="awt" mc="Package" uid="138e3430-b1dd-4af8-969a-130a3a7b354a"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[event]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="KeyAdapter" mc="Class" uid="6ebdc8e2-5afa-4530-ab4a-2d40d146a046"/>
+        <COMPID name="KeyEvent" mc="Class" uid="54349177-5d30-423f-96ec-c313cbe748a8"/>
+        <COMPID name="MouseAdapter" mc="Class" uid="61547f5b-b133-4b8e-8ab5-8c417341cec0"/>
+        <COMPID name="MouseEvent" mc="Class" uid="96059c19-9637-4541-8e30-5e75fb9a2f0c"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Tag">
+        <OBJECT>
+          <ID name="" mc="TaggedValue" uid="4cd38149-4933-4448-9f08-63478a8ce10a"/>
+          <PID name="event" mc="Package" uid="29feba44-9378-446b-b1e5-ec5edaa3a76c"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Definition">
+              <FOREIGNID name="JavaExtern" mc="TagType" uid="003800a8-0000-0197-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

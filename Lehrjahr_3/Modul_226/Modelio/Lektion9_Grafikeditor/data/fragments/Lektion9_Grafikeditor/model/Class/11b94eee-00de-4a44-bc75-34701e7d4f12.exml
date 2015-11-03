@@ -1,0 +1,553 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Zeichnung" version="3">
+  <DEPS>
+    <ID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+    <EXTID name="ArrayList" mc="Class" uid="538fc8e4-71ef-4575-b78a-281034c2c39f"/>
+    <EXTID name="Figur" mc="Class" uid="53686268-6811-46e6-bb7d-545ecae0ca26"/>
+    <EXTID name="Graphics" mc="Class" uid="77b8f432-a260-4d12-bac7-943f11630780"/>
+    <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+    <FOREIGNID name="JavaInitValue" mc="NoteType" uid="00380080-0000-0994-0000-000000000000"/>
+    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
+    <FOREIGNID name="Javadoc" mc="NoteType" uid="01240268-0000-0044-0000-000000000000"/>
+    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+    <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3766-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+    <PID name="grafik" mc="Package" uid="06e7e941-d65e-4ed4-be0a-e29c73278c0a"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Zeichnung]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedOperation">
+        <OBJECT>
+          <ID name="zeichne" mc="Operation" uid="5fe75b0c-c7db-4812-87da-b2827788f217"/>
+          <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[zeichne]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="g" mc="Parameter" uid="f49e5e54-6049-4630-8bf9-dae106a1f560"/>
+                <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[g]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="Graphics" mc="Class" uid="77b8f432-a260-4d12-bac7-943f11630780"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="06298bfc-4626-4432-8eba-db86757d0b72"/>
+                <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[Delegiert das Zeichnen an die einzelnen Figuren
+@param g]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="e5f2e17f-67bb-4b45-9760-4e94c5b3f0da"/>
+                <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[this.shapes.forEach(shape -> shape.zeichne(g));]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="addFigur" mc="Operation" uid="c94bb096-5f47-410b-a565-99562d74f9e1"/>
+          <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[addFigur]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="figur" mc="Parameter" uid="be4b91f3-5594-4af4-9450-d4bd7aa6c588"/>
+                <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[figur]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="Figur" mc="Class" uid="53686268-6811-46e6-bb7d-545ecae0ca26"/>
+                  </LINK>
+                  <COMP relation="Descriptor">
+                    <OBJECT>
+                      <ID name="" mc="Note" uid="5eda0326-e585-40ae-9757-193bb2dbebcb"/>
+                      <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                      <ATTRIBUTES>
+                        <ATT name="Content"><![CDATA[Figur die hinzugef�gt wird.]]></ATT>
+                        <ATT name="MimeType"></ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Model">
+                          <FOREIGNID name="Javadoc" mc="NoteType" uid="01240268-0000-0044-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="fd662706-ef63-41a5-abf1-ac6d49dc524c"/>
+                <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[F�gt der Zeichnung eine neue Figur hinzu]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="8a435dec-f1b1-4ca7-be17-50901370022b"/>
+                <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[this.shapes.add(figur);]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="removeFigur" mc="Operation" uid="7d07a3fb-fa9c-4398-bb70-46365235ff58"/>
+          <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[removeFigur]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="figur" mc="Parameter" uid="67e7961e-1370-4780-b56c-a659f098b44a"/>
+                <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[figur]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="Figur" mc="Class" uid="53686268-6811-46e6-bb7d-545ecae0ca26"/>
+                  </LINK>
+                  <COMP relation="Descriptor">
+                    <OBJECT>
+                      <ID name="" mc="Note" uid="3607d9ea-2c58-4638-97be-3386a38c1d81"/>
+                      <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                      <ATTRIBUTES>
+                        <ATT name="Content"><![CDATA[Figur, die entfertn wird.]]></ATT>
+                        <ATT name="MimeType"></ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Model">
+                          <FOREIGNID name="Javadoc" mc="NoteType" uid="01240268-0000-0044-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="0e6887ca-874d-4c6c-8bab-95124f24b61a"/>
+                <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[Entfernt eine Figur von der Zeichnung.]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="6fc4a9d5-0de0-4894-9af7-32d36a172ed8"/>
+                <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[this.shapes.remove(figur);]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="moveFigur" mc="Operation" uid="89212fb2-d1a6-40e1-a4f6-7dfb875aeb92"/>
+          <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[moveFigur]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="figur" mc="Parameter" uid="6b65a9d3-1cd9-4ee6-95d6-8cdc28da7080"/>
+                <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[figur]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="Figur" mc="Class" uid="53686268-6811-46e6-bb7d-545ecae0ca26"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="dx" mc="Parameter" uid="342cb4d5-de9c-4e84-8a40-e93bfa5531ab"/>
+                <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[dx]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="dy" mc="Parameter" uid="505ebaac-6cd4-4a98-a6e8-e3a5c87a925e"/>
+                <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[dy]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="fcbef600-c2f5-4c01-a8fb-aef5dfb7251d"/>
+                <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[@param figur
+@param dx
+@param dy]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="043eb56d-4f14-41de-8232-80f8453365e7"/>
+                <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[figur.move(dx, dy);]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedEnd">
+        <OBJECT>
+          <ID name="shapes" mc="AssociationEnd" uid="873226b3-c207-4196-a840-13e0b8f051e9"/>
+          <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[shapes]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="Figur" mc="Class" uid="53686268-6811-46e6-bb7d-545ecae0ca26"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="e3b0a500-9026-4a67-93f6-7c5382fd8383"/>
+                <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="shapes" mc="AssociationEnd" uid="873226b3-c207-4196-a840-13e0b8f051e9"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="6d61cdda-c617-41e9-b84d-2bd7403bb9ef"/>
+                      <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Association" uid="6d61cdda-c617-41e9-b84d-2bd7403bb9ef"/>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="63ae2abb-1cbc-4927-b48a-bbd7749a1391"/>
+                <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="TagParameter" uid="bf47e9d7-9693-477a-824e-a31e01b045be"/>
+                      <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[List]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3766-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="2ffd4e29-fce8-4974-9dcd-a0a084bc754a"/>
+                <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[Liste die alle Figuren der Zeichnung enth�lt.]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="e44fe1c1-b1c6-47a3-a1f2-33e6963a792c"/>
+                <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[new ArrayList<Figur>()]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaInitValue" mc="NoteType" uid="00380080-0000-0994-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedImport">
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="d50baffe-1575-4e4d-8b04-13ed1ac6c008"/>
+          <PID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="ArrayList" mc="Class" uid="538fc8e4-71ef-4575-b78a-281034c2c39f"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

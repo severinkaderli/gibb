@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="LocalModule" version="3">
+  <DEPS>
+    <ID name="LocalModule" mc="ModuleComponent" uid="56c5981c-d5c3-471e-9cc6-4b0c0e7da3dd"/>
+    <COMPID name="LocalProfile" mc="Profile" uid="73817408-4e76-4388-86b8-f53f8c0a5575"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="LocalModule" mc="ModuleComponent" uid="56c5981c-d5c3-471e-9cc6-4b0c0e7da3dd"/>
+    <ATTRIBUTES>
+      <ATT name="LicenseKey">0</ATT>
+      <ATT name="MajVersion">0</ATT>
+      <ATT name="MinVersion">0</ATT>
+      <ATT name="MinMinVersion"></ATT>
+      <ATT name="MinBinVersionCompatibility"></ATT>
+      <ATT name="JavaClassName"></ATT>
+      <ATT name="State">SoModuleStateActivated</ATT>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[LocalModule]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedProfile">
+        <COMPID name="LocalProfile" mc="Profile" uid="73817408-4e76-4388-86b8-f53f8c0a5575"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

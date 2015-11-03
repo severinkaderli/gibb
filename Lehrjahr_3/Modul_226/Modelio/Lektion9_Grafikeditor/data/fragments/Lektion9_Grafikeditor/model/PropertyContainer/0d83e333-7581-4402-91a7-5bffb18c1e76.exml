@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Lektion9_Grafikeditor" version="3">
+  <DEPS>
+    <ID name="Lektion9_Grafikeditor" mc="PropertyContainer" uid="0d83e333-7581-4402-91a7-5bffb18c1e76"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Lektion9_Grafikeditor" mc="PropertyContainer" uid="0d83e333-7581-4402-91a7-5bffb18c1e76"/>
+    <PID name="Lektion9_Grafikeditor" mc="AnalystProject" uid="63561c9d-389b-4a7b-b029-846f62bebeac"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[Lektion9_Grafikeditor]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

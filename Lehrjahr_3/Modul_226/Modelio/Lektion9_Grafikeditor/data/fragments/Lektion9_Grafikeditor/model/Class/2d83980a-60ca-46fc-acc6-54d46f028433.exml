@@ -1,0 +1,383 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Zeichenbrett" version="3">
+  <DEPS>
+    <ID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+    <EXTID name="JFrame" mc="Class" uid="773426f6-8a92-4ab9-920e-ffeac9ed5bc1"/>
+    <EXTID name="Papier" mc="Class" uid="06790966-82f4-4596-9cec-dfb02376df4d"/>
+    <FOREIGNID name="JavaAnnotation" mc="NoteType" uid="000c0b48-0000-3a6f-0000-000000000000"/>
+    <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0180-0000-000000000000"/>
+    <FOREIGNID name="JavaInitValue" mc="NoteType" uid="00380080-0000-0994-0000-000000000000"/>
+    <FOREIGNID name="JavaTypeExpr" mc="TagType" uid="00380080-0000-01a4-0000-000000000000"/>
+    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015d-0000-000000000000"/>
+    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
+    <FOREIGNID name="Javadoc" mc="NoteType" uid="01240268-0000-0044-0000-000000000000"/>
+    <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+    <PID name="grafik" mc="Package" uid="06e7e941-d65e-4ed4-be0a-e29c73278c0a"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Zeichenbrett]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedOperation">
+        <OBJECT>
+          <ID name="Zeichenbrett" mc="Operation" uid="87687653-0aad-489f-85c8-608994de7785"/>
+          <PID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[Zeichenbrett]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="5c0118f1-584b-437c-bf16-6435b02337b2"/>
+                <PID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[Konstruktor.
+Setzt den Titel, Ort, Gr�sse und Verhalten beim Schliessen
+des Zeichenbretts. Erzeugt ein Papierobjekt und f�gt dieses
+in das Zeichnbrett ein. Zeigt das Zeichenbrett auf dem Desktop an.]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="0a225c10-0503-4c75-8988-29ca99f05c06"/>
+                <PID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[super("Zeichenbrett f�r Figuren");
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+setSize(800, 600);
+setLocation(200, 200);
+setContentPane(papier);
+setVisible(true);
+]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="zeige" mc="Operation" uid="ffaacd1f-3874-4d68-b66d-c4b395dd3e14"/>
+          <PID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[zeige]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="zeichnung" mc="Parameter" uid="3f5e6cc4-e31a-47ba-8e28-52a67d4809d9"/>
+                <PID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[zeichnung]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="332994d4-089f-4407-a57e-a202d2b1d3b6"/>
+                      <PID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="Actual">
+                          <OBJECT>
+                            <ID name="" mc="TagParameter" uid="710e7269-59a3-46db-9d28-bda8c0d133fa"/>
+                            <PID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+                            <ATTRIBUTES>
+                              <ATT name="Value"><![CDATA[Zeichnung]]></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES></DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaTypeExpr" mc="TagType" uid="00380080-0000-01a4-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="Descriptor">
+                    <OBJECT>
+                      <ID name="" mc="Note" uid="bcc90a74-b912-46d3-b93a-2147d440245d"/>
+                      <PID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+                      <ATTRIBUTES>
+                        <ATT name="Content"><![CDATA[Die zu zeigende Zeichnung.]]></ATT>
+                        <ATT name="MimeType"></ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Model">
+                          <FOREIGNID name="Javadoc" mc="NoteType" uid="01240268-0000-0044-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="b37959f5-fa25-4fff-8a6c-7adb1e11158e"/>
+                <PID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[Zeigt eine Zeichnung auf dem Zeichenbrett an, indem die Zeichnung
+auf das Papier "gesetzt" wird.]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="c82a348e-2ef5-4ce4-b364-8f48b7203e42"/>
+                <PID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[papier.setZeichnung(zeichnung);
+// Aufruf von repaint() bewirkt, dass das Fenster des Zeichenbrett
+// auf dem Dektop neu aufgebaut wird.
+repaint();
+]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedEnd">
+        <OBJECT>
+          <ID name="papier" mc="AssociationEnd" uid="a543b15f-4cde-407e-b9fc-5b5e59e60309"/>
+          <PID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[papier]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="Papier" mc="Class" uid="06790966-82f4-4596-9cec-dfb02376df4d"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="009879fa-558e-496e-b220-10763311c525"/>
+                <PID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="papier" mc="AssociationEnd" uid="a543b15f-4cde-407e-b9fc-5b5e59e60309"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="0b438c08-5bc1-4afc-8e64-8bc1c2a74140"/>
+                      <PID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Association" uid="0b438c08-5bc1-4afc-8e64-8bc1c2a74140"/>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="2e7afac0-41c0-496e-912f-b08c13fde684"/>
+                <PID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0180-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="600937ec-4fa3-4ffe-866e-afe1db6b568b"/>
+                <PID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[Das Papier, auf welchem gezeichnet wird.]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="5b289007-fe06-44b9-8775-70fbabfe074f"/>
+                <PID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[new Papier()]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaInitValue" mc="NoteType" uid="00380080-0000-0994-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Parent">
+        <OBJECT>
+          <ID name="" mc="Generalization" uid="0fefb1cd-d3b9-40d8-9faf-110254798589"/>
+          <PID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+          <ATTRIBUTES>
+            <ATT name="Discriminator"></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SuperType">
+              <ID name="JFrame" mc="Class" uid="773426f6-8a92-4ab9-920e-ffeac9ed5bc1"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Note" uid="db10994f-0814-4229-b266-b55601c63074"/>
+          <PID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[@SuppressWarnings("serial")]]></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="JavaAnnotation" mc="NoteType" uid="000c0b48-0000-3a6f-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="Note" uid="660f98a0-b990-4957-9521-1ec7af2f0463"/>
+          <PID name="Zeichenbrett" mc="Class" uid="2d83980a-60ca-46fc-acc6-54d46f028433"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[Die Klasse Zeichenbrett erm�glicht die Darstellung von Zeichnungen.
+Sie �ffnet ein Fenster auf dem Desktop, welches als einzige Komponente
+ein Papierobjekt enth�lt.
+
+@author Andres Scheidegger]]></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015d-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
