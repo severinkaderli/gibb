@@ -379,6 +379,20 @@ this.radius = radius;
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
+        <OBJECT>
+          <ID name="Generalization" mc="Generalization" uid="c972ed01-f29f-4f21-ad32-d8e245fd85dd"/>
+          <PID name="Kreis" mc="Class" uid="004f8e62-830a-4d6f-924a-cb6b86e26e09"/>
+          <ATTRIBUTES>
+            <ATT name="Discriminator"></ATT>
+            <ATT name="Name"><![CDATA[Generalization]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SuperType">
+              <ID name="Figur" mc="Class" uid="53686268-6811-46e6-bb7d-545ecae0ca26"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>

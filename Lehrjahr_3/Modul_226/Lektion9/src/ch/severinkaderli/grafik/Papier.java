@@ -28,7 +28,7 @@ public class Papier extends JPanel {
 	private int x, y;
 
 	/**
-	 * Enum for the different Drawing Modes
+	 * Enum für die verschiedenen Zeichnungsmodi
 	 */
 	public enum DrawingMode {
 		RECTANGLE, LINE, CIRCLE

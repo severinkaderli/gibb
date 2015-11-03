@@ -32,13 +32,15 @@ public class Zeichnung {
 		/**
 		 * Entfernt eine Figur von der Zeichnung.
 		 * 
-		 * @param figur Figur, die entfertn wird.
+		 * @param figur Figur, die entfernt wird.
 		 */
 		public void removeFigur(Figur figur) {
 			this.shapes.remove(figur);
 		}
 		
 		/**
+		 * Bewegt eine Figur
+		 * 
 		 * @param figur
 		 * @param dx
 		 * @param dy

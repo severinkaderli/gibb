@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Interaction" version="3">
   <DEPS>
     <ID name="Interaction" mc="Interaction" uid="48e4d1d9-3fb2-45dc-868b-7fe401a0faa6"/>
-    <COMPID name="paintComponent-Diagramm" mc="SequenceDiagram" uid="8aff6119-fe59-4f63-ab82-f85fc7b3cb63"/>
+    <COMPID name="grafikEditor_Sequenzdiagramm" mc="SequenceDiagram" uid="8aff6119-fe59-4f63-ab82-f85fc7b3cb63"/>
     <EXTID name="Figur" mc="Class" uid="53686268-6811-46e6-bb7d-545ecae0ca26"/>
     <EXTID name="Graphics" mc="Class" uid="77b8f432-a260-4d12-bac7-943f11630780"/>
     <EXTID name="JPanel" mc="Class" uid="71f3ce9a-75f5-4d03-9f36-8295473ee170"/>
@@ -1082,7 +1082,7 @@
           <ID name="" mc="ExecutionOccurenceSpecification" uid="d62fe165-51d7-4271-af0c-30026e643b27"/>
           <PID name="Interaction" mc="Interaction" uid="48e4d1d9-3fb2-45dc-868b-7fe401a0faa6"/>
           <ATTRIBUTES>
-            <ATT name="LineNumber">578</ATT>
+            <ATT name="LineNumber">572</ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -1126,7 +1126,7 @@
           <ID name="" mc="ExecutionOccurenceSpecification" uid="63fb84f3-4fe0-43d5-a3d4-d77b3f0c20f8"/>
           <PID name="Interaction" mc="Interaction" uid="48e4d1d9-3fb2-45dc-868b-7fe401a0faa6"/>
           <ATTRIBUTES>
-            <ATT name="LineNumber">578</ATT>
+            <ATT name="LineNumber">572</ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -1149,7 +1149,7 @@
           <ID name="" mc="ExecutionOccurenceSpecification" uid="8d8269d1-40ae-4331-a7b5-edb6c6dfb0ef"/>
           <PID name="Interaction" mc="Interaction" uid="48e4d1d9-3fb2-45dc-868b-7fe401a0faa6"/>
           <ATTRIBUTES>
-            <ATT name="LineNumber">598</ATT>
+            <ATT name="LineNumber">586</ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -1187,7 +1187,7 @@
           <ID name="" mc="ExecutionSpecification" uid="e4672632-4b4e-4cf3-82ef-a37c92d9d6b2"/>
           <PID name="Interaction" mc="Interaction" uid="48e4d1d9-3fb2-45dc-868b-7fe401a0faa6"/>
           <ATTRIBUTES>
-            <ATT name="LineNumber">578</ATT>
+            <ATT name="LineNumber">572</ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -1210,7 +1210,7 @@
           <ID name="" mc="ExecutionOccurenceSpecification" uid="04e0efa3-2a2b-4bd4-9e5f-04415fd23e88"/>
           <PID name="Interaction" mc="Interaction" uid="48e4d1d9-3fb2-45dc-868b-7fe401a0faa6"/>
           <ATTRIBUTES>
-            <ATT name="LineNumber">618</ATT>
+            <ATT name="LineNumber">606</ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -2409,17 +2409,17 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="" mc="ExecutionOccurenceSpecification" uid="55026638-70a8-4c48-b2d4-12ccc4c753ab"/>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="035209c6-bd84-48c2-9d00-f469f040661f"/>
           <PID name="Interaction" mc="Interaction" uid="48e4d1d9-3fb2-45dc-868b-7fe401a0faa6"/>
           <ATTRIBUTES>
-            <ATT name="LineNumber">633</ATT>
+            <ATT name="LineNumber">631</ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="SentMessage">
               <OBJECT>
-                <ID name="Graphics()" mc="Message" uid="fa5899c3-d3a6-41c0-9ca7-9f71bac79a55"/>
+                <ID name="Graphics()" mc="Message" uid="5bdb90df-a184-4bbf-b8f6-e6af9ffcca3e"/>
                 <PID name="Interaction" mc="Interaction" uid="48e4d1d9-3fb2-45dc-868b-7fe401a0faa6"/>
                 <ATTRIBUTES>
                   <ATT name="Argument"></ATT>
@@ -2431,7 +2431,7 @@
                 <DEPENDENCIES>
                   <LINK relation="ReceiveEvent">
                     <REFOBJ>
-                      <ID name="" mc="ExecutionOccurenceSpecification" uid="8bf1924c-3681-47d4-98fb-911a3023af9b"/>
+                      <ID name="" mc="ExecutionOccurenceSpecification" uid="20092891-07c9-4c07-b072-0076393dadbc"/>
                       <PID name="Interaction" mc="Interaction" uid="48e4d1d9-3fb2-45dc-868b-7fe401a0faa6"/>
                     </REFOBJ>
                   </LINK>
@@ -2440,17 +2440,17 @@
             </COMP>
             <LINK relation="Covered">
               <REFOBJ>
-                <ID name="z" mc="Lifeline" uid="6290974c-85e0-47dd-9298-a0aec8914e2a"/>
+                <ID name="papier" mc="Lifeline" uid="ce91eee3-6087-44a1-b6c7-9f509e55570b"/>
                 <PID name="Interaction" mc="Interaction" uid="48e4d1d9-3fb2-45dc-868b-7fe401a0faa6"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="" mc="ExecutionOccurenceSpecification" uid="8bf1924c-3681-47d4-98fb-911a3023af9b"/>
+          <ID name="" mc="ExecutionOccurenceSpecification" uid="20092891-07c9-4c07-b072-0076393dadbc"/>
           <PID name="Interaction" mc="Interaction" uid="48e4d1d9-3fb2-45dc-868b-7fe401a0faa6"/>
           <ATTRIBUTES>
-            <ATT name="LineNumber">633</ATT>
+            <ATT name="LineNumber">631</ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -2929,7 +2929,7 @@
         </OBJECT>
       </COMP>
       <COMP relation="Product">
-        <COMPID name="paintComponent-Diagramm" mc="SequenceDiagram" uid="8aff6119-fe59-4f63-ab82-f85fc7b3cb63"/>
+        <COMPID name="grafikEditor_Sequenzdiagramm" mc="SequenceDiagram" uid="8aff6119-fe59-4f63-ab82-f85fc7b3cb63"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>

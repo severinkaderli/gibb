@@ -6,6 +6,7 @@
     <COMPID name="PapierMouseListener" mc="Class" uid="c904dc55-b060-472b-b6d1-1f8016e7d7c7"/>
     <EXTID name="Graphics" mc="Class" uid="77b8f432-a260-4d12-bac7-943f11630780"/>
     <EXTID name="JPanel" mc="Class" uid="71f3ce9a-75f5-4d03-9f36-8295473ee170"/>
+    <EXTID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
     <FOREIGNID name="JavaAnnotation" mc="NoteType" uid="000c0b48-0000-3a6f-0000-000000000000"/>
     <FOREIGNID name="JavaAnnotation" mc="NoteType" uid="000c0b48-0000-3aa1-0000-000000000000"/>
     <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
@@ -448,6 +449,72 @@ if (zeichnung != null)
                 <PID name="Papier" mc="Class" uid="06790966-82f4-4596-9cec-dfb02376df4d"/>
               </REFOBJ>
             </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedEnd">
+        <OBJECT>
+          <ID name="zeichnung" mc="AssociationEnd" uid="dcf7600c-a047-4153-8d2f-ea26b65d71bf"/>
+          <PID name="Papier" mc="Class" uid="06790966-82f4-4596-9cec-dfb02376df4d"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[zeichnung]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="Zeichnung" mc="Class" uid="11b94eee-00de-4a44-bc75-34701e7d4f12"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="1f3e4cce-691d-4238-a3f1-2d7ec95941aa"/>
+                <PID name="Papier" mc="Class" uid="06790966-82f4-4596-9cec-dfb02376df4d"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="zeichnung" mc="AssociationEnd" uid="dcf7600c-a047-4153-8d2f-ea26b65d71bf"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="e70670c1-f9f5-4265-812f-798a000a0e09"/>
+                      <PID name="Papier" mc="Class" uid="06790966-82f4-4596-9cec-dfb02376df4d"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Association" uid="e70670c1-f9f5-4265-812f-798a000a0e09"/>
+            </COMP>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
