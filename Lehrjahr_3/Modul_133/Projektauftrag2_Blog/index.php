@@ -17,6 +17,7 @@
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/prism.js"></script>
     <style>
+    /*TODO: Put this css in an external file*/
     .container {
         max-width: 960px;
     }
@@ -28,20 +29,29 @@
             <h1>Severin Kaderli <small>Blog</small></h1>
         </div>
         <!-- Blog posts -->
-        <div class="post">
-            <header class="post__header">
-                <h1>Posttitel <small>10. November 2015</small></h1>
-            </header>
-            <div class="post__content">
+        <?php
+            //GET BLOG POSTS
+            $posts = $blog->getPosts();
+            print_r($posts);
+            foreach($posts as $post) {
+                var_dump($post);
+                echo "<div class'post'>";
+                    echo "<header class='post__header'>";
+                        echo "<h1>" . $post["title"] . " <small>" . $post["date"] . "</small></h1>";
+                    echo "</header>";
+                    echo "<div class='post__content'>";
+                        echo $post["content"];
+                    echo "</div>";
+                echo "</div>";
 
-            </div>
-        </div>
+
+            }
+        ?>
+        
         <?php 
             
 
-            //TODO: Test code for stuff
-            $sqlResult = $db->query("SELECT username, firstname, lastname FROM users");
-            var_dump($sqlResult->fetchArray(SQLITE3_ASSOC));
+            
         ?>
         <!-- Footer -->
         <footer>
