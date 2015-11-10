@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="snake_game" version="3">
+  <DEPS>
+    <ID name="snake_game" mc="Package" uid="cfa3f60a-100d-4110-8177-a6f130f0c6c0"/>
+    <COMPID name="Border" mc="Class" uid="0b82c8d0-28d2-4fb6-b451-3d94a3f3d97a"/>
+    <COMPID name="Diamond" mc="Class" uid="68d621c1-aa55-4bfb-9ca9-a07dc02ddcf6"/>
+    <COMPID name="Entity" mc="Class" uid="e4bbac8c-b3a1-400d-9f6e-32bbe2692b98"/>
+    <COMPID name="Klassen-Diagramm" mc="ClassDiagram" uid="6340005b-674f-499f-97b7-0bd71e898812"/>
+    <COMPID name="Snake" mc="Class" uid="0ad42f10-d24f-43c2-9972-de18c0b0bb3c"/>
+    <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="snake_game" mc="Package" uid="cfa3f60a-100d-4110-8177-a6f130f0c6c0"/>
+    <PID name="Snake_Game" mc="Project" uid="5ed8f7ba-fdbc-4585-84d1-d5e05c086329"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[snake_game]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Snake" mc="Class" uid="0ad42f10-d24f-43c2-9972-de18c0b0bb3c"/>
+        <COMPID name="Diamond" mc="Class" uid="68d621c1-aa55-4bfb-9ca9-a07dc02ddcf6"/>
+        <COMPID name="Border" mc="Class" uid="0b82c8d0-28d2-4fb6-b451-3d94a3f3d97a"/>
+        <COMPID name="Entity" mc="Class" uid="e4bbac8c-b3a1-400d-9f6e-32bbe2692b98"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Product">
+        <COMPID name="Klassen-Diagramm" mc="ClassDiagram" uid="6340005b-674f-499f-97b7-0bd71e898812"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
