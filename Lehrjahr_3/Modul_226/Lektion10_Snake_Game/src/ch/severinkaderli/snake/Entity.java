@@ -1,31 +1,25 @@
 package ch.severinkaderli.snake;
 
+import java.awt.Graphics;
+import java.awt.Rectangle;
+
 public abstract class Entity {
     protected boolean isAlive;
 
-    protected int x;
+    protected Rectangle position;
 
-    protected int y;
-
-    public void Entity() {
+    /**
+     * Creates the element at the specified position with
+     * the specified height and width
+     * 
+     * @param x
+     * @param y
+     * @param width
+     * @param height
+     */
+    public Entity(int x, int y, int width, int height) {
+    	this.position = new Rectangle(x, y, width, height);
     }
 
-    public abstract void draw();
-
-    int getX() {
-        return this.x;
-    }
-
-    void setX(int value) {
-        this.x = value;
-    }
-
-    int getY() {
-        return this.y;
-    }
-
-    void setY(int value) {
-        this.y = value;
-    }
-
+    public abstract void draw(Graphics g);
 }

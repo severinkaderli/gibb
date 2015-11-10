@@ -40,7 +40,7 @@ public class GUI extends JFrame {
   public GUI(Game game) {
     this.game= game;
     setSize(600, 400);
-    setTitle("Snake V4.0");
+    setTitle("Snake Game - Severin Kaderli");
     setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     setContentPane(spielfeld);
     setVisible(true);
