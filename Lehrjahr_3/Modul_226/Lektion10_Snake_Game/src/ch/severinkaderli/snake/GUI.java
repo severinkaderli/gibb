@@ -44,6 +44,7 @@ public class GUI extends JFrame {
     setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     setContentPane(spielfeld);
     setVisible(true);
+    setResizable(false);
   }
 
   /**
