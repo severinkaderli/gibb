@@ -1,3 +1,9 @@
+<?php
+    require_once("./class/DatabaseConnection.php");
+    require_once("./class/Blog.php");
+    $db = new DatabaseConnection("./blog.db");
+    $blog = new Blog($db);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,10 +37,11 @@
             </div>
         </div>
         <?php 
-            require_once("./class/Db.php")
-            $db = new DatabaseConnection();
+            
 
-            $db->exec('CREATE TABLE foo (bar STRING)');
+            //TODO: Test code for stuff
+            $sqlResult = $db->query("SELECT username, firstname, lastname FROM users");
+            var_dump($sqlResult->fetchArray(SQLITE3_ASSOC));
         ?>
         <!-- Footer -->
         <footer>
@@ -42,4 +49,4 @@
         </footer>
     </div> 
 </body>
-</html>r>
+</html>
