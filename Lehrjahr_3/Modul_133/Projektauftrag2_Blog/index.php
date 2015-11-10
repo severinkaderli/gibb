@@ -30,11 +30,16 @@
 
             </div>
         </div>
-    
+        <?php 
+            require_once("./class/Db.php")
+            $db = new DatabaseConnection();
+
+            $db->exec('CREATE TABLE foo (bar STRING)');
+        ?>
         <!-- Footer -->
         <footer>
             &copy;2015 - Severin Kaderli - <a href="https://github.com/severinkaderli">GitHub</a>
-        </foote
+        </footer>
     </div> 
 </body>
 </html>r>
