@@ -83,7 +83,7 @@ public class Papier extends JPanel {
 				break;
 			case CIRCLE:
 
-				// Calculate radius with the pythogeroas theorem
+				// Calculate radius with the pythogerean theorem
 				int dx = Math.abs(e.getX()) - x;
 				int dy = Math.abs(e.getY()) - y;
 				int radius = (int) Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));

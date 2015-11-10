@@ -11,12 +11,12 @@ public class Rechteck extends Figur {
 	/**
 	 * Breite des Rechtecks
 	 */
-	private int width;
+	protected int width;
 	
 	/**
 	 * Höhe des Rechtecks
 	 */
-	private int height;
+	protected int height;
 	
 	/**
 	 * @param x

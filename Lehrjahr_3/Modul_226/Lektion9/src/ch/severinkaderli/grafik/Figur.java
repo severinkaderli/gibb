@@ -2,6 +2,8 @@ package ch.severinkaderli.grafik;
 
 import java.awt.Graphics;
 
+import javax.naming.directory.InvalidAttributesException;
+
 /**
  * Die Klasse Figur dient als Erbgrundlage für alle anderen Figuren.
  * Sie wird nie selber initalisiert.
@@ -20,8 +22,8 @@ abstract public class Figur {
 	protected int y;
 	
 	/**
-	 * @param x
-	 * @param y
+	 * @param x X-Position der Figur
+	 * @param y Y-Position der Figur
 	 */
 	public Figur(int x, int y) {
 		this.x = x;
