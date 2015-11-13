@@ -34,3 +34,4 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
     * Blog
 * Modul 226
   * Buch & Arbeitsblätter Aufgaben
+* Spicker Abschlussprüfung
