@@ -33,5 +33,5 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
     * Formular-Validierung
     * Blog
 * Modul 226
-  * Buch & Arbeitsblätter Aufgaben
+  * Java-Programme
 * Spicker Abschlussprüfung
