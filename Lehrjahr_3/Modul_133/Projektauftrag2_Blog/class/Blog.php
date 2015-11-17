@@ -23,10 +23,8 @@ class Blog
      * @return array
      */
     function getPosts() {
-        $result = $this->db->query("SELECT * FROM posts");
-        
-        return $result->fetchArray(SQLITE3_ASSOC);
+        $result = $this -> db-> getResult("SELECT * FROM posts");
+
+        return $result;
     }
-
-
 }

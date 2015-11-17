@@ -32,12 +32,12 @@
         <?php
             //GET BLOG POSTS
             $posts = $blog->getPosts();
+
             print_r($posts);
             foreach($posts as $post) {
-                var_dump($post);
                 echo "<div class'post'>";
                     echo "<header class='post__header'>";
-                        echo "<h1>" . $post["title"] . " <small>" . $post["date"] . "</small></h1>";
+                        echo "<h1>" . $post["title"] . " <small>" . strftime("%d. %B %Y", $post["timestamp"]) . "</small></h1>";
                     echo "</header>";
                     echo "<div class='post__content'>";
                         echo $post["content"];

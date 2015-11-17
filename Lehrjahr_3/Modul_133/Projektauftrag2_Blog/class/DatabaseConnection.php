@@ -10,9 +10,23 @@ class DatabaseConnection extends SQLite3
      *
      * @param string $database
      */
-    function __construct($database)
+    public function __construct($database)
     {
         $this->open($database);
+    }
+
+    /**
+     * @param string $query
+     * @return array
+     */
+    public function getResult($query) {
+        $result = [];
+        $tmpResult = $this->query($query);
+        while($res = $tmpResult->fetchArray(SQLITE3_ASSOC)){
+            $result[] = $res;
+        }
+
+        return $result;
     }
 
 }
