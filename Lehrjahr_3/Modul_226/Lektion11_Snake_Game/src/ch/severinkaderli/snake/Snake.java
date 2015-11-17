@@ -3,6 +3,10 @@ package ch.severinkaderli.snake;
 import java.awt.Color;
 import java.awt.Graphics;
 
+/**
+ * 
+ * @author Severin Kaderli
+ */
 public class Snake extends Entity {
 
 	/**
@@ -93,10 +97,12 @@ public class Snake extends Entity {
 
 		// Collision detection and score handling?
 		game.getDiamonds().forEach((diamond) -> {
-			if(position.intersects(diamond.position)) {
+
+			if (position.intersects(diamond.position)) {
 				game.setScore(game.getScore() + diamond.value);
-				//Remove diamond
-				System.out.println("Intersection");
+
+				// Remove diamond
+				// game.removeDiamond(diamond);
 			}
 		});
 	}

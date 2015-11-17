@@ -4,6 +4,10 @@ import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+ * @author Severin Kaderli
+ */
 public class Game {
 
 	/**
@@ -42,9 +46,9 @@ public class Game {
 	final private int STEP_SIZE = 2;
 
 	/**
-	 * Anzahl der Ticks pro Sekunde
+	 * Länge eines Ticks
 	 */
-	final private int TICKS_PER_SECOND = 16;
+	final private int TICK_LENGTH = 16;
 
 	/**
 	 * Abstand vom Border zum Fensterrand.
@@ -105,7 +109,7 @@ public class Game {
 	 */
 	public void loop() {
 		try {
-			Thread.sleep(TICKS_PER_SECOND);
+			Thread.sleep(TICK_LENGTH);
 			snake.move(STEP_SIZE);
 			
 
@@ -122,6 +126,10 @@ public class Game {
 	 */
 	public List<Diamond> getDiamonds() {
 		return diamonds;
+	}
+	
+	public void removeDiamond(Diamond diamond) {
+		diamonds.remove(diamond);
 	}
 	
 	public void setScore(int score) {

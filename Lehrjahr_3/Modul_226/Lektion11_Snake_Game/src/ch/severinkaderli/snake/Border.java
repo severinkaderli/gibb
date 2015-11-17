@@ -2,6 +2,10 @@ package ch.severinkaderli.snake;
 
 import java.awt.Graphics;
 
+/**
+ * 
+ * @author Severin Kaderli
+ */
 public class Border extends Entity {
 
 	/**
