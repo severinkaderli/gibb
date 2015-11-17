@@ -1,4 +1,5 @@
 <?php
+    require_once("./config.php");
     require_once("./class/DatabaseConnection.php");
     require_once("./class/Blog.php");
     $db = new DatabaseConnection("./blog.db");
@@ -12,16 +13,11 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/prism.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 
     <!-- Scripts -->
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/prism.js"></script>
-    <style>
-    /*TODO: Put this css in an external file*/
-    .container {
-        max-width: 960px;
-    }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -32,12 +28,10 @@
         <?php
             //GET BLOG POSTS
             $posts = $blog->getPosts();
-
-            print_r($posts);
             foreach($posts as $post) {
                 echo "<div class'post'>";
                     echo "<header class='post__header'>";
-                        echo "<h1>" . $post["title"] . " <small>" . strftime("%d. %B %Y", $post["timestamp"]) . "</small></h1>";
+                        echo "<h1>" . $post["title"] . " <small>" . strftime(DATE_FORMAT, $post["timestamp"]) . "</small></h1>";
                     echo "</header>";
                     echo "<div class='post__content'>";
                         echo $post["content"];
