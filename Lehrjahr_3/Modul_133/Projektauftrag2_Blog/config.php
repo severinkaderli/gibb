@@ -1,5 +1,10 @@
 <?php
 
+define("__ROOT__", "/");
+
+/**
+ * Time and local related settings
+ */
 define("LOCALE", "de_DE");    
 define("TIMEZONE", "Europe/Zurich");
 define("DATE_FORMAT", "%d. %B %Y");

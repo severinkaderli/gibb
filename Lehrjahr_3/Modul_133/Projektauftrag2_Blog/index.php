@@ -1,9 +1,9 @@
 <?php
     require_once("./config.php");
-    require_once("./class/DatabaseConnection.php");
-    require_once("./class/Blog.php");
+    require_once("./core/Database/DatabaseConnection.php");
+    require_once("./core/Model/Model.php");
+    require_once("./core/Model/Post.php");
     $db = new DatabaseConnection("./blog.db");
-    $blog = new Blog($db);
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,29 +26,16 @@
         </div>
         <!-- Blog posts -->
         <?php
-            //GET BLOG POSTS
-            $posts = $blog->getPosts();
-            foreach($posts as $post) {
-                echo "<div class'post'>";
-                    echo "<header class='post__header'>";
-                        echo "<h1>" . $post["title"] . " <small>" . strftime(DATE_FORMAT, $post["timestamp"]) . "</small></h1>";
-                    echo "</header>";
-                    echo "<div class='post__content'>";
-                        echo $post["content"];
-                    echo "</div>";
-                echo "</div>";
-
-
-            }
-        ?>
-        
-        <?php 
             
-
             
+            $post = new Post();
+            $posts = $post->getAll();
+            echo "<pre>";
+                print_r($posts);
+            echo "</pre>";
         ?>
         <!-- Footer -->
-        <footer>
+        <footer id="footer">
             &copy;2015 - Severin Kaderli - <a href="https://github.com/severinkaderli">GitHub</a>
         </footer>
     </div> 
