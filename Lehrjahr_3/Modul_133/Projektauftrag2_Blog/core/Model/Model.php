@@ -5,13 +5,9 @@
 abstract class Model
 {
 
-    protected $db;
 
-    public function __construct() {
-        //TODO: Use constant for the db file
-        $this->db = new DatabaseConnection("./blog.db");
-    }
+    public function __construct() {}
 
-    abstract protected function find($id);
-    abstract protected function getAll();
+    abstract protected static function find($id);
+    abstract protected static function getAll();
 }

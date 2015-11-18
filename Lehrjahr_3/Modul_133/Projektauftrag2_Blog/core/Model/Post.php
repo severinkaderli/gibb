@@ -10,8 +10,6 @@ class Post extends Model
     public $content;
     public $fk_user_id;
     public $timestamp;
- 
-    protected $db;
 
     public function __construct()
     {
@@ -24,17 +22,18 @@ class Post extends Model
      * @param int $id
      * @return Post
      */
-    public function find($id) {
-        $result = $this -> db -> getResult("SELECT * FROM posts WHERE id=:id", ["id" => $id]);
+    public static function find($id) {
+        $result = DatabaseConnection::getResult("SELECT * FROM posts WHERE id=:id", ["id" => $id]);
         foreach($result as $post) {
-            $this->id = $post["id"];
-            $this->title = $post["title"];
-            $this->content = $post["content"];
-            $this->fk_user_id = $post["fk_user_id"];
-            $this->timestamp = $post["timestamp"];
+            $object = new Post();
+            $object->id = $post["id"];
+            $object->title = $post["title"];
+            $object->content = $post["content"];
+            $object->fk_user_id = $post["fk_user_id"];
+            $object->timestamp = $post["timestamp"];
         }
 
-        return $this;
+        return $object;
     }
 
     /**
@@ -42,9 +41,9 @@ class Post extends Model
      *
      * @return array
      */
-    public function getAll() {
+    public static function getAll() {
         $result = [];
-        $sqlResult = $this->db -> getResult("SELECT * FROM posts");
+        $sqlResult = DatabaseConnection::getResult("SELECT * FROM posts");
 
         foreach($sqlResult as $post) {
             $postObject = new Post();

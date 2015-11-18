@@ -1,9 +1,5 @@
 <?php
     require_once("./config.php");
-    require_once("./core/Database/DatabaseConnection.php");
-    require_once("./core/Model/Model.php");
-    require_once("./core/Model/Post.php");
-    $db = new DatabaseConnection("./blog.db");
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,8 +24,7 @@
         <?php
             
             
-            $post = new Post();
-            $posts = $post->getAll();
+            $posts = Post::find(1);
             echo "<pre>";
                 print_r($posts);
             echo "</pre>";
