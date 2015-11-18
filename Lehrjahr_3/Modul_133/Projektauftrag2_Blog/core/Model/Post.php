@@ -24,16 +24,15 @@ class Post extends Model
      */
     public static function find($id) {
         $result = DatabaseConnection::getResult("SELECT * FROM posts WHERE id=:id", ["id" => $id]);
-        foreach($result as $post) {
-            $object = new Post();
-            $object->id = $post["id"];
-            $object->title = $post["title"];
-            $object->content = $post["content"];
-            $object->fk_user_id = $post["fk_user_id"];
-            $object->timestamp = $post["timestamp"];
-        }
 
-        return $object;
+        $postObject = new Post();
+        $postObject->id = $result[0]["id"];
+        $postObject->title = $result[0]["title"];
+        $postObject->content = $result[0]["content"];
+        $postObject->fk_user_id = $result[0]["fk_user_id"];
+        $postObject->timestamp = $result[0]["timestamp"];
+
+        return $postObject;
     }
 
     /**
