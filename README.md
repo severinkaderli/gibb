@@ -31,7 +31,7 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
   * JS- & PHP-Programme
   * Projekte
     * Formular-Validierung
-    * Blog
+    * PHP-Blog
 * Modul 226
   * Java-Programme
 * Spicker Abschlussprüfung
