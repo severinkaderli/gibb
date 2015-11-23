@@ -18,6 +18,47 @@ class User extends Model
     }
 
     /**
+     * Checks whether a user is logged in or not
+     *
+     * @return bool
+     */
+    public static function auth() {
+
+    	if(isset($_SESSION["user"]["logged_in"]) && $_SESSION["user"]["logged_in"] === true) {
+    		return true;
+    	}
+
+    	return false;
+    }
+
+    /**
+     * Try to login with a user
+     *
+     * @return bool
+     */
+    public function login() {
+
+    	$checkUser = User::getByUsername($this->username);
+    	if(password_verify($this->password, $checkUser->password)) {
+    		return true;
+    	}
+    	
+
+    	return false;
+    }
+
+    /**
+     * Save the user data in db
+     */
+    public function register() {
+    	DatabaseConnection::getResult("INSERT INTO users(username, password, firstname, lastname, isAdmin) VALUES(:username, :password, :firstname, :lastname, 0)",
+    									["username" => $this->username,
+    									"password" => password_hash($this->password),
+    									"firstname" => $this->firstname,
+    									"lastname" => $this->lastname]);
+    }
+
+    /**
      * Finds and returns an User by its id
      *
      * @param int $id
@@ -25,7 +66,6 @@ class User extends Model
      */
     public static function find($id) {
         $result = DatabaseConnection::getResult("SELECT * FROM users WHERE id=:id", ["id" => $id]);
-        var_dump($result);
 
         $userObject = new User();
         $userObject->id = $result[0]["id"];
@@ -60,6 +100,26 @@ class User extends Model
         }
 
         return $result;
+    }
+
+    /**
+     * Return an user by its username
+     *
+     * @param string $username
+     * @return User
+     */
+    public static function getByUsername($username) {
+    	$result = DatabaseConnection::getResult("SELECT * FROM users WHERE username=:username", ["username" => $username]);
+
+    	$userObject = new User();
+        $userObject->id = $result[0]["id"];
+        $userObject->username = $result[0]["username"];
+        $userObject->password = $result[0]["password"];
+        $userObject->firstname = $result[0]["firstname"];
+        $userObject->lastname = $result[0]["lastname"];
+        $userObject->isAdmin = $result[0]["isAdmin"];
+
+        return $userObject;
     }
 
 
