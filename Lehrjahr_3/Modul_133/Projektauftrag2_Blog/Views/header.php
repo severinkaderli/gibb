@@ -20,7 +20,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><?php echo SITE_TITLE; ?></a>
+				<a class="navbar-brand" href="./"><?php echo SITE_TITLE; ?></a>
 			</div>
 			<div class="collapse navbar-collapse" id="navbar">
 				<ul class="nav navbar-nav">
@@ -31,22 +31,6 @@
 	</nav>
 
 	<div class="container">
-	    <div class="page-header">
-	        <h1>Severin Kaderli <small>Blog</small></h1>
-	    </div>
-	    <!-- Blog posts -->
-	    <?php
-	        
-	        
-	        $posts = User::find(1);
-	        echo "<pre>";
-	            print_r($posts);
-	        echo "</pre>";
-	    ?>
-	    <!-- Footer -->
-	    <footer id="footer">
-	        &copy;2015 - Severin Kaderli - <a href="https://github.com/severinkaderli">GitHub</a>
-	    </footer>
-	</div> 
-</body>
-</html>
+	    <!-- Main Content -->
+
+	   

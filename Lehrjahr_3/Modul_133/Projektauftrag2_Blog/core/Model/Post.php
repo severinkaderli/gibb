@@ -20,11 +20,13 @@ class Post extends Model
      * Finds and returns an Post by its id
      *
      * @param int $id
-     * @return Post
+     * @return mixed
      */
     public static function find($id) {
         $result = DatabaseConnection::getResult("SELECT * FROM posts WHERE id=:id", ["id" => $id]);
-
+        if(empty($result)) {
+            return null;
+        }
         $postObject = new Post();
         $postObject->id = $result[0]["id"];
         $postObject->title = $result[0]["title"];
@@ -38,7 +40,7 @@ class Post extends Model
     /**
      * Return all posts as an array
      *
-     * @return array
+     * @return mixed
      */
     public static function getAll() {
         $result = [];
