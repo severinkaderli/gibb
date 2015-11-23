@@ -24,7 +24,7 @@
         <?php
             
             
-            $posts = Post::find(1);
+            $posts = User::find(1);
             echo "<pre>";
                 print_r($posts);
             echo "</pre>";
