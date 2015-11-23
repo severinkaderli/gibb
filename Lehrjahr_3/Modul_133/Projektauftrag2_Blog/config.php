@@ -2,6 +2,9 @@
 
 define("__ROOT__", "/");
 
+define("SITE_TITLE", "Blog");
+define("SITE_AUTHOR", "Severin Kader");
+
 /**
  * Time and local related settings
  */
