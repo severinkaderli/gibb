@@ -24,4 +24,6 @@
 	echo "</div>";
 
 	//Display comments
+	//$comments = Comment::getByPostId($post->id);
+	//Only show add comment if logged in
 ?>

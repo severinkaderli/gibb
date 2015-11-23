@@ -8,11 +8,12 @@
 	<link rel="stylesheet" type="text/css" href="./css/prism.css">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<!-- Scripts -->
+	<script src="./js/jquery-2.1.4.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/prism.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-inverse">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
@@ -24,7 +25,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="navbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
 				</ul>
 			</div>
 		</div>
