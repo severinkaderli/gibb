@@ -19,7 +19,23 @@ public abstract class Entity {
 	 */
 	public Entity(int x, int y, int width, int height) {
 		this.position = new Rectangle(x, y, width, height);
+		isAlive = true;
 	}
 
+	/**
+	 * Destroys an entity
+	 */
+	public void destroy() {
+		isAlive = false;
+	}
+	
+	/**
+	 * "Revives" an entity
+	 */
+	public void revive() {
+		isAlive = true;
+	}
+	
 	public abstract void draw(Graphics g);
+	
 }

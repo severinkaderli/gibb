@@ -46,7 +46,7 @@ public class GUI extends JFrame {
 		this.game = game;
 		setSize(600, 400);
 		setTitle("Snake Game - Severin Kaderli");
-		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setContentPane(spielfeld);
 		setVisible(true);
 		setResizable(false);
@@ -77,7 +77,7 @@ public class GUI extends JFrame {
 
 			// Change the direction of the snake
 			switch (e.getKeyCode()) {
-			default:
+			
 			case KeyEvent.VK_UP:
 				game.snake.setDirection(Direction.UP);
 				break;
@@ -90,7 +90,12 @@ public class GUI extends JFrame {
 			case KeyEvent.VK_RIGHT:
 				game.snake.setDirection(Direction.RIGHT);
 				break;
+			
+			default:
+				break;
 			}
+			
+			
 		}
 	}
 }

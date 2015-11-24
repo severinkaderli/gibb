@@ -14,12 +14,22 @@ public class Game {
 	 * Die Schlange, die man Steuert.
 	 */
 	public Snake snake;
-	
+
 	/**
 	 * Der Rahmen des Spielfeldes
 	 */
 	public Border border;
 	
+	/**
+	 * Das Spielfeld
+	 */
+	public GUI gui;
+	
+	/**
+	 * Aktueller Zustand, ob das Spiel am laufen ist.
+	 */
+	private boolean isRunning = true;
+
 	/**
 	 * Die aktuelle Punktzahl
 	 */
@@ -34,7 +44,7 @@ public class Game {
 	 * Anzahl der Diamanten, die auf dem Feld erschienen sollen.
 	 */
 	final private int NUMBER_OF_DIAMONDS = 10;
-	
+
 	/**
 	 * Radius der Diamanten
 	 */
@@ -43,7 +53,7 @@ public class Game {
 	/**
 	 * Schrittweite, um die sich die Schlange bei jedem Tick bewegt.
 	 */
-	final private int STEP_SIZE = 2;
+	final private int STEP_SIZE = 5;
 
 	/**
 	 * Länge eines Ticks
@@ -63,8 +73,14 @@ public class Game {
 	public void draw(Graphics g) {
 		border.draw(g);
 		snake.draw(g);
-		diamonds.forEach(diamond -> diamond.draw(g));
-		g.drawString(String.valueOf(score),10, 10);
+
+		diamonds.forEach((diamond) -> {
+			if (diamond.isAlive) {
+				diamond.draw(g);
+			}
+		});
+
+		g.drawString(String.valueOf(score), 10, 10);
 	}
 
 	/**
@@ -74,7 +90,7 @@ public class Game {
 	public Game() {
 
 		// Das Spielbrett initialisieren
-		GUI gui = new GUI(this);
+		gui = new GUI(this);
 
 		// Spielbegrenzung einfügen
 		int borderWidth = gui.getBreite() - 2 * AREA_PADDING;
@@ -86,17 +102,18 @@ public class Game {
 		for (int i = 0; i < NUMBER_OF_DIAMONDS; i++) {
 			int value = Zufallsgenerator.zufallszahl(1, 5);
 			int x = Zufallsgenerator.zufallszahl(AREA_PADDING, AREA_PADDING
-					+ borderWidth-DIAMOND_RADIUS);
+					+ borderWidth - DIAMOND_RADIUS);
 			int y = Zufallsgenerator.zufallszahl(AREA_PADDING, AREA_PADDING
-					+ borderHeight-DIAMOND_RADIUS);
-			diamonds.add(new Diamond(x, y, DIAMOND_RADIUS, DIAMOND_RADIUS, value));
+					+ borderHeight - DIAMOND_RADIUS);
+			diamonds.add(new Diamond(x, y, DIAMOND_RADIUS, DIAMOND_RADIUS,
+					value));
 		}
 
 		// Add snake
 		snake = new Snake(300, 100, 10, 10, this);
 
 		// Main Game Loop
-		while (true) {
+		while (isRunning) {
 			loop();
 			gui.repaint();
 		}
@@ -111,14 +128,31 @@ public class Game {
 		try {
 			Thread.sleep(TICK_LENGTH);
 			snake.move(STEP_SIZE);
-			
+			checkCollision();
 
 			// Read key strokes and change direction of snake
 		} catch (InterruptedException e) {
 
 		}
 	}
-	
+
+	/**
+	 * Überprüft, ob es irgendwelche Kollisionen gibt.
+	 */
+	public void checkCollision() {
+		snake.checkCollision();
+	}
+
+	/**
+	 * Beendet die aktuelle Spielpartie und zeigt den Status in der Titelleiste
+	 * an.
+	 */
+	public void end() {
+		isRunning = false;
+		gui.setTitle("End of game");
+		
+	}
+
 	/**
 	 * Gibt die Liste der aktuellen Diamanten zurück.
 	 * 
@@ -127,15 +161,15 @@ public class Game {
 	public List<Diamond> getDiamonds() {
 		return diamonds;
 	}
-	
+
 	public void removeDiamond(Diamond diamond) {
 		diamonds.remove(diamond);
 	}
-	
+
 	public void setScore(int score) {
 		this.score = score;
 	}
-	
+
 	public int getScore() {
 		return score;
 	}

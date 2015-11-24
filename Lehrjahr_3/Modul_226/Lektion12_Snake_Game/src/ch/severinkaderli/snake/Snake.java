@@ -94,16 +94,30 @@ public class Snake extends Entity {
 			position.y += stepSize;
 			break;
 		}
+	}
 
-		// Collision detection and score handling?
+	/**
+	 * Überprüft Kollisionen
+	 */
+	public void checkCollision() {
+
+		// Collision detection with the Snake
 		game.getDiamonds().forEach((diamond) -> {
+			if (diamond.isAlive) {
+				if (position.intersects(diamond.position)) {
 
-			if (position.intersects(diamond.position)) {
-				game.setScore(game.getScore() + diamond.value);
+					game.setScore(game.getScore() + diamond.value);
 
-				// Remove diamond
-				// game.removeDiamond(diamond);
+					// Remove diamond
+					diamond.destroy();
+				}
 			}
 		});
+		
+		//Collision with the border
+		if(!position.intersects(game.border.position)) {
+			game.end();
+			System.out.println("Out of area");
+		}
 	}
 }
