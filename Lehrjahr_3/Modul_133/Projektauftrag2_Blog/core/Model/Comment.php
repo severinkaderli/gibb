@@ -1,1 +1,83 @@
 <?php
+
+/**
+* @author Severin Kaderli
+*/
+class Comment extends Model
+{
+    public $id;
+    public $comment;
+    public $fk_post_id;
+    public $fk_user_id;
+
+    public function __construct()
+    {
+       parent::__construct();
+    }
+
+    /**
+     * Finds and returns an Post by its id
+     *
+     * @param int $id
+     * @return mixed
+     */
+    public static function find($id) {
+        $result = DatabaseConnection::getResult("SELECT * FROM posts WHERE id=:id", ["id" => $id]);
+        if(empty($result)) {
+            return null;
+        }
+        $commentObject = new Comment();
+        $commentObject->id = $result[0]["id"];
+        $commentObject->comment = $result[0]["comment"];
+        $commentObject->fk_post_id = $result[0]["fk_post_id"];
+        $commentObject->fk_user_id = $result[0]["fk_user_id"];
+
+        return $commentObject;
+    }
+
+    /**
+     * Return all posts as an array
+     *
+     * @return mixed
+     */
+    public static function getAll() {
+        $result = [];
+        $sqlResult = DatabaseConnection::getResult("SELECT * FROM posts");
+
+        foreach($sqlResult as $comment) {
+            $commentObject = new Comment();
+            $commentObject->id = $result["id"];
+            $commentObject->comment = $result["comment"];
+            $commentObject->fk_post_id = $result["fk_post_id"];
+            $commentObject->fk_user_id = $result["fk_user_id"];
+
+            $result[] = $commentObject;
+        }
+
+        return $result;
+    }
+
+    /**
+     * Return comments by post id
+     *
+     * @param int $postId
+     * @return mixed
+     */
+    public static function getByPostId($postId) {
+        $result = [];
+        $sqlResult = DatabaseConnection::getResult("SELECT * FROM comments WHERE fk_post_id=:postId", ["postId" => $postId]);
+
+        foreach($sqlResult as $comment) {
+            $commentObject = new Comment();
+            $commentObject->id = $comment["id"];
+            $commentObject->comment = $comment["comment"];
+            $commentObject->fk_post_id = $comment["fk_post_id"];
+            $commentObject->fk_user_id = $comment["fk_user_id"];
+
+            $result[] = $commentObject;
+        }
+
+        return $result;
+    }
+
+}

@@ -20,6 +20,7 @@ require_once("./core/Database/DatabaseConnection.php");
 require_once("./core/Model/Model.php");
 require_once("./core/Model/Post.php");
 require_once("./core/Model/User.php");
+require_once("./core/Model/Comment.php");
 
 
 DatabaseConnection::init("./blog.db");

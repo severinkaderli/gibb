@@ -5,3 +5,12 @@
 #footer {
     text-align: center;
 }
+
+.post {
+    border-bottom: 1px dotted black;
+}
+
+.comment__header {
+    font-size: 1.1em;
+    font-weight: bold;
+}
