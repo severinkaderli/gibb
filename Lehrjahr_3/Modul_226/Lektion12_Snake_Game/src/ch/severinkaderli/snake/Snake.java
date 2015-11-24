@@ -65,7 +65,16 @@ public class Snake {
 	 * @param direction
 	 */
 	public void changeDirection(Direction direction) {	
-		head.direction = direction;
+		
+		//Check if the direction is possible
+		//Todo: add correct checking constraints
+		if(!(head.direction == Direction.LEFT && direction == Direction.RIGHT)
+			&& !(head.direction == Direction.RIGHT && direction == Direction.LEFT)
+			&& !(head.direction == Direction.UP && direction == Direction.DOWN)
+			&& !(head.direction == Direction.DOWN && direction == Direction.UP)) {
+			head.direction = direction;
+		}
+		
 	}
 
 
