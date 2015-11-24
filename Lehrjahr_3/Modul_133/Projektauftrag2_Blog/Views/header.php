@@ -25,7 +25,14 @@
 			</div>
 			<div class="collapse navbar-collapse" id="navbar">
 				<ul class="nav navbar-nav">
-					<li><a href="#">Link</a></li>
+					<?php 
+						if(User::auth()) {
+							echo "<li><a href='logout.php'>Logout</a></li>";
+						} else {
+							echo "<li><a href='login.php'>Login</a></li>";
+							echo "<li><a href='register.php'>Registrieren</a></li>";
+						}
+					?>
 				</ul>
 			</div>
 		</div>
