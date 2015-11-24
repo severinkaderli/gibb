@@ -1,5 +1,8 @@
 <?php
 
+//Start session
+session_start();
+
 define("__ROOT__", "/");
 
 define("SITE_TITLE", "Blog");

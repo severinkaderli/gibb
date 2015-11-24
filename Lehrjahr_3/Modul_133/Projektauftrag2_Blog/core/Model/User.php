@@ -57,9 +57,16 @@ class User extends Model
      * Save the user data in db
      */
     public function register() {
+
+        if(User::exists($this->username)) {
+            //show message or something
+            header("Location: register.php");
+            exit();
+        }
+
     	DatabaseConnection::getResult("INSERT INTO users(username, password, firstname, lastname, isAdmin) VALUES(:username, :password, :firstname, :lastname, 0)",
     									["username" => $this->username,
-    									"password" => password_hash($this->password),
+    									"password" => password_hash($this->password, PASSWORD_BCRYPT),
     									"firstname" => $this->firstname,
     									"lastname" => $this->lastname]);
     }
@@ -126,6 +133,23 @@ class User extends Model
         $userObject->isAdmin = $result[0]["isAdmin"];
 
         return $userObject;
+    }
+
+    /**
+     * Checks if an user already exists
+     *
+     * @param string $username
+     * @return bool
+     */
+    public static function exists($username) {
+
+        $result = DatabaseConnection::getResult("SELECT * FROM users WHERE username=:username", ["username" => $username]);
+
+        if(!empty($result)) {
+            return true;
+        }
+
+        return false;
     }
 
 

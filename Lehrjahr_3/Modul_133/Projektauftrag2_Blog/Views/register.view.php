@@ -1,5 +1,5 @@
 <h1>Registrieren</h1>
-<form method="POST" action="">
+<form method="POST" action="register.php">
     <div class="form-group">
         <label for="username">Benutzername</label>
         <input type="text" name="username" id="username" class="form-control">
@@ -21,6 +21,6 @@
         <input type="password" name="password_confirmation" id="password_confirmation" class="form-control">
     </div>
     <div class="form-group">
-        <input type="submit" value="Registrieren" class="btn btn-default">
+        <input type="submit" name="registerSubmit" value="Registrieren" class="btn btn-default">
     </div>
 </form>

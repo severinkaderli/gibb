@@ -51,7 +51,7 @@
 
 	//Only show add comment if logged in
 	echo "<h3>Kommentar verfassen</h3>";
-	//if(User::auth()) {
+	if(User::auth()) {
 		
 		echo "<form method='POST' action=''>";
 			echo "<div class='form-group'>";
@@ -61,7 +61,7 @@
 				echo "<input type='submit' class='btn btn-default' value='Kommentar absenden'>";
 			echo "</div>";
 		echo "</form>";
-	//} else {
-		//echo "<p>Sie müssen eingeloggt sein, um einen Kommentar zu verfassen!</p>";
-	//}
+	} else {
+		echo "<p>Sie müssen eingeloggt sein, um einen Kommentar zu verfassen!</p>";
+	}
 ?>
