@@ -7,8 +7,6 @@ import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import ch.severinkaderli.snake.Snake.Direction;
-
 /**
  * Die Klasse GUI stellt das Fenster (JFrame) und das Spielfeld (JPanel) des
  * Snake-Spiels zur Verfügung.

@@ -19,12 +19,12 @@ public class Game {
 	 * Der Rahmen des Spielfeldes
 	 */
 	public Border border;
-	
+
 	/**
 	 * Das Spielfeld
 	 */
 	public GUI gui;
-	
+
 	/**
 	 * Aktueller Zustand, ob das Spiel am laufen ist.
 	 */
@@ -53,12 +53,12 @@ public class Game {
 	/**
 	 * Schrittweite, um die sich die Schlange bei jedem Tick bewegt.
 	 */
-	final private int STEP_SIZE = 5;
+	final private int STEP_SIZE = 2;
 
 	/**
 	 * Länge eines Ticks
 	 */
-	final private int TICK_LENGTH = 16;
+	final private int TICK_LENGTH = 100;
 
 	/**
 	 * Abstand vom Border zum Fensterrand.
@@ -110,7 +110,7 @@ public class Game {
 		}
 
 		// Add snake
-		snake = new Snake(300, 100, 10, 10, this);
+		snake = new Snake(300, 100, this);
 
 		// Main Game Loop
 		while (isRunning) {
@@ -150,7 +150,7 @@ public class Game {
 	public void end() {
 		isRunning = false;
 		gui.setTitle("End of game");
-		
+
 	}
 
 	/**
