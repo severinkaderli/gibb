@@ -41,14 +41,12 @@ class User extends Model
     	$checkUser = User::getByUsername($this->username);
     	if(password_verify($this->password, $checkUser->password)) {
 
-
     		$_SESSION["user"]["logged_in"] = true;
     		$_SESSION["user"]["id"] = $checkUser->id;
     		$_SESSION["user"]["username"] = $this->username;
 
     		return true;
-    	}
-    	
+    	}	
 
     	return false;
     }

@@ -24,6 +24,12 @@
 				<a class="navbar-brand" href="./"><?php echo SITE_TITLE; ?></a>
 			</div>
 			<div class="collapse navbar-collapse" id="navbar">
+				<?php 
+					if(User::auth()) {
+						echo "<p class='navbar-text'>Eingeloggt als " . $_SESSION['user']['username'] . "</p>";
+					}	
+				?>
+				
 				<ul class="nav navbar-nav">
 					<?php 
 						if(User::auth()) {

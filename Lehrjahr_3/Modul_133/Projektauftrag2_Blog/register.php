@@ -1,8 +1,14 @@
 <?php
     require_once("./config.php");
+    if(User::auth()) {
+        header("Location: index.php");
+        exit();
+    }
 
     //Process registering process
     if(isset($_POST["registerSubmit"])) {
+
+        var_dump("stupid sthit");
 
         //Todo: Validation of user input and sanitation.
         $user = new User();
