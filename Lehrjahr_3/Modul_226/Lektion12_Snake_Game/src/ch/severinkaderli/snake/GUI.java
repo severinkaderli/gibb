@@ -77,16 +77,16 @@ public class GUI extends JFrame {
 			switch (e.getKeyCode()) {
 			
 			case KeyEvent.VK_UP:
-				game.snake.setDirection(Direction.UP);
+				game.snake.changeDirection(Direction.UP);
 				break;
 			case KeyEvent.VK_DOWN:
-				game.snake.setDirection(Direction.DOWN);
+				game.snake.changeDirection(Direction.DOWN);
 				break;
 			case KeyEvent.VK_LEFT:
-				game.snake.setDirection(Direction.LEFT);
+				game.snake.changeDirection(Direction.LEFT);
 				break;
 			case KeyEvent.VK_RIGHT:
-				game.snake.setDirection(Direction.RIGHT);
+				game.snake.changeDirection(Direction.RIGHT);
 				break;
 			
 			default:

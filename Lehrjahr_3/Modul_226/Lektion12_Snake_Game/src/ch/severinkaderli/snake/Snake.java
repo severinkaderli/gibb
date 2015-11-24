@@ -46,6 +46,7 @@ public class Snake {
 		body.add(new SnakePart(x+BODY_SIZE, y, BODY_SIZE, BODY_SIZE, Direction.LEFT));
 		body.add(new SnakePart(x+BODY_SIZE*2, y, BODY_SIZE, BODY_SIZE, Direction.LEFT));
 		body.add(new SnakePart(x+BODY_SIZE*3, y, BODY_SIZE, BODY_SIZE, Direction.LEFT));
+		body.add(new SnakePart(x+BODY_SIZE*4, y, BODY_SIZE, BODY_SIZE, Direction.LEFT));
 		
 		this.game = game;
 	}
@@ -63,11 +64,8 @@ public class Snake {
 	 * 
 	 * @param direction
 	 */
-	public void setDirection(Direction direction) {
-		
+	public void changeDirection(Direction direction) {	
 		head.direction = direction;
-		
-		System.out.println("Changed direction");
 	}
 
 
@@ -110,23 +108,37 @@ public class Snake {
 	 */
 	public void checkCollision() {
 
-		/*// Collision detection with the Snake
-		game.getDiamonds().forEach((diamond) -> {
-			if (diamond.isAlive) {
-				if (position.intersects(diamond.position)) {
 
-					game.setScore(game.getScore() + diamond.value);
+			
+			//Collision with diamonds
+			game.getDiamonds().forEach((diamond) -> {
+				if (diamond.isAlive) {
+					if (head.position.intersects(diamond.position)) {
 
-					// Remove diamond
-					diamond.destroy();
+						game.setScore(game.getScore() + diamond.value);
+
+						// Remove diamond
+						diamond.destroy();
+					}
 				}
+			});
+			
+			//Collision with itself
+			body.forEach((part) -> {
+				if(head.position.intersects(part.position)) {
+					game.end();
+					System.out.println("Touch itself");
+				}
+			
+			});
+				
+			//Collision with the border
+			if(!head.position.intersects(game.border.position)) {
+				game.end();
+				System.out.println("Out of area");
 			}
-		});
 		
-		//Collision with the border
-		if(!position.intersects(game.border.position)) {
-			game.end();
-			System.out.println("Out of area");
-		}*/
+		
+		
 	}
 }
