@@ -33,5 +33,5 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
     * Formularvalidierung
     * PHP-Blog mit SQLite Datenbank
 * Modul 226
-  * Java-Programme aus Arbeitsblätter
+  * Java-Programme aus Arbeitsblätter & Buch
 * Spicker Abschlussprüfung
