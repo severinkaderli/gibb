@@ -30,7 +30,7 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
 * Modul 133
   * JS- & PHP-Programme aus Arbeitsblätter
   * Projekte
-    * Formularvalidierung mit Javascript & HTML5
+    * Formularvalidierung mit Javascript, jQuery & HTML5
     * PHP-Blog mit SQLite Datenbank
 * Modul 226
   * Java-Programme aus Arbeitsblätter & Buch
