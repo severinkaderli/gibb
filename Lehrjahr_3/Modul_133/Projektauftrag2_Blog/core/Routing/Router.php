@@ -105,8 +105,8 @@ class Router
         $requestMethod = $_SERVER["REQUEST_METHOD"];
 
         //Strip base path and query string from the request url
-        $requestUrl = str_replace($this->basePath, "", $requestUrl);
-        echo $requestUrl;
+        $requestUrl = rtrim(str_replace($this->basePath, "", $requestUrl), "/");
+
         if ($strpos = strpos($requestUrl, "?") !== false) {
             $requestUrl = substr($requestUrl, 0, $strpos);
         }
@@ -129,7 +129,7 @@ class Router
 
             //Check if the a route matches the current route
             $matchRoute = false;
-            $routePattern = preg_replace("/{[A-Za-z0-9]+}/", "(?P<parameter>[A-Za-z0-9]+)", $route["route"]);
+            $routePattern = preg_replace("/{[A-Za-z0-9]+}/", "(?P<parameter>[0-9]+)", $route["route"]);
             $routePattern = str_replace("/", '\/', $routePattern);
             $routePattern = "/^" . $routePattern . "$/";
 
@@ -142,37 +142,48 @@ class Router
             //Try to call the callback function
             if ($matchMethod && $matchRoute) {
 
+                $returnArray = [];
+                $returnArray["parameter"] = isset($routeParameter["parameter"]) ? $routeParameter["parameter"] : null;
+
                 if ($route["callback"] instanceof Closure) {
-                    return [$route["callback"]];
+
+                    $returnArray["type"] = "Closure";
+                    $returnArray["function"] = $route["callback"];
+                    return $returnArray;
                 }
 
                 //If the callback is a string try to call the right method
                 if (is_string($route["callback"])) {
 
+                    $returnArray["type"] = "Controller";
+
                     $controllerCallback = explode("@", $route["callback"]);
                     if (count($controllerCallback) !== 2) {
-                        //throw new IllegalCallbackException();
+                        return ["type" => "error"];
                     }
 
                     //Get controller name and method from callback string
-                    $controllerName = $controllerCallback[0];
+                    $controllerName = "Core\\Controller\\" . $controllerCallback[0];
                     $controllerMethod = $controllerCallback[1];
 
                     //Check if the controller exists
                     if (!class_exists($controllerName)) {
-                        throw new ClassNotFoundException($controllerName);
+                        return ["type" => "error"];
                     }
 
                     //Check if the method exists
                     if (!method_exists($controllerName, $controllerMethod)) {
-                        //throw new MethodNotFoundException($controllerMethod, $controllerName);
+                        return ["type" => "error"];
                     }
 
-                    return [$controllerName, $controllerMethod, $routeParameter];
+                    $returnArray["controller"] = $controllerName;
+                    $returnArray["method"] = $controllerMethod;
+
+                    return $returnArray;
                 }
             }
         }
 
-        return [];
+        return ["type" => "error"];
     }
 }

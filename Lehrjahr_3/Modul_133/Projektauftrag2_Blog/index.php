@@ -1,11 +1,19 @@
 <?php
 require_once("./config.php");
 
+/**
+ * This file is used to set up the bootstrapping using routes.
+ */
 $router = new Core\Routing\Router();
 $router->setBasePath(str_replace("http://" . $_SERVER['SERVER_NAME'], "", BASE_DIR));
 
-$router->addRoute("GET", "/", "Core\\Controller\\PostController@index");
-$router->addRoute("GET", "/{page}", "Core\\Controller\\PostController@show");
+$router->addRoute("GET", "", "PostController@index");
+$router->addRoute("GET", "/{page}", "PostController@index");
+$router->addRoute("GET", "/post/{postId}", "PostController@show");
+
+$router->addRoute("GET", "/test", function() {
+    return "test";
+});
 
 $match = $router->dispatch();
 
@@ -22,11 +30,16 @@ switch($match["type"]) {
 
     case "Controller":
         $controller = new $match["controller"]();
-        echo $controller->$match["method"]();
+        if(is_null($match["parameter"])) {
+            echo $controller->$match["method"]();
+        } else {
+            echo $controller->$match["method"]($match["parameter"]);
+        }
+
         break;
 
     case "Error":
         echo $match["error"];
         break;
 }
-require_once(__ROOT__ . "Templates/index.view.php");
+
