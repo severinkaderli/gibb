@@ -1,10 +1,17 @@
 <?php
-
-//Start session
+/**
+ * Starting the session
+ */
 session_start();
 
-define("__ROOT__", "/");
+/**
+ * Path related settings
+ */
+define("__ROOT__", __DIR__ . "/");
 
+/**
+ * Site related settings
+ */
 define("SITE_TITLE", "Blog");
 define("SITE_AUTHOR", "Severin Kaderli");
 
@@ -26,4 +33,4 @@ require_once("./core/Model/User.php");
 require_once("./core/Model/Comment.php");
 
 
-DatabaseConnection::init("./blog.db");
+DatabaseConnection::init(__ROOT__ . "Database/blog.db");

@@ -1,27 +1,26 @@
 <?php
-    require_once("./config.php");
-    if(User::auth()) {
-        header("Location: index.php");
-        exit();
-    }
+require_once("./config.php");
 
-    //Process registering process
-    if(isset($_POST["registerSubmit"])) {
+if (User::auth()) {
+    header("Location: index.php");
+    exit();
+}
 
-        var_dump("stupid sthit");
+//Process registering process
+if (isset($_POST["registerSubmit"])) {
 
-        //Todo: Validation of user input and sanitation.
-        $user = new User();
-        $user -> username = $_POST["username"];
-        $user -> firstname = $_POST["firstname"];
-        $user -> lastname = $_POST["lastname"];
-        $user -> password = $_POST["password"];
-        $user -> isAdmin = 0;
+    die("stupid sthit");
 
-        $user->register();
-        $user->login();
-    }
+    //Todo: Validation of user input and sanitation.
+    $user = new User();
+    $user->username = $_POST["username"];
+    $user->firstname = $_POST["firstname"];
+    $user->lastname = $_POST["lastname"];
+    $user->password = $_POST["password"];
+    $user->isAdmin = 0;
 
-    require_once("./Views/header.php");
-    require_once("./Views/register.view.php");
-    require_once("./Views/footer.php");
+    $user->register();
+    $user->login();
+}
+
+require_once(__ROOT__ . "Templates/register.view.php");
