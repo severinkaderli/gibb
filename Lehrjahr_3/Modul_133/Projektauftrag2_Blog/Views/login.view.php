@@ -1,4 +1,4 @@
-<?php require_once(__ROOT__ . "Templates/Partials/header.php"); ?>
+<?php require_once(__ROOT__ . "Views/Partials/header.php"); ?>
     <h1>Login</h1>
     <form method="POST" action="login.php">
         <div class="form-group">
@@ -13,4 +13,4 @@
             <input type="submit" name="loginSubmit" value="Login" class="btn btn-default">
         </div>
     </form>
-<?php require_once(__ROOT__ . "Templates/Partials/footer.php"); ?>
+<?php require_once(__ROOT__ . "Views/Partials/footer.php"); ?>

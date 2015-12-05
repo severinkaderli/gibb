@@ -2,17 +2,31 @@
 
 namespace Core\Controller;
 
+use Core\Routing\Redirect;
+use Core\Model\Post;
+use Core\View\View;
+
 class PostController
 {
     public function index($page = 1)
     {
-        require_once(__ROOT__ . "Templates/index.view.php");
-        return "You are on page $page";
+        return new View("index");
     }
 
-    public function show($postId = 1)
+    public function show($postId)
     {
-        //require_once(__ROOT__ . "Templates/show.view.php");
-        return "It works!";
+        if (!is_numeric($postId)) {
+            //Todo: Create a redirector class so the path resolving is automatically done.
+            /*header("Location: index.php");
+            exit();*/
+            Redirect::to("/");
+        }
+        $post = Post::find($postId);
+        if (is_null($post)) {
+
+            Redirect::to("/");
+
+        }
+        return require_once(__ROOT__ . "Views/show.view.php");
     }
 }

@@ -1,5 +1,5 @@
 <?php
-    require_once(__ROOT__ . "Templates/Partials/header.php");
+    require_once(__ROOT__ . "Views/Partials/header.php");
 
 
 	$posts = Core\Model\Post::getAll();
@@ -16,4 +16,4 @@
 		echo "</div>";	
 	}
 
-    require_once(__ROOT__ . "Templates/Partials/footer.php");
+    require_once(__ROOT__ . "Views/Partials/footer.php");

@@ -27,7 +27,7 @@ switch($match["type"]) {
     case "Controller":
         $controller = new $match["controller"]();
         if(is_null($match["parameter"])) {
-            echo $controller->$match["method"]();
+            $controller->$match["method"]();
         } else {
             echo $controller->$match["method"]($match["parameter"]);
         }

@@ -1,20 +1,9 @@
 <?php
 
-require_once(__ROOT__ . "Templates/Partials/header.php");
+require_once(__ROOT__ . "Views/Partials/header.php");
 use Core\Model\Post;
 use Core\Model\User;
 use Core\Model\Comment;
-//Check if there's a post with this id
-$postId = $_GET["id"];
-if (!is_numeric($postId)) {
-    header("Location: index.php");
-    exit();
-}
-$post = Post::find($postId);
-if (is_null($post)) {
-    header("Location: index.php");
-    exit();
-}
 
 $postUser = User::find($post->fk_user_id);
 
@@ -69,4 +58,4 @@ if (User::auth()) {
     echo "<p>Sie müssen eingeloggt sein, um einen Kommentar zu verfassen!</p>";
 }
 
-require_once(__ROOT__ . "Templates/Partials/footer.php");
+require_once(__ROOT__ . "Views/Partials/footer.php");

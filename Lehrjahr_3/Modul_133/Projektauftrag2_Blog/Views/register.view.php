@@ -1,4 +1,4 @@
-<?php require_once(__ROOT__ . "Templates/Partials/header.php"); ?>
+<?php require_once(__ROOT__ . "Views/Partials/header.php"); ?>
 
 <h1>Registrieren</h1>
 <form method="POST" action="register.php">
@@ -27,4 +27,4 @@
     </div>
 </form>
 
-<?php require_once(__ROOT__ . "Templates/Partials/footer.php"); ?>
+<?php require_once(__ROOT__ . "Views/Partials/footer.php"); ?>

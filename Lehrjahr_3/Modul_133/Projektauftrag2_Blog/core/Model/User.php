@@ -2,7 +2,7 @@
 
 namespace Core\Model;
 
-
+use Core\Database\DatabaseConnection;
 
 /**
 * @author Severin Kaderli
