@@ -24,16 +24,18 @@ define("__ROOT__", __DIR__ . "/");
 define("BASE_DIR", "http://" . dirname($_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF']));
 
 
-
-setlocale (LC_ALL, LOCALE);
+setlocale(LC_ALL, LOCALE);
 date_default_timezone_set(TIMEZONE);
 
-//Todo: Create an autoloader for classes
-require_once("./core/Database/DatabaseConnection.php");
-require_once("./core/Model/Model.php");
-require_once("./core/Model/Post.php");
-require_once("./core/Model/User.php");
-require_once("./core/Model/Comment.php");
+/**
+ * Class autoloader
+ * @param $class
+ */
+function classAutoload($class) {
+    $class = implode("/", explode("\\", $class));
+    require_once(__ROOT__ . $class . ".php");
+}
+spl_autoload_register("classAutoload");
 
 
-DatabaseConnection::init(__ROOT__ . "Database/blog.db");
+Core\Database\DatabaseConnection::init(__ROOT__ . "Database/blog.db");

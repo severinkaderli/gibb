@@ -1,7 +1,8 @@
 <?php
     require_once(__ROOT__ . "Templates/Partials/header.php");
 
-	$posts = Post::getAll();
+
+	$posts = Core\Model\Post::getAll();
 
 	foreach($posts as $post) {
 		echo "<div class='post'>";

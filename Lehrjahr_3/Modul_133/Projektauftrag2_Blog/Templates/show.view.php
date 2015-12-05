@@ -1,8 +1,9 @@
 <?php
 
 require_once(__ROOT__ . "Templates/Partials/header.php");
-
-
+use Core\Model\Post;
+use Core\Model\User;
+use Core\Model\Comment;
 //Check if there's a post with this id
 $postId = $_GET["id"];
 if (!is_numeric($postId)) {

@@ -1,5 +1,9 @@
 <?php
 
+namespace Core\Model;
+
+
+
 /**
 * @author Severin Kaderli
 */

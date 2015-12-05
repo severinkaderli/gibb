@@ -1,3 +1,5 @@
+<?php require_once(__ROOT__ . "Templates/Partials/header.php"); ?>
+
 <h1>Registrieren</h1>
 <form method="POST" action="register.php">
     <div class="form-group">
@@ -24,3 +26,5 @@
         <input type="submit" name="registerSubmit" value="Registrieren" class="btn btn-default">
     </div>
 </form>
+
+<?php require_once(__ROOT__ . "Templates/Partials/footer.php"); ?>
