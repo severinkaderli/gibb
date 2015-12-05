@@ -103,6 +103,7 @@
         <option value="$PROJECT_DIR$/Core/Routing/Router.php" />
         <option value="$PROJECT_DIR$/Core/Controller/PostController.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
