@@ -16,9 +16,6 @@ class PostController
     public function show($postId)
     {
         if (!is_numeric($postId)) {
-            //Todo: Create a redirector class so the path resolving is automatically done.
-            /*header("Location: index.php");
-            exit();*/
             Redirect::to("/");
         }
         $post = Post::find($postId);
@@ -27,6 +24,6 @@ class PostController
             Redirect::to("/");
 
         }
-        return require_once(__ROOT__ . "Views/show.view.php");
+        return new View("show");
     }
 }
