@@ -10,22 +10,18 @@ $router->setBasePath(str_replace("http://" . $_SERVER['SERVER_NAME'], "", BASE_D
 $router->addRoute("GET", "", "PostController@index");
 $router->addRoute("GET", "/{page}", "PostController@index");
 $router->addRoute("GET", "/post/{postId}", "PostController@show");
-
-$router->addRoute("GET", "/test", function() {
-    return "test";
+$router->addRoute("GET", "/post", function() {
+    return "This works!";
 });
 
 $match = $router->dispatch();
 
-
-
 echo "<pre>";
 var_dump($match);
 echo "</pre>";
-
 switch($match["type"]) {
     case "Closure":
-        $match["function"]();
+        echo $match["function"]();
         break;
 
     case "Controller":
@@ -39,7 +35,7 @@ switch($match["type"]) {
         break;
 
     case "Error":
-        echo $match["error"];
+        echo "Page not found..." . $_SERVER["REQUEST_URI"];
         break;
 }
 

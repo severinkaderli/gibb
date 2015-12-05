@@ -184,6 +184,6 @@ class Router
             }
         }
 
-        return ["type" => "error"];
+        return ["type" => "Error"];
     }
 }
