@@ -14,6 +14,12 @@ $router->addRoute("GET", "", "PostController@index");
 $router->addRoute("GET", "/{page}", "PostController@index");
 $router->addRoute("GET", "/post/{postId}", "PostController@show");
 
+$router->addRoute("GET", "/logout", "AuthController@logout");
+$router->addRoute("GET", "/login", "AuthController@showLogin");
+$router->addRoute("POST", "/login", "AuthController@login");
+$router->addRoute("GET", "/register", "AuthController@showRegister");
+$router->addRoute("POST", "/register", "AuthController@register");
+
 /**
  * Dispatching and call the matched method
  */

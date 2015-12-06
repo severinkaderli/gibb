@@ -23,4 +23,4 @@ if (isset($_POST["registerSubmit"])) {
     $user->login();
 }
 
-require_once(__ROOT__ . "Views/register.view.php");
+require_once(__ROOT__ . "Views/register.php");

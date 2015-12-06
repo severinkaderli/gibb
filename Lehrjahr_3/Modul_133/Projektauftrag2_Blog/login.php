@@ -14,4 +14,4 @@ if (isset($_POST["loginSubmit"])) {
     $user->login();
 }
 
-require_once(__ROOT__ . "Views/login.view.php");
+require_once(__ROOT__ . "Views/login.php");

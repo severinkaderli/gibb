@@ -1,8 +1,5 @@
 <?php
-    require_once(__ROOT__ . "Views/Partials/header.php");
-
-
-
+    require_once(__ROOT__ . "Views/_header.php");
 
 	foreach($posts as $post) {
 		echo "<div class='post'>";
@@ -16,4 +13,4 @@
 		echo "</div>";	
 	}
 
-    require_once(__ROOT__ . "Views/Partials/footer.php");
+    require_once(__ROOT__ . "Views/_footer.php");

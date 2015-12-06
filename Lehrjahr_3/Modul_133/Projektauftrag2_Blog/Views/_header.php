@@ -23,7 +23,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php"><?php echo SITE_TITLE; ?></a>
+            <a class="navbar-brand" href="/"><?php echo SITE_TITLE; ?></a>
         </div>
         <div class="collapse navbar-collapse" id="navbar">
             <?php
@@ -35,10 +35,10 @@
             <ul class="nav navbar-nav">
                 <?php
                 if (Core\Model\User::auth()) {
-                    echo "<li><a href='logout.php'>Logout</a></li>";
+                    echo "<li><a href='logout'>Logout</a></li>";
                 } else {
-                    echo "<li><a href='login.php'>Login</a></li>";
-                    echo "<li><a href='register.php'>Registrieren</a></li>";
+                    echo "<li><a href='login'>Login</a></li>";
+                    echo "<li><a href='register'>Registrieren</a></li>";
                 }
                 ?>
             </ul>

@@ -1,13 +1,9 @@
 <?php
 
-require_once(__ROOT__ . "Views/Partials/header.php");
-use Core\Model\Post;
+require_once(__ROOT__ . "Views/_header.php");
+
 use Core\Model\User;
-use Core\Model\Comment;
 
-
-
-//Display the post
 echo "<div class='post'>";
 echo "<header class='post__header'>";
 echo "<h1>$post->title<br><small>" . strftime(DATE_FORMAT, $post->timestamp) . " von $postUser->firstname $postUser->lastname</small></h1>";
@@ -58,4 +54,4 @@ if (User::auth()) {
     echo "<p>Sie müssen eingeloggt sein, um einen Kommentar zu verfassen!</p>";
 }
 
-require_once(__ROOT__ . "Views/Partials/footer.php");
+require_once(__ROOT__ . "Views/_footer.php");
