@@ -5,16 +5,7 @@ use Core\Model\Post;
 use Core\Model\User;
 use Core\Model\Comment;
 
-if (!is_numeric($postId)) {
-    Redirect::to("/");
-}
-$post = Post::find($postId);
-if (is_null($post)) {
 
-    Redirect::to("/");
-}
-
-$postUser = User::find($post->fk_user_id);
 
 //Display the post
 echo "<div class='post'>";
@@ -29,7 +20,7 @@ echo "</div>";
 
 //Display comments
 echo "<h3>Kommentare</h3>";
-$comments = Comment::getByPostId($post->id);
+
 if (is_null($comments)) {
     echo "<p>Keine Kommentare vorhanden</p>";
 } else {

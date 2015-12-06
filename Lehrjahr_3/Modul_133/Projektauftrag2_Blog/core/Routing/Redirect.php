@@ -4,7 +4,7 @@
     class Redirect {
 
         /**
-         * @param $route Route to redirect to
+         * @param string $route
          */
         public static function to($route) {
             $route = rtrim($route, "/");

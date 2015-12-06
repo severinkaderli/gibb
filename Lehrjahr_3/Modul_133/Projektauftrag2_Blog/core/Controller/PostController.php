@@ -4,6 +4,8 @@ namespace Core\Controller;
 
 use Core\Routing\Redirect;
 use Core\Model\Post;
+use Core\Model\User;
+use Core\Model\Comment;
 use Core\View\View;
 
 class PostController
@@ -25,12 +27,41 @@ class PostController
     /**
      * Show a single post by postId.
      *
-     * @param $postId
+     * @param int $id
      * @return View
      */
-    public function show($postId)
+    public function show($id)
     {
+        /**
+         * Check if the postId is valid and if a post with that id
+         * exists. If no post can be found the user will be redirected to the
+         * index page.
+         */
+        if (!is_numeric($id)) {
+            Redirect::to("/");
+        }
+        $post = Post::find($id);
+        if (is_null($post)) {
+            Redirect::to("/");
+        }
+
+        /**
+         * Get the user associatd with the blog post
+         */
+        $postUser = User::find($post->fk_user_id);
+
+        /**
+         * Get all comments of this blog post
+         */
+        $comments = Comment::getByPostId($post->id);
+
+        /**
+         * Assign variables to view and render it
+         */
         $view = new View("posts.show");
-        return new View("show");
+        $view->assign("post", $post);
+        $view->assign("postUser", $postUser);
+        $view->assign("comments", $comments);
+        echo $view->render();
     }
 }
