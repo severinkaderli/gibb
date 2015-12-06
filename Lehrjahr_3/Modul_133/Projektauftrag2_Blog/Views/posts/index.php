@@ -2,7 +2,7 @@
     require_once(__ROOT__ . "Views/Partials/header.php");
 
 
-	$posts = Core\Model\Post::getAll();
+
 
 	foreach($posts as $post) {
 		echo "<div class='post'>";

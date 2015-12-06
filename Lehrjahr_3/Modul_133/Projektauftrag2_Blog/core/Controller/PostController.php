@@ -8,22 +8,29 @@ use Core\View\View;
 
 class PostController
 {
+    /**
+     * Renders a listing of all blog posts. Only posts of the current page
+     * are shown.
+     *
+     * @param int $page
+     */
     public function index($page = 1)
     {
-        return new View("index");
+        //Todo: Manage page handling
+        $view = new View("posts.index");
+        $view->assign("posts", Post::getAll());
+        echo $view->render();
     }
 
+    /**
+     * Show a single post by postId.
+     *
+     * @param $postId
+     * @return View
+     */
     public function show($postId)
     {
-        if (!is_numeric($postId)) {
-            Redirect::to("/");
-        }
-        $post = Post::find($postId);
-        if (is_null($post)) {
-
-            Redirect::to("/");
-
-        }
+        $view = new View("posts.show");
         return new View("show");
     }
 }

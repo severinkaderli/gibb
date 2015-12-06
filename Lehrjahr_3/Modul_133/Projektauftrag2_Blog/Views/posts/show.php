@@ -5,6 +5,15 @@ use Core\Model\Post;
 use Core\Model\User;
 use Core\Model\Comment;
 
+if (!is_numeric($postId)) {
+    Redirect::to("/");
+}
+$post = Post::find($postId);
+if (is_null($post)) {
+
+    Redirect::to("/");
+}
+
 $postUser = User::find($post->fk_user_id);
 
 //Display the post
