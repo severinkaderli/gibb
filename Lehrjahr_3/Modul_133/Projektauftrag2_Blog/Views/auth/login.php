@@ -1,6 +1,6 @@
 <?php require_once(__ROOT__ . "Views/_header.php"); ?>
     <h1>Login</h1>
-    <form method="POST" action="login.php">
+    <form method="POST" action="login">
         <div class="form-group">
             <label for="username">Benutzername</label>
             <input type="text" name="username" id="username" class="form-control">

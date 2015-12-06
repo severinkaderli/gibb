@@ -1,7 +1,7 @@
 <?php require_once(__ROOT__ . "Views/_header.php"); ?>
 
 <h1>Registrieren</h1>
-<form method="POST" action="register.php">
+<form method="POST" action="register">
     <div class="form-group">
         <label for="username">Benutzername</label>
         <input type="text" name="username" id="username" class="form-control">
