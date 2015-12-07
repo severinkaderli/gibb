@@ -110,7 +110,7 @@ public class Game {
 
 		// Main Game Loop
 		while (isRunning) {
-			loop();
+			loop(); //=> Sequenzdiagramm hier
 			gui.repaint();
 		}
 
@@ -123,7 +123,7 @@ public class Game {
 	public void loop() {
 		try {
 			Thread.sleep(TICK_LENGTH);
-			snake.move(); //=> Sequenzdiagramm hier
+			snake.move(); 
 			checkCollision();
 
 			// Read key strokes and change direction of snake
