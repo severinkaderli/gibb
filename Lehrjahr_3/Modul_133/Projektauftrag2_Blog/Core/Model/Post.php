@@ -84,5 +84,9 @@ class Post extends Model
                 "post_id" => $postId]);
     }
 
+    public static function delete($postId) {
+        DatabaseConnection::insert("DELETE FROM posts WHERE id=:post_id", ["post_id" => $postId]);
+    }
+
 
 }

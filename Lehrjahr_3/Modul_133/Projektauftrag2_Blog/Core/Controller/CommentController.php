@@ -13,4 +13,13 @@ class CommentController
         Comment::create($postId, $_POST);
         Redirect::to("/post/$postId");
     }
+
+    public function delete($id){
+        $comment = Comment::find($id);
+        if($comment->fk_user_id != $_SESSION["user"]["id"]) {
+            Redirect::to("/");
+        }
+        Comment::delete($id);
+        Redirect::to("/");
+    }
 }

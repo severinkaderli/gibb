@@ -96,4 +96,13 @@ class PostController
         Post::update($id, $_POST);
         Redirect::to("/");
     }
+
+    public function delete($id){
+        $post = Post::find($id);
+        if($post->fk_user_id != $_SESSION["user"]["id"]) {
+            Redirect::to("/");
+        }
+        Post::delete($id);
+        Redirect::to("/");
+    }
 }

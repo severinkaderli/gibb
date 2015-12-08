@@ -50,10 +50,10 @@ class Comment extends Model
 
         foreach($sqlResult as $comment) {
             $commentObject = new Comment();
-            $commentObject->id = $result["id"];
-            $commentObject->comment = $result["comment"];
-            $commentObject->fk_post_id = $result["fk_post_id"];
-            $commentObject->fk_user_id = $result["fk_user_id"];
+            $commentObject->id = $comment["id"];
+            $commentObject->comment = $comment["comment"];
+            $commentObject->fk_post_id = $comment["fk_post_id"];
+            $commentObject->fk_user_id = $comment["fk_user_id"];
 
             $result[] = $commentObject;
         }
@@ -63,6 +63,10 @@ class Comment extends Model
 
     public static function create($postId, array $fields) {
         DatabaseConnection::insert("INSERT INTO comments(comment, fk_post_id, fk_user_id) VALUES(:comment, :post_id, :user_id)", ["comment" => $fields["comment"], "post_id" => $postId, "user_id" => $_SESSION["user"]["id"]]);
+    }
+
+    public static function delete($commentId) {
+        DatabaseConnection::insert("DELETE FROM comments WHERE id=:comment_id", ["comment_id" => $commentId]);
     }
 
     /**

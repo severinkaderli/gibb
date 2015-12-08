@@ -5,6 +5,17 @@
 session_start();
 
 /**
+ * Debugging
+ */
+define("DEBUG", true);
+
+if(DEBUG) {
+    error_reporting(E_ALL);
+} else {
+    error_reporting(0);
+}
+
+/**
  * Site related settings
  */
 define("SITE_TITLE", "Blog");

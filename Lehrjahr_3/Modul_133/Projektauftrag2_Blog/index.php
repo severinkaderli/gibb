@@ -27,11 +27,11 @@ $router->addRoute("GET", "/create", "PostController@create");
 $router->addRoute("POST", "/post", "PostController@store");
 $router->addRoute("GET", "/post/{postId}/edit", "PostController@edit");
 $router->addRoute("POST", "/post/{postId}/update", "PostController@update");
-$router->addRoute("POST", "/post/{postId}/delete", "PostController@delete");
+$router->addRoute("GET", "/post/{postId}/delete", "PostController@delete");
 
 //Comments
 $router->addRoute("POST", "/post/{postId}/comment", "CommentController@store");
-$router->addRoute("POST", "/comment/{commentId}/delete", "CommentController@delete");
+$router->addRoute("GET", "/comment/{commentId}/delete", "CommentController@delete");
 
 
 /**
