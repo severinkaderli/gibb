@@ -3,8 +3,6 @@ package ch.severinkaderli.snake;
 import java.awt.Graphics;
 
 /**
- * Diese Klasse stellt einen Diamant dar, welcher als Sammelobjekt von der
- * Schlange aufgefressen werden kann.
  * 
  * @author Severin Kaderli
  */
@@ -17,11 +15,11 @@ public class Diamond extends Entity {
 
 	/**
 	 * 
-	 * @param x X-Position
-	 * @param y Y-Position
-	 * @param width Breite des Diamanten
-	 * @param height Höhe des Diamanten
-	 * @param value Wert des Diamanten
+	 * @param x
+	 * @param y
+	 * @param width
+	 * @param height
+	 * @param value
 	 */
 	public Diamond(int x, int y, int width, int height, int value) {
 		super(x, y, width, height);
@@ -30,9 +28,6 @@ public class Diamond extends Entity {
 
 	/**
 	 * Zeichnet den Diamanten und dessen Wert
-	 * 
-	 * @param g
-	 *            Referenz auf Graphics object
 	 */
 	public void draw(Graphics g) {
 		g.drawOval(position.x, position.y, position.width, position.height);

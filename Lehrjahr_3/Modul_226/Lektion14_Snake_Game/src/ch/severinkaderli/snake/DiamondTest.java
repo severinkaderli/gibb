@@ -30,7 +30,7 @@ public class DiamondTest {
 	}
 
 	@Test
-	public void testReviveSetsAliveToTrue() {
+	public void testRevive() {
 		diamond.revive();
 		assertTrue(diamond.isAlive);
 	}
