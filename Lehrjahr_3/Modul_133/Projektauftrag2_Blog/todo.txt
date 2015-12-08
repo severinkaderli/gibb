@@ -1,11 +1,7 @@
 Todo
 ====
-- Validator
-- MessageHandler
-- Creating, editing and deleting of posts
-- Creating of comments
-- User management (promoting to admin)
-- Frontend rendering of markdown syntax
+- editing and deleting of posts
+- Deleting of own comments
+- User management (promoting to admin, deleting if admin)
 - Securing database file with .htaccess
 - Fix Link to home page
-- 

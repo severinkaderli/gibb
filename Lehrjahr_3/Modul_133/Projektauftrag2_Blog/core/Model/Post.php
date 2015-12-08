@@ -64,5 +64,15 @@ class Post extends Model
         return $result;
     }
 
+    public static function create(array $fields)
+    {
+        DatabaseConnection::insert("INSERT INTO posts(title, content, fk_user_id, timestamp)
+              VALUES(:title, :content, :user_id, :timestamp)",
+            ["title" => $fields["title"],
+                "content" => $fields["content"],
+                "user_id" => $_SESSION["user"]["id"],
+                "timestamp", time()]);
+    }
+
 
 }

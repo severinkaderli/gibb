@@ -66,6 +66,12 @@ class PostController
     }
 
     public function create() {
-        echo "create";
+        $view = new View("posts.create");
+        $view->render();
+    }
+
+    public function store() {
+        Post::create($_POST);
+        Redirect::to("/");
     }
 }

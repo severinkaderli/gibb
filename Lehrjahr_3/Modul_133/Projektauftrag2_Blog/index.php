@@ -24,7 +24,7 @@ $router->addRoute("POST", "/register", "AuthController@register");
 
 //Creating, editing and deleting of posts
 $router->addRoute("GET", "/create", "PostController@create");
-$router->addRoute("POST", "/", "PostController@store");
+$router->addRoute("POST", "/post", "PostController@store");
 $router->addRoute("GET", "/post/{postId}/edit", "PostController@edit");
 $router->addRoute("POST", "/post/{postId}/update", "PostController@update");
 $router->addRoute("POST", "/post/{postId}/delete", "PostController@delete");

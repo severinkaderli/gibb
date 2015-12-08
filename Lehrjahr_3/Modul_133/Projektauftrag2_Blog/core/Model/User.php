@@ -3,10 +3,11 @@
 namespace Core\Model;
 
 use Core\Database\DatabaseConnection;
+use Core\Routing\Redirect;
 
 /**
-* @author Severin Kaderli
-*/
+ * @author Severin Kaderli
+ */
 class User extends Model
 {
     public $id;
@@ -18,7 +19,7 @@ class User extends Model
 
     public function __construct()
     {
-       parent::__construct();
+        parent::__construct();
     }
 
     /**
@@ -26,13 +27,14 @@ class User extends Model
      *
      * @return bool
      */
-    public static function auth() {
+    public static function auth()
+    {
 
-    	if(isset($_SESSION["user"]["logged_in"]) && $_SESSION["user"]["logged_in"] === true) {
-    		return true;
-    	}
+        if (isset($_SESSION["user"]["logged_in"]) && $_SESSION["user"]["logged_in"] === true) {
+            return true;
+        }
 
-    	return false;
+        return false;
     }
 
     /**
@@ -40,35 +42,37 @@ class User extends Model
      *
      * @return bool
      */
-    public function login() {
+    public function login()
+    {
 
-    	$checkUser = User::getByUsername($this->username);
-    	if(password_verify($this->password, $checkUser->password)) {
+        $checkUser = User::getByUsername($this->username);
+        if (password_verify($this->password, $checkUser->password)) {
 
-    		$_SESSION["user"]["logged_in"] = true;
-    		$_SESSION["user"]["id"] = $checkUser->id;
-    		$_SESSION["user"]["username"] = $this->username;
+            $_SESSION["user"]["logged_in"] = true;
+            $_SESSION["user"]["id"] = $checkUser->id;
+            $_SESSION["user"]["username"] = $this->username;
 
-    		return true;
-    	}	
+            Redirect::to("/");
+        }
 
-    	return false;
+        Redirect::to("login");
     }
 
     /**
      * Save the user data in db
      */
-    public function register() {
+    public function register()
+    {
 
-        if(User::exists($this->username)) {
+        if (User::exists($this->username)) {
             Redirect::to("/");
         }
 
-    	DatabaseConnection::getResult("INSERT INTO users(username, password, firstname, lastname, isAdmin) VALUES(:username, :password, :firstname, :lastname, 0)",
-    									["username" => $this->username,
-    									"password" => password_hash($this->password, PASSWORD_BCRYPT),
-    									"firstname" => $this->firstname,
-    									"lastname" => $this->lastname]);
+        DatabaseConnection::insert("INSERT INTO users(username, password, firstname, lastname, isAdmin) VALUES(:username, :password, :firstname, :lastname, 0)",
+            ["username" => $this->username,
+                "password" => password_hash($this->password, PASSWORD_BCRYPT),
+                "firstname" => $this->firstname,
+                "lastname" => $this->lastname]);
     }
 
     /**
@@ -77,7 +81,8 @@ class User extends Model
      * @param int $id
      * @return User
      */
-    public static function find($id) {
+    public static function find($id)
+    {
         $result = DatabaseConnection::getResult("SELECT * FROM users WHERE id=:id", ["id" => $id]);
 
         $userObject = new User();
@@ -96,18 +101,19 @@ class User extends Model
      *
      * @return array
      */
-    public static function getAll() {
+    public static function getAll()
+    {
         $result = [];
         $sqlResult = DatabaseConnection::getResult("SELECT * FROM users");
 
-        foreach($sqlResult as $user) {
+        foreach ($sqlResult as $user) {
             $userObject = new User();
-	        $userObject->id = $result["id"];
-	        $userObject->username = $result["username"];
-	        $userObject->password = $result["password"];
-	        $userObject->firstname = $result["firstname"];
-	        $userObject->lastname = $result["lastname"];
-	        $userObject->isAdmin = $result["isAdmin"];
+            $userObject->id = $result["id"];
+            $userObject->username = $result["username"];
+            $userObject->password = $result["password"];
+            $userObject->firstname = $result["firstname"];
+            $userObject->lastname = $result["lastname"];
+            $userObject->isAdmin = $result["isAdmin"];
 
             $result[] = $userObject;
         }
@@ -121,10 +127,11 @@ class User extends Model
      * @param string $username
      * @return User
      */
-    public static function getByUsername($username) {
-    	$result = DatabaseConnection::getResult("SELECT * FROM users WHERE username=:username", ["username" => $username]);
+    public static function getByUsername($username)
+    {
+        $result = DatabaseConnection::getResult("SELECT * FROM users WHERE username=:username", ["username" => $username]);
 
-    	$userObject = new User();
+        $userObject = new User();
         $userObject->id = $result[0]["id"];
         $userObject->username = $result[0]["username"];
         $userObject->password = $result[0]["password"];
@@ -141,11 +148,12 @@ class User extends Model
      * @param string $username
      * @return bool
      */
-    public static function exists($username) {
+    public static function exists($username)
+    {
 
         $result = DatabaseConnection::getResult("SELECT * FROM users WHERE username=:username", ["username" => $username]);
 
-        if(!empty($result)) {
+        if (!empty($result)) {
             return true;
         }
 

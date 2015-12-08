@@ -41,4 +41,15 @@ class DatabaseConnection extends \SQLite3
         return $result;
     }
 
+    public static function insert($query, array $parameter = []) {
+        //Prepare the statement and bind values
+        $stmt = self::$sqliteConnection->prepare($query);
+        foreach ($parameter as $parameter => $value) {
+            $stmt -> bindValue($parameter, $value);
+        }
+
+        //Get result and return as an array
+        $sqlResult = $stmt->execute();
+    }
+
 }
