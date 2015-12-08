@@ -3,25 +3,24 @@
 require_once(__ROOT__ . "Views/_header.php");
 
 use Core\Model\User;
-
 echo "<div class='post'>";
 echo "<header class='post__header'>";
-echo "<h1>$post->title<br><small>" . strftime(DATE_FORMAT, $post->timestamp) . " von $postUser->firstname $postUser->lastname</small></h1>";
+echo "<h1>".$this->post->title. "<br><small>" . strftime(DATE_FORMAT, $this->post->timestamp) . " von ".$this->postUser->firstname." ".$this->postUser->lastname."</small></h1>";
 echo "</header>";
 
 echo "<div class='post__content'>";
-echo "<p>$post->content</p>";
+echo "<p>".$this->post->content."</p>";
 echo "</div>";
 echo "</div>";
 
 //Display comments
 echo "<h3>Kommentare</h3>";
 
-if (is_null($comments)) {
+if (is_null($this->comments)) {
     echo "<p>Keine Kommentare vorhanden</p>";
 } else {
 
-    foreach ($comments as $comment) {
+    foreach ($this->comments as $comment) {
 
         $user = User::find($comment->fk_user_id);
 

@@ -64,4 +64,8 @@ class PostController
         $view->assign("comments", $comments);
         $view->render();
     }
+
+    public function create() {
+        echo "create";
+    }
 }
