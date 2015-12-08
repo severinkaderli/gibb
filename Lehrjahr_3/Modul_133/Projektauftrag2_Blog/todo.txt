@@ -1,0 +1,10 @@
+Todo
+====
+- Validator
+- MessageHandler
+- Creating, editing and deleting of posts
+- Creating of comments
+- User management (promoting to admin)
+- Frontend rendering of markdown syntax
+- Securing database file with .htaccess
+- 

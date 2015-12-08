@@ -17,7 +17,7 @@ class AuthController
             Redirect::to("/");
         }
         $view = new View("auth.login");
-        echo $view->render();
+        $view->render();
     }
 
     public function login()
@@ -27,7 +27,6 @@ class AuthController
         }
 
         if (isset($_POST["loginSubmit"])) {
-            die("Lloggin in...");
             $user = new User();
             $user->username = $_POST["username"];
             $user->password = $_POST["password"];
@@ -42,7 +41,7 @@ class AuthController
         }
 
         $view = new View("auth.register");
-        echo $view->render();
+        $view->render();
     }
 
     public function register()
@@ -52,8 +51,6 @@ class AuthController
         }
 
         if (isset($_POST["registerSubmit"])) {
-
-            die("stupid sthit");
 
             //Todo: Validation of user input and sanitation.
             $user = new User();

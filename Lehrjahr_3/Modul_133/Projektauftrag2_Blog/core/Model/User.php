@@ -61,9 +61,7 @@ class User extends Model
     public function register() {
 
         if(User::exists($this->username)) {
-            //show message or something
-            header("Location: register.php");
-            exit();
+            Redirect::to("/");
         }
 
     	DatabaseConnection::getResult("INSERT INTO users(username, password, firstname, lastname, isAdmin) VALUES(:username, :password, :firstname, :lastname, 0)",

@@ -21,7 +21,7 @@ class PostController
         //Todo: Manage page handling
         $view = new View("posts.index");
         $view->assign("posts", Post::getAll());
-        echo $view->render();
+        $view->render();
     }
 
     /**
@@ -62,6 +62,6 @@ class PostController
         $view->assign("post", $post);
         $view->assign("postUser", $postUser);
         $view->assign("comments", $comments);
-        echo $view->render();
+        $view->render();
     }
 }

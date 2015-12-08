@@ -83,7 +83,8 @@ class View
         extract($this->data);
         ob_start();
         require_once($this->template);
-        return ob_get_clean();
+        echo ob_get_clean();
+        return true;
     }
 
 
