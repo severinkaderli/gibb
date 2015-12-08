@@ -1,9 +1,11 @@
 <?php
 
+namespace Core\Database;
+
 /**
  * @author Severin Kaderli
  */
-class DatabaseConnection extends SQLite3
+class DatabaseConnection extends \SQLite3
 {
 
     private static $sqliteConnection;
@@ -14,7 +16,7 @@ class DatabaseConnection extends SQLite3
      * @param string $database
      */
     public static function init($database) {
-        self::$sqliteConnection = new SQLite3($database);
+        self::$sqliteConnection = new \SQLite3($database);
     }
 
     /**

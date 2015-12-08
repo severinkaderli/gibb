@@ -28,10 +28,10 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
 
 ###3. Lehrjahr
 * Modul 133
-  * JS- & PHP-Programme
+  * JS- & PHP-Programme aus Arbeitsblätter
   * Projekte
-    * HTML, CSS & Javascript Formular-Validierung
-    * PHP-Blog
+    * Formularvalidierung mit Javascript, jQuery & HTML5
+    * PHP-Blog mit SQLite Datenbank (selber erstelltes MVC-Framework)
 * Modul 226
-  * Java-Programme
+  * Java-Programme aus Arbeitsblätter & Buch
 * Spicker Abschlussprüfung

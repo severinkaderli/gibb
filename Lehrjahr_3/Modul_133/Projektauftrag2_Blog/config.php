@@ -1,29 +1,41 @@
 <?php
-
-//Start session
+/**
+ * Starting the session
+ */
 session_start();
 
-define("__ROOT__", "/");
-
+/**
+ * Site related settings
+ */
 define("SITE_TITLE", "Blog");
 define("SITE_AUTHOR", "Severin Kaderli");
 
 /**
  * Time and local related settings
  */
-define("LOCALE", "de_DE");    
+define("LOCALE", "de_DE");
 define("TIMEZONE", "Europe/Zurich");
 define("DATE_FORMAT", "%d. %B %Y");
 
+/**
+ * Path related settings
+ */
+define("__ROOT__", __DIR__ . "/");
+define("BASE_DIR", "http://" . dirname($_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF']));
 
-setlocale (LC_ALL, LOCALE);
+
+setlocale(LC_ALL, LOCALE);
 date_default_timezone_set(TIMEZONE);
 
-require_once("./core/Database/DatabaseConnection.php");
-require_once("./core/Model/Model.php");
-require_once("./core/Model/Post.php");
-require_once("./core/Model/User.php");
-require_once("./core/Model/Comment.php");
+/**
+ * Class autoloader
+ * @param $class
+ */
+function classAutoload($class) {
+    $class = implode("/", explode("\\", $class));
+    require_once(__ROOT__ . $class . ".php");
+}
+spl_autoload_register("classAutoload");
 
 
-DatabaseConnection::init("./blog.db");
+Core\Database\DatabaseConnection::init(__ROOT__ . "Database/blog.db");
