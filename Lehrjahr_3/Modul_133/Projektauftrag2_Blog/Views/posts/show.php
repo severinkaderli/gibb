@@ -5,7 +5,7 @@ require_once(__ROOT__ . "Views/_header.php");
 use Core\Model\User;
 echo "<div class='post'>";
 echo "<header class='post__header'>";
-echo "<h1>".$this->post->title. "<br><small>" . strftime(DATE_FORMAT, $this->post->timestamp) . " von ".$this->postUser->firstname." ".$this->postUser->lastname."</small></h1>";
+echo "<h1>".$this->post->title. "<br><small>" . date(DATE_FORMAT, $this->post->post_time) . " von ".$this->postUser->firstname." ".$this->postUser->lastname."</small></h1>";
 echo "</header>";
 
 echo "<div class='post__content'>";

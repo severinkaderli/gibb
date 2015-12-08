@@ -5,19 +5,19 @@ namespace Core\Model;
 use Core\Database\DatabaseConnection;
 
 /**
-* @author Severin Kaderli
-*/
+ * @author Severin Kaderli
+ */
 class Post extends Model
 {
     public $id;
     public $title;
     public $content;
     public $fk_user_id;
-    public $timestamp;
+    public $post_time;
 
     public function __construct()
     {
-       parent::__construct();
+        parent::__construct();
     }
 
     /**
@@ -26,9 +26,10 @@ class Post extends Model
      * @param int $id
      * @return mixed
      */
-    public static function find($id) {
+    public static function find($id)
+    {
         $result = DatabaseConnection::getResult("SELECT * FROM posts WHERE id=:id", ["id" => $id]);
-        if(empty($result)) {
+        if (empty($result)) {
             return null;
         }
         $postObject = new Post();
@@ -36,7 +37,7 @@ class Post extends Model
         $postObject->title = $result[0]["title"];
         $postObject->content = $result[0]["content"];
         $postObject->fk_user_id = $result[0]["fk_user_id"];
-        $postObject->timestamp = $result[0]["timestamp"];
+        $postObject->post_time = $result[0]["post_time"];
 
         return $postObject;
     }
@@ -46,17 +47,18 @@ class Post extends Model
      *
      * @return mixed
      */
-    public static function getAll() {
+    public static function getAll()
+    {
         $result = [];
-        $sqlResult = DatabaseConnection::getResult("SELECT * FROM posts");
+        $sqlResult = DatabaseConnection::getResult("SELECT * FROM posts ORDER BY id DESC");
 
-        foreach($sqlResult as $post) {
+        foreach ($sqlResult as $post) {
             $postObject = new Post();
             $postObject->id = $post["id"];
             $postObject->title = $post["title"];
             $postObject->content = $post["content"];
             $postObject->fk_user_id = $post["fk_user_id"];
-            $postObject->timestamp = $post["timestamp"];
+            $postObject->post_time = $post["post_time"];
 
             $result[] = $postObject;
         }
@@ -66,12 +68,20 @@ class Post extends Model
 
     public static function create(array $fields)
     {
-        DatabaseConnection::insert("INSERT INTO posts(title, content, fk_user_id, timestamp)
-              VALUES(:title, :content, :user_id, :timestamp)",
+        DatabaseConnection::insert("INSERT INTO posts(title, content, fk_user_id, post_time)
+              VALUES(:title, :content, :user_id, :post_time)",
             ["title" => $fields["title"],
                 "content" => $fields["content"],
                 "user_id" => $_SESSION["user"]["id"],
-                "timestamp", time()]);
+                "post_time" => time()]);
+    }
+
+    public static function update($postId, array $fields)
+    {
+        DatabaseConnection::insert("UPDATE posts SET title=:title, content=:content WHERE id=:post_id",
+            ["title" => $fields["title"],
+                "content" => $fields["content"],
+                "post_id" => $postId]);
     }
 
 

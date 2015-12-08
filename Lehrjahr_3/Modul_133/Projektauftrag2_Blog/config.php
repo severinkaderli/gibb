@@ -15,7 +15,7 @@ define("SITE_AUTHOR", "Severin Kaderli");
  */
 define("LOCALE", "de_DE");
 define("TIMEZONE", "Europe/Zurich");
-define("DATE_FORMAT", "%d. %B %Y");
+define("DATE_FORMAT", "d. F Y");
 
 /**
  * Path related settings

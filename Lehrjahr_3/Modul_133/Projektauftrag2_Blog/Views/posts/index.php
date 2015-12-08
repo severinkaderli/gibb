@@ -4,7 +4,7 @@
 	foreach($this->posts as $post) {
 		echo "<div class='post'>";
 			echo "<header class='post__header'>";
-				echo "<h1><a href='post/$post->id'>$post->title</a> <small>" . strftime(DATE_FORMAT, $post->timestamp) . "</small></h1>";
+				echo "<h1><a href='post/$post->id'>$post->title</a> <small>" . date(DATE_FORMAT, $post->post_time) . "</small></h1>";
 			echo "</header>";
 
 			echo "<div class='post__content'>";

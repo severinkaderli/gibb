@@ -74,4 +74,26 @@ class PostController
         Post::create($_POST);
         Redirect::to("/");
     }
+
+    public function edit($id) {
+        //Check if user is allowed to delete the post
+        $post = Post::find($id);
+        if($_SESSION["user"]["id"] != $post->fk_user_id) {
+            Redirect::to("/");
+        }
+
+        $view = new View("posts.edit");
+        $view->assign("post", $post);
+        $view->render();
+    }
+
+    public function update($id) {
+        //Check if user is allowed to delete the post
+        $post = Post::find($id);
+        if($_SESSION["user"]["id"] != $post->fk_user_id) {
+            Redirect::to("/");
+        }
+        Post::update($id, $_POST);
+        Redirect::to("/");
+    }
 }
