@@ -7,4 +7,5 @@ Todo
 - User management (promoting to admin)
 - Frontend rendering of markdown syntax
 - Securing database file with .htaccess
+- Fix Link to home page
 - 

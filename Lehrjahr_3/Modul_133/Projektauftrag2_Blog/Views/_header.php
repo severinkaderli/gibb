@@ -33,7 +33,9 @@
             ?>
 
             <ul class="nav navbar-nav">
+                <li class="nav-divider"></li>
                 <?php
+
                 if (Core\Model\User::auth()) {
                     echo "<li><a href='create'>Eintrag erstellen</a></li>";
                     echo "<li><a href='logout'>Logout</a></li>";

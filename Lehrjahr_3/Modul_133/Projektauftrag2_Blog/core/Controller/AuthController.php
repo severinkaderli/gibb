@@ -31,6 +31,7 @@ class AuthController
             $user->username = $_POST["username"];
             $user->password = $_POST["password"];
             $user->login();
+            Redirect::to("/");
         }
     }
 

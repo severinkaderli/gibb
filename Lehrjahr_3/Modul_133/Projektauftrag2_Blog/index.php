@@ -30,6 +30,7 @@ $router->addRoute("POST", "/post/{postId}/update", "PostController@update");
 $router->addRoute("POST", "/post/{postId}/delete", "PostController@delete");
 
 //Comments
+$router->addRoute("POST", "/post/{postId}/comment", "CommentController@store");
 $router->addRoute("POST", "/comment/{commentId}/delete", "CommentController@delete");
 
 

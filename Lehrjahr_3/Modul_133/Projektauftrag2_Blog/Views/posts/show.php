@@ -23,7 +23,6 @@ if (is_null($this->comments)) {
     foreach ($this->comments as $comment) {
 
         $user = User::find($comment->fk_user_id);
-
         echo "<div class='comment panel panel-default panel-body'>";
         echo "<header class='comment__header'>";
         echo "<p>Kommentar veröffentlicht von $user->firstname $user->lastname</p>";
@@ -41,7 +40,7 @@ if (is_null($this->comments)) {
 echo "<h3>Kommentar verfassen</h3>";
 if (User::auth()) {
 
-    echo "<form method='POST' action=''>";
+    echo "<form method='POST' action='post/" . $this->post->id . "/comment'>";
     echo "<div class='form-group'>";
     echo "<textarea id='comment' rows='5' name='comment' class='form-control'></textarea>";
     echo "</div>";
