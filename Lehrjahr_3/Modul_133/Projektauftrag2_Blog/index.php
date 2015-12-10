@@ -33,6 +33,11 @@ $router->addRoute("GET", "/post/{postId}/delete", "PostController@delete");
 $router->addRoute("POST", "/post/{postId}/comment", "CommentController@store");
 $router->addRoute("GET", "/comment/{commentId}/delete", "CommentController@delete");
 
+//User management
+$router->addRoute("GET", "/user", "UserController@index");
+$router->addRoute("POST", "/user/{userId}/delete", "UserController@delete");
+$router->addRoute("POST", "/user/{userId}/promote", "UserController@promote");
+
 
 /**
  * Dispatching and call the matched method

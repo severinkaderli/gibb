@@ -1,7 +1,4 @@
 Todo
 ====
-- Fix deleting of comments.
 - User management (promoting to admin, deleting if admin)
-- Securing database file with .htaccess
-- Fix Link to home page
 - Test and install blog on server dev.severinkaderli.ch/blog

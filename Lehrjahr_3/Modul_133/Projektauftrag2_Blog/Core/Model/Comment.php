@@ -26,7 +26,7 @@ class Comment extends Model
      * @return mixed
      */
     public static function find($id) {
-        $result = DatabaseConnection::getResult("SELECT * FROM posts WHERE id=:id", ["id" => $id]);
+        $result = DatabaseConnection::getResult("SELECT * FROM comments WHERE id=:id", ["id" => $id]);
         if(empty($result)) {
             return null;
         }
@@ -46,7 +46,7 @@ class Comment extends Model
      */
     public static function getAll() {
         $result = [];
-        $sqlResult = DatabaseConnection::getResult("SELECT * FROM posts");
+        $sqlResult = DatabaseConnection::getResult("SELECT * FROM comments");
 
         foreach($sqlResult as $comment) {
             $commentObject = new Comment();
