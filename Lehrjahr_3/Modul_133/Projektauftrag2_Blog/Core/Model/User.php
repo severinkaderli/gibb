@@ -62,7 +62,7 @@ class User extends Model
             $_SESSION["user"]["logged_in"] = true;
             $_SESSION["user"]["id"] = $checkUser->id;
             $_SESSION["user"]["username"] = $this->username;
-            $_SESSION["user"]["is_admin"] = $this->is_admin;
+            $_SESSION["user"]["is_admin"] = $checkUser->is_admin;
 
             Redirect::to("/");
         }
@@ -120,12 +120,12 @@ class User extends Model
 
         foreach ($sqlResult as $user) {
             $userObject = new User();
-            $userObject->id = $result["id"];
-            $userObject->username = $result["username"];
-            $userObject->password = $result["password"];
-            $userObject->firstname = $result["firstname"];
-            $userObject->lastname = $result["lastname"];
-            $userObject->is_admin = $result["is_Admin"];
+            $userObject->id = $user["id"];
+            $userObject->username = $user["username"];
+            $userObject->password = $user["password"];
+            $userObject->firstname = $user["firstname"];
+            $userObject->lastname = $user["lastname"];
+            $userObject->is_admin = $user["is_admin"];
 
             $result[] = $userObject;
         }
@@ -170,6 +170,14 @@ class User extends Model
         }
 
         return false;
+    }
+
+    public static function delete($userId) {
+        DatabaseConnection::insert("DELETE FROM users WHERE id=:user_id", ["user_id" => $userId]);
+    }
+
+    public static function promote($userId) {
+        DatabaseConnection::insert("UPDATE users  SET is_admin=1 WHERE id=:user_id", ["user_id" => $userId]);
     }
 
 

@@ -35,8 +35,8 @@ $router->addRoute("GET", "/comment/{commentId}/delete", "CommentController@delet
 
 //User management
 $router->addRoute("GET", "/users", "UserController@index");
-$router->addRoute("POST", "/user/{userId}/delete", "UserController@delete");
-$router->addRoute("POST", "/user/{userId}/promote", "UserController@promote");
+$router->addRoute("GET", "/user/{userId}/delete", "UserController@delete");
+$router->addRoute("GET", "/user/{userId}/promote", "UserController@promote");
 
 
 /**
@@ -44,9 +44,12 @@ $router->addRoute("POST", "/user/{userId}/promote", "UserController@promote");
  */
 $match = $router->dispatch();
 
-echo "<pre>";
-var_dump($match);
-echo "</pre>";
+if(DEBUG) {
+    echo "<pre>";
+    var_dump($match);
+    echo "</pre>";
+}
+
 switch ($match["type"]) {
     case "Closure":
         $match["function"]();
