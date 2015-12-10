@@ -34,7 +34,7 @@ $router->addRoute("POST", "/post/{postId}/comment", "CommentController@store");
 $router->addRoute("GET", "/comment/{commentId}/delete", "CommentController@delete");
 
 //User management
-$router->addRoute("GET", "/user", "UserController@index");
+$router->addRoute("GET", "/users", "UserController@index");
 $router->addRoute("POST", "/user/{userId}/delete", "UserController@delete");
 $router->addRoute("POST", "/user/{userId}/promote", "UserController@promote");
 

@@ -16,7 +16,7 @@ echo "</small></h1>";
 echo "</header>";
 
 echo "<div class='post__content'>";
-echo "<p>".$this->post->content."</p>";
+echo "<p>". nl2br($this->post->content)."</p>";
 echo "</div>";
 echo "</div>";
 
@@ -42,7 +42,7 @@ if (is_null($this->comments)) {
         }
         echo "</header>";
         echo "<div class='comment_content'>";
-        echo $comment->comment;
+        echo nl2br($comment->comment);
         echo "</div>";
 
         echo "</div>";

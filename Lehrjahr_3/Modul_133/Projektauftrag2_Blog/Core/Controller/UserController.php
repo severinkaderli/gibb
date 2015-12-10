@@ -7,20 +7,38 @@ use Core\Model\User;
 use Core\Model\Comment;
 use Core\View\View;
 
-class CommentController
+class UserController
 {
-    public function store($postId) {
-        Comment::create($postId, $_POST);
-        Redirect::to("/post/$postId");
+    public function index() {
+        if(!User::isAdmin()) {
+            Redirect::to("/");
+        }
+
+        $users = User::getAll();
+        $view = new View("users.index");
+        $view->assign("users", $users);
+        $view->render();
     }
 
     public function delete($id){
-        $comment = Comment::find($id);
-        if($comment->fk_user_id != $_SESSION["user"]["id"]) {
+        if(!User::isAdmin()) {
             Redirect::to("/");
         }
-        $postId = $comment->fk_post_id;
-        Comment::delete($id);
-        Redirect::to("/post/" . $postId);
+
+        if($_SESSION["user"]["id"] == $id) {
+            Redirect::to("/");
+        }
+
+        User::delete($id);
+        Redirect::to("/users");
+    }
+
+    public function promote($id) {
+        if(!User::isAdmin()) {
+            Redirect::to("/");
+        }
+
+        User::promote($id);
+        Redirect::tO("/users");
     }
 }

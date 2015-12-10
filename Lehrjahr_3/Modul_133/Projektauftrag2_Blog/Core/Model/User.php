@@ -15,7 +15,7 @@ class User extends Model
     public $password;
     public $firstname;
     public $lastname;
-    public $isAdmin;
+    public $is_admin;
 
     public function __construct()
     {
@@ -38,6 +38,17 @@ class User extends Model
     }
 
     /**
+     * @return bool
+     */
+    public static function isAdmin() {
+        if (isset($_SESSION["user"]["logged_in"]) && $_SESSION["user"]["is_admin"] == 1) {
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
      * Try to login with a user
      *
      * @return bool
@@ -51,6 +62,7 @@ class User extends Model
             $_SESSION["user"]["logged_in"] = true;
             $_SESSION["user"]["id"] = $checkUser->id;
             $_SESSION["user"]["username"] = $this->username;
+            $_SESSION["user"]["is_admin"] = $this->is_admin;
 
             Redirect::to("/");
         }
@@ -68,7 +80,7 @@ class User extends Model
             Redirect::to("/");
         }
 
-        DatabaseConnection::insert("INSERT INTO users(username, password, firstname, lastname, isAdmin) VALUES(:username, :password, :firstname, :lastname, 0)",
+        DatabaseConnection::insert("INSERT INTO users(username, password, firstname, lastname, is_admin) VALUES(:username, :password, :firstname, :lastname, 0)",
             ["username" => $this->username,
                 "password" => password_hash($this->password, PASSWORD_BCRYPT),
                 "firstname" => $this->firstname,
@@ -91,7 +103,7 @@ class User extends Model
         $userObject->password = $result[0]["password"];
         $userObject->firstname = $result[0]["firstname"];
         $userObject->lastname = $result[0]["lastname"];
-        $userObject->isAdmin = $result[0]["isAdmin"];
+        $userObject->is_admin = $result[0]["is_admin"];
 
         return $userObject;
     }
@@ -113,7 +125,7 @@ class User extends Model
             $userObject->password = $result["password"];
             $userObject->firstname = $result["firstname"];
             $userObject->lastname = $result["lastname"];
-            $userObject->isAdmin = $result["isAdmin"];
+            $userObject->is_admin = $result["is_Admin"];
 
             $result[] = $userObject;
         }
@@ -137,7 +149,7 @@ class User extends Model
         $userObject->password = $result[0]["password"];
         $userObject->firstname = $result[0]["firstname"];
         $userObject->lastname = $result[0]["lastname"];
-        $userObject->isAdmin = $result[0]["isAdmin"];
+        $userObject->is_admin = $result[0]["is_admin"];
 
         return $userObject;
     }

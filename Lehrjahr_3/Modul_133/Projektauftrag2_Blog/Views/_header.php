@@ -35,9 +35,11 @@
             <ul class="nav navbar-nav">
                 <li class="nav-divider"></li>
                 <?php
-
                 if (Core\Model\User::auth()) {
                     echo "<li><a href='create'>Eintrag erstellen</a></li>";
+                    if(Core\Model\User::isAdmin()) {
+                        echo "<li><a href='users'>Benutzerverwaltung</a></li>";
+                    }
                     echo "<li><a href='logout'>Logout</a></li>";
                 } else {
                     echo "<li><a href='login'>Login</a></li>";

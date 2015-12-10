@@ -16,7 +16,7 @@ foreach ($this->posts as $post) {
     echo "</header>";
 
     echo "<div class='post__content'>";
-    echo "<p>$post->content</p>";
+    echo "<p>" . nl2br($post->content) . "</p>";
     echo "</div>";
     echo "</div>";
 }
