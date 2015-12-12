@@ -66,6 +66,30 @@ class Post extends Model
         return $result;
     }
 
+    /**
+     * Return all posts by user id
+     *
+     * @return mixed
+     */
+    public static function getByUserId($userId)
+    {
+        $result = [];
+        $sqlResult = DatabaseConnection::getResult("SELECT * FROM posts WHERE fk_user_id=:user_id", ["user_id" => $userId]);
+
+        foreach ($sqlResult as $post) {
+            $postObject = new Post();
+            $postObject->id = $post["id"];
+            $postObject->title = $post["title"];
+            $postObject->content = $post["content"];
+            $postObject->fk_user_id = $post["fk_user_id"];
+            $postObject->post_time = $post["post_time"];
+
+            $result[] = $postObject;
+        }
+
+        return $result;
+    }
+
     public static function create(array $fields)
     {
         DatabaseConnection::insert("INSERT INTO posts(title, content, fk_user_id, post_time)

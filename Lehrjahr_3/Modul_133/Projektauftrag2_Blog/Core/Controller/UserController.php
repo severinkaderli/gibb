@@ -30,6 +30,18 @@ class UserController
         }
 
         User::delete($id);
+
+        //Delete all posts that belongs to the user
+        $userPosts = Post::getByUserId($id);
+        foreach ($userPosts as $post) {
+            Post::delete($post->id);
+        }
+
+        //Delete all comments that belongs to the user
+        $userComments = Comment::getByUserId($id);
+        foreach($userComments as $comment) {
+            Comment::delete($comment->id);
+        }
         Redirect::to("/users");
     }
 

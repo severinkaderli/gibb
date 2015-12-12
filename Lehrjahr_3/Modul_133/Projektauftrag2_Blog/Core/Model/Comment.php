@@ -61,6 +61,28 @@ class Comment extends Model
         return $result;
     }
 
+    /**
+     * Return all posts by user id as an array
+     *
+     * @return mixed
+     */
+    public static function getByUserId($userId) {
+        $result = [];
+        $sqlResult = DatabaseConnection::getResult("SELECT * FROM comments WHERE fk_user_id=:user_id", ["user_id" => $userId]);
+
+        foreach($sqlResult as $comment) {
+            $commentObject = new Comment();
+            $commentObject->id = $comment["id"];
+            $commentObject->comment = $comment["comment"];
+            $commentObject->fk_post_id = $comment["fk_post_id"];
+            $commentObject->fk_user_id = $comment["fk_user_id"];
+
+            $result[] = $commentObject;
+        }
+
+        return $result;
+    }
+
     public static function create($postId, array $fields) {
         DatabaseConnection::insert("INSERT INTO comments(comment, fk_post_id, fk_user_id) VALUES(:comment, :post_id, :user_id)", ["comment" => $fields["comment"], "post_id" => $postId, "user_id" => $_SESSION["user"]["id"]]);
     }

@@ -7,7 +7,7 @@
         </div>
         <div class="form-group">
             <label for="content">Inhalt</label>
-            <textarea id='content' rows='5' name='content' value="<?php echo $this->post->content;?>" class='form-control'></textarea>
+            <textarea id='content' rows='5' name='content' class='form-control'><?php echo $this->post->content;?></textarea>
         </div>
         <div class="form-group">
             <input type="submit" name="createPostSubmit" value="Eintrag aktualisieren" class="btn btn-default">

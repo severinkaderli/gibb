@@ -65,7 +65,7 @@ switch ($match["type"]) {
         break;
 
     case "Error":
-        echo "Page not found..." . $_SERVER["REQUEST_URI"];
+        Core\Routing\Redirect::to("/");
         break;
 }
 

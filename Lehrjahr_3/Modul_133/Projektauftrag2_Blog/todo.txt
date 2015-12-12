@@ -1,4 +1,0 @@
-Todo
-====
-- User management (promoting to admin, deleting if admin)
-- Test and install blog on server dev.severinkaderli.ch/blog
