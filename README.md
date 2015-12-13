@@ -31,7 +31,8 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
   * JS- & PHP-Programme aus Arbeitsblätter
   * Projekte
     * Formularvalidierung mit Javascript, jQuery & HTML5
-    * PHP-Blog mit SQLite Datenbank (selber erstelltes MVC-Framework) & Projektdokumentation
+    * PHP-Blog mit SQLite Datenbank (selber erstelltes MVC-Framework)
+    * Projektdokumentation zum PHP-Blog
 * Modul 226
   * Java-Programme aus Arbeitsblätter & Buch
 * Spicker Abschlussprüfung
