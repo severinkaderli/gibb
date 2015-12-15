@@ -94,8 +94,8 @@ class Post extends Model
     {
         DatabaseConnection::insert("INSERT INTO posts(title, content, fk_user_id, post_time)
               VALUES(:title, :content, :user_id, :post_time)",
-            ["title" => $fields["title"],
-                "content" => $fields["content"],
+            ["title" => htmlentities($fields["title"]),
+                "content" => htmlentities($fields["content"]),
                 "user_id" => $_SESSION["user"]["id"],
                 "post_time" => time()]);
     }
@@ -103,8 +103,8 @@ class Post extends Model
     public static function update($postId, array $fields)
     {
         DatabaseConnection::insert("UPDATE posts SET title=:title, content=:content WHERE id=:post_id",
-            ["title" => $fields["title"],
-                "content" => $fields["content"],
+            ["title" => htmlentities($fields["title"]),
+                "content" => htmlentities($fields["content"]),
                 "post_id" => $postId]);
     }
 
