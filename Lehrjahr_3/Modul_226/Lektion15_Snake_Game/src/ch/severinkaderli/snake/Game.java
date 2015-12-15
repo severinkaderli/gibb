@@ -11,9 +11,30 @@ import java.util.List;
 public class Game {
 
 	/**
+	 * Anzahl der Diamanten, die auf dem Feld erschienen sollen.
+	 */
+	final private int NUMBER_OF_DIAMONDS = 10;
+
+	/**
+	 * Radius der Diamanten
+	 */
+	final private int DIAMOND_RADIUS = 20;
+
+	/**
+	 * Länge eines Ticks
+	 */
+	final private int TICK_LENGTH = 100;
+
+	/**
+	 * Abstand vom Border zum Fensterrand.
+	 */
+	final private int AREA_PADDING = 10;
+	
+	/**
 	 * Die Schlange, die man Steuert.
 	 */
 	public Snake snake;
+	public Snake snake2;
 
 	/**
 	 * Der Rahmen des Spielfeldes
@@ -41,27 +62,6 @@ public class Game {
 	private static List<Diamond> diamonds = new ArrayList<Diamond>();
 
 	/**
-	 * Anzahl der Diamanten, die auf dem Feld erschienen sollen.
-	 */
-	final private int NUMBER_OF_DIAMONDS = 10;
-
-	/**
-	 * Radius der Diamanten
-	 */
-	final private int DIAMOND_RADIUS = 20;
-
-
-	/**
-	 * Länge eines Ticks
-	 */
-	final private int TICK_LENGTH = 100;
-
-	/**
-	 * Abstand vom Border zum Fensterrand.
-	 */
-	final private int AREA_PADDING = 10;
-
-	/**
 	 * Delegiert das zeichnen an die einzelnen Elemente
 	 * 
 	 * @param g
@@ -69,6 +69,7 @@ public class Game {
 	public void draw(Graphics g) {
 		border.draw(g);
 		snake.draw(g);
+		snake2.draw(g);
 
 		diamonds.forEach((diamond) -> {
 			if (diamond.isAlive) {
@@ -107,6 +108,8 @@ public class Game {
 
 		// Add snake
 		snake = new Snake(300, 100, this);
+		snake2 = new Snake(300, 300, this);
+		
 
 		// Main Game Loop
 		while (isRunning) {
@@ -124,6 +127,7 @@ public class Game {
 		try {
 			Thread.sleep(TICK_LENGTH);
 			snake.move(); 
+			snake2.move();
 			checkCollision();
 
 			// Read key strokes and change direction of snake
@@ -137,6 +141,7 @@ public class Game {
 	 */
 	public void checkCollision() {
 		snake.checkCollision();
+		snake2.checkCollision();
 	}
 
 	/**
@@ -176,7 +181,7 @@ public class Game {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Game game = new Game();
+		new Game();
 	}
 
 }

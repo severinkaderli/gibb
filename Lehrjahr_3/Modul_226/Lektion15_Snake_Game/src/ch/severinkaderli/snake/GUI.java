@@ -75,7 +75,8 @@ public class GUI extends JFrame {
 
 			// Change the direction of the snake
 			switch (e.getKeyCode()) {
-			
+
+			// Snake 1
 			case KeyEvent.VK_UP:
 				game.snake.changeDirection(Direction.UP);
 				break;
@@ -88,12 +89,23 @@ public class GUI extends JFrame {
 			case KeyEvent.VK_RIGHT:
 				game.snake.changeDirection(Direction.RIGHT);
 				break;
-			
+			// Snake 2
+			case KeyEvent.VK_W:
+				game.snake2.changeDirection(Direction.UP);
+				break;
+			case KeyEvent.VK_S:
+				game.snake2.changeDirection(Direction.DOWN);
+				break;
+			case KeyEvent.VK_A:
+				game.snake2.changeDirection(Direction.LEFT);
+				break;
+			case KeyEvent.VK_D:
+				game.snake2.changeDirection(Direction.RIGHT);
+				break;
 			default:
 				break;
 			}
-			
-			
+
 		}
 	}
 }

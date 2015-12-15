@@ -27,7 +27,6 @@ public class Calculator {
 			System.out.println("Ungültiger Operator!");
 			break;
 		}
-
 	}
 
 	public static void main(String[] args) {
