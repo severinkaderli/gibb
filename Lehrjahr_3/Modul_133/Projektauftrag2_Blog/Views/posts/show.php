@@ -52,7 +52,7 @@ if (is_null($this->comments)) {
 
 //Only show add comment if logged in
 echo "<h3>Kommentar verfassen</h3>";
-if (User::auth()) {
+if (User::auth() && $_SESSION["user"]["id"] != $this->post->fk_user_id) {
 
     echo "<form method='POST' action='post/" . $this->post->id . "/comment'>";
     echo "<div class='form-group'>";
@@ -63,7 +63,7 @@ if (User::auth()) {
     echo "</div>";
     echo "</form>";
 } else {
-    echo "<p>Sie müssen eingeloggt sein, um einen Kommentar zu verfassen!</p>";
+    echo "<p>Sie müssen eingeloggt sein, um einen Kommentar zu verfassen und sie können nicht ihre eigenen Einträge kommentieren!</p>";
 }
 
 require_once(__ROOT__ . "Views/_footer.php");

@@ -67,7 +67,7 @@ class User extends Model
             Redirect::to("/");
         }
 
-        Redirect::to("login");
+        Redirect::to("/login");
     }
 
     /**
