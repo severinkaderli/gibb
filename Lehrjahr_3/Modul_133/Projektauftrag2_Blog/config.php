@@ -3,6 +3,7 @@
  * Starting the session
  */
 session_start();
+session_regenerate_id();
 
 /**
  * Debugging
