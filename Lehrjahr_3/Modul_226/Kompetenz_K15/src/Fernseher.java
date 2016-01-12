@@ -18,7 +18,7 @@ public class Fernseher extends Observable {
 	}
 	
 	public void changeChannel(String newChannel) {
-		setChannel(channel);
+		setChannel(newChannel);
 		setChanged();
 		notifyObservers(newChannel);
 	}

@@ -3,7 +3,9 @@
  * 
  * @author Severin Kaderli
  */
+@SuppressWarnings("serial")
 public class NegativeNumberException extends Exception {
+
 	// Parameterless Constructor
 	public NegativeNumberException() {
 	}

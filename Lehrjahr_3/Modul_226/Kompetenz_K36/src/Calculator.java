@@ -34,8 +34,8 @@ public class Calculator {
 			calculate(2, 3, Operation.ADDITION);
 			calculate(-2, 3, Operation.DIVISION);
 			calculate(4, 3, Operation.MULTIPLICATION);
-		} catch (NegativeNumberException ex) {
-			System.out.println(ex.getMessage());
+		} catch (NegativeNumberException e) {
+			System.out.println(e.getMessage());
 		} finally {
 			System.out.println("Der Code im Finally-Block wird immer ausgeführt!");
 		}
