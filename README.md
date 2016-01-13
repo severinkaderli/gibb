@@ -32,6 +32,7 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
   * Projekte
     * Formularvalidierung mit Javascript, jQuery & HTML5
     * PHP-Blog mit SQLite Datenbank & Projektdokumentation
+  * Spicker
 * Modul 226
   * Java-Programme aus Arbeitsblätter & Buch
   * Dokumentation für Snake-Projekt
