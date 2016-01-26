@@ -13,7 +13,7 @@ public class Game {
 	/**
 	 * Anzahl der Diamanten, die auf dem Feld erschienen sollen.
 	 */
-	final private int NUMBER_OF_DIAMONDS = 10;
+	final private int NUMBER_OF_DIAMONDS = 5;
 
 	/**
 	 * Radius der Diamanten
@@ -31,7 +31,7 @@ public class Game {
 	final private int AREA_PADDING = 10;
 	
 	/**
-	 * Die Schlange, die man Steuert.
+	 * Die Schlangen, die man Steuert.
 	 */
 	public Snake snake;
 	public Snake snake2;

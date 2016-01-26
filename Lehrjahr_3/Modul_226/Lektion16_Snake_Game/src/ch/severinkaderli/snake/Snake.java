@@ -158,13 +158,18 @@ public class Snake {
 			}
 		});
 
-		// Collision with itself
-		body.forEach((part) -> {
-			if (head.position.intersects(part.position)) {
+		// Collision with snakes
+		// TODO: Make this code better
+		game.snake.body.forEach((part) -> {
+			if (this.head.position.intersects(part.position)) {
 				game.end();
-				System.out.println("Touch itself");
 			}
-
+		});
+		
+		game.snake2.body.forEach((part) -> {
+			if (this.head.position.intersects(part.position)) {
+				game.end();
+			}
 		});
 
 		// Collision with the border
