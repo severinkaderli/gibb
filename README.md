@@ -37,5 +37,5 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
   * Java-Programme aus Arbeitsblätter & Buch
   * Dokumentation für Snake-Projekt
 * Modul 306
-* modul 151
+* Modul 151
 * Spicker Abschlussprüfung
