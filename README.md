@@ -38,4 +38,5 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
   * Dokumentation für Snake-Projekt
 * Modul 306
 * Modul 151
+  * Lösungen von Arbeitsblätter
 * Spicker Abschlussprüfung
