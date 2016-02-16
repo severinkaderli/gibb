@@ -1,0 +1,65 @@
+/* CSS Document */
+
+body { font-family: Verdana, Arial, Helvetica, sans-serif; font-size:12px; color:#000000; line-height:20px; margin:0 }
+
+.wb { color:#FFFFFF; font-weight:bold }
+.wb10 { color:#FFFFFF; font-weight:bold; font-size:10px }
+
+#topimg { background:url(../images/kontakte-top.png) }
+#bottomimg { background:url(../images/kontakte-bottom.png) }
+.standardWidth { width: 250px }
+
+table, th, td { border: 0px solid black }
+
+table.table_menu { width: 192px; border-spacing: 1px }
+table.table_menu th { background-color: #990000; color: #ffffff; text-align: center }
+table.table_menu td { padding: 0px }
+
+table.out th { background-color: #333333; color:#FFFFFF }
+table.out tr.norm { background-color: #dddddd }
+table.out tr.sel { background-color: #efefef }
+table.out tr.mover { background-color: rgb(240,253,119); cursor:pointer }
+
+table.liste th { text-align: left }
+
+td.nav { background-color: #aaaaaa }
+td.content { border-right-style:solid;
+             border-right-width:5px;
+             border-right-color:#990000; }
+
+form { margin:0 }
+.label { color:#000066; font-weight:bold }
+.fehler { color: red; font-weight:bold; padding-left: 5px }
+.meldung { color: green; font-weight:bold; padding-left: 5px }
+
+input.txt, select  { background-color: #dddddd; color:#000000; }
+input.err { background-color:#FF8888; color:#000000 }
+
+a.link_menu:link, a.link_menu:visited {
+    display: block;
+	background: url(../images/link_n.png) no-repeat;
+	vertical-align: middle;
+	font-size: 11px;
+	font-weight: bold;	
+	color:#999999;
+	text-decoration: none;	
+	text-align: left;
+	padding-top: 2px;
+	padding-left: 25px;
+	height: 23px;
+	width: 100%;
+}
+
+a.link_menu:hover {
+    display: block;
+	background: url(../images/link_h.png) no-repeat;
+	color:#FFFFFF;
+	font-weight: bold;
+}
+
+a.link_menu#active {
+    display: block;
+	background: url(../images/link_a.png) no-repeat;
+	color:#FFFFFF;
+	font-weight: bold;
+}
