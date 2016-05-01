@@ -37,7 +37,7 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
   * Java-Programme aus Arbeitsblätter & Buch
   * Dokumentation für Snake-Projekt
 * Modul 151
-  * Projekt
+  * Das Projekt von diesem Modul: Die Bilderdatenbank ist in einem eigenem Repository zu finden:
 * Modul 306 
 * 
 * Spicker Abschlussprüfung
