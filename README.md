@@ -39,5 +39,4 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
 * Modul 151
   * Das Projekt von diesem Modul ist in einem eigenem [Repository](https://github.com/severinkaderli/Modul151-Projekt) zu finden.
 * Modul 306 
-* 
 * Spicker Abschlussprüfung
