@@ -9,7 +9,7 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
 ###1. Lehrjahr
 * Modul 101
   * Projektwebseite
-* Spicker Abschlussprüfung
+* Spicker Abschlussprüfungen
 
 ###2. Lehrjahr
 * Modul 122
@@ -24,7 +24,7 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
 * Modul 318
   * VB-Programme
   * Sortierprogramm
-* Spicker Abschlussprüfung
+* Spicker Abschlussprüfungen
 
 ###3. Lehrjahr
 * Modul 133
@@ -39,4 +39,4 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
 * Modul 151
   * Programme aus Arbeitsblättern 
   * Das Projekt von diesem Modul ist in einem eigenem [Repository](https://github.com/severinkaderli/Modul151-Projekt) zu finden.
-* Spicker Abschlussprüfung
+* Spicker Abschlussprüfungen
