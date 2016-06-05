@@ -38,5 +38,5 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
   * Dokumentation für Snake-Projekt
 * Modul 151
   * Programme aus Arbeitsblättern 
-  * Das Projekt von diesem Modul ist in einem eigenem [Repository](https://github.com/severinkaderli/Modul151-Projekt) zu finden.
+  * Projekt ist in diesem [Repository](https://github.com/severinkaderli/Modul151-Projekt) zu finden.
 * Spicker Abschlussprüfungen
