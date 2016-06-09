@@ -1,17 +1,17 @@
 # gibb
 Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während meiner Ausbildung an der gibb erstellt habe. Zudem speichere ich hier meine Spicker ab, welche ich für die Modulabschlussprüfungen erstellt habe. Alle Dateien hier sind frei unter der MIT License nutzbar. Dokumentation & Projekte aus den ÜKs habe ich auch hier hochgeladen. Wichtig zu beachten ist, dass alle Module hier noch nach der alten Bildungsverordnung vor 2014 laufen. 
 
-##Inhalt
-###ÜK###
+## Inhalt
+### ÜK
 * Modul 307
   * PHP-Projekt
 
-###1. Lehrjahr
+### 1. Lehrjahr
 * Modul 101
   * Projektwebseite
 * Spicker Abschlussprüfungen
 
-###2. Lehrjahr
+### 2. Lehrjahr
 * Modul 122
   * Bash-Scripts
   * Python-Scripts
@@ -26,7 +26,7 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
   * Sortierprogramm
 * Spicker Abschlussprüfungen
 
-###3. Lehrjahr
+### 3. Lehrjahr
 * Modul 133
   * JS- und PHP-Scripts
   * Projekte
