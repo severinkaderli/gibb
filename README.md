@@ -20,7 +20,7 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
   * Dokumentation Freigaben & Berechtigungen
 * Modul 303
   * VB-Programme
-  * Softice-Automat
+  * Projekt: Softice-Automat
 * Modul 318
   * VB-Programme
   * Sortierprogramm
