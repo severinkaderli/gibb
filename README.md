@@ -42,5 +42,5 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
 * Modul 306
   * Projekt: [Hier](https://github.com/martyschaer/SchoolDashboard) zu finden. 
 * Spicker Abschlussprüfungen
-* 
+
 ### 4. Lehrjahr
