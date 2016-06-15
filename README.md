@@ -39,6 +39,8 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
 * Modul 151
   * Programme aus Arbeitsblättern 
   * Das Projekt ist in diesem [Repository](https://github.com/severinkaderli/Modul151-Projekt) zu finden.
+* Modul 306
+  * Projekt: [Hier](https://github.com/martyschaer/SchoolDashboard) zu finden. 
 * Spicker Abschlussprüfungen
 * 
 ### 4. Lehrjahr
