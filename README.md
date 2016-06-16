@@ -8,7 +8,7 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
 
 ### 1. Lehrjahr
 * Modul 101
-  * Projektwebseite
+  * Projekt: Webseite
 * Spicker Abschlussprüfungen
 
 ### 2. Lehrjahr
