@@ -30,7 +30,7 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
 * Modul 133
   * JS- und PHP-Scripts
   * Projekte
-    * Formularvalidierung mit Javascript, jQuery & HTML5
+    * Projekt: Formularvalidierung mit JavaScript ([Repository](https://github.com/severinkaderli/Modul-133-Formularvalidierung))
     * Projekt: PHP-Blog ([Repository](https://github.com/severinkaderli/Modul-133-Blog))
   * Spicker
 * Modul 226
