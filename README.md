@@ -30,17 +30,17 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
 * Modul 133
   * JS- und PHP-Scripts
   * Projekte
-    * Projekt: Formularvalidierung mit JavaScript ([Repository](https://github.com/severinkaderli/Modul-133-Formularvalidierung))
-    * Projekt: PHP-Blog ([Repository](https://github.com/severinkaderli/Modul-133-Blog))
+    * Projekt: Formularvalidierung mit JavaScript ([Repository](https://github.com/severinkaderli/Modul-133-Formularvalidierung)).
+    * Projekt: PHP-Blog ([Repository](https://github.com/severinkaderli/Modul-133-Blog)).
   * Spicker
 * Modul 226
   * Java-Programme aus Arbeitsblätter & Buch
   * Dokumentation für Snake-Projekt
 * Modul 151
   * Programme aus Arbeitsblättern 
-  * Das Projekt ist in diesem [Repository](https://github.com/severinkaderli/Modul151-Projekt) zu finden.
+  * Projekt: Bilderdatenbank mit PHP & MySQL ([Repository](https://github.com/severinkaderli/Modul151-Projekt)).
 * Modul 306
-  * Projekt: [Hier](https://github.com/martyschaer/SchoolDashboard) zu finden. 
+  * Projekt: School-Dashboard ([Repository](https://github.com/martyschaer/SchoolDashboard)). 
 * Spicker Abschlussprüfungen
 
 ### 4. Lehrjahr
