@@ -1,9 +1,0 @@
-C:\Module\303\HalloWelt\HalloWelt\bin\Debug\HalloWelt.exe
-C:\Module\303\HalloWelt\HalloWelt\bin\Debug\HalloWelt.pdb
-C:\Module\303\HalloWelt\HalloWelt\bin\Debug\HalloWelt.xml
-C:\Module\303\HalloWelt\HalloWelt\obj\x86\Debug\HalloWelt.Form1.resources
-C:\Module\303\HalloWelt\HalloWelt\obj\x86\Debug\HalloWelt.Resources.resources
-C:\Module\303\HalloWelt\HalloWelt\obj\x86\Debug\HalloWelt.vbproj.GenerateResource.Cache
-C:\Module\303\HalloWelt\HalloWelt\obj\x86\Debug\HalloWelt.exe
-C:\Module\303\HalloWelt\HalloWelt\obj\x86\Debug\HalloWelt.xml
-C:\Module\303\HalloWelt\HalloWelt\obj\x86\Debug\HalloWelt.pdb

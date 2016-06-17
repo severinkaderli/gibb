@@ -1,9 +1,0 @@
-C:\Module\318\asciitabelle\asciitabelle\obj\x86\Debug\asciitabelle.frmAscii.resources
-C:\Module\318\asciitabelle\asciitabelle\obj\x86\Debug\asciitabelle.Resources.resources
-C:\Module\318\asciitabelle\asciitabelle\obj\x86\Debug\asciitabelle.vbproj.GenerateResource.Cache
-C:\Module\318\asciitabelle\asciitabelle\bin\Debug\asciitabelle.exe
-C:\Module\318\asciitabelle\asciitabelle\bin\Debug\asciitabelle.pdb
-C:\Module\318\asciitabelle\asciitabelle\bin\Debug\asciitabelle.xml
-C:\Module\318\asciitabelle\asciitabelle\obj\x86\Debug\asciitabelle.exe
-C:\Module\318\asciitabelle\asciitabelle\obj\x86\Debug\asciitabelle.xml
-C:\Module\318\asciitabelle\asciitabelle\obj\x86\Debug\asciitabelle.pdb
