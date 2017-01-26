@@ -44,3 +44,5 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
 * Spicker Abschlussprüfungen
 
 ### 4. Lehrjahr
+* Modul 326
+  * Bomberman Teilkomponente Editor: ([Repository](https://github.com/severinkaderli/Modul-326-Labyrinth-Editor))
