@@ -46,5 +46,7 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
 ### 4. Lehrjahr
 * Modul 326
   * Bomberman Teilkomponente Editor ([Repository](https://github.com/severinkaderli/Modul-326-Labyrinth-Editor)).
+* Modul 121
+  * Diverse ASM Programme
 * Modul 152
-  * Projekt: Website ([Repository](https://github.com/severinkaderli/Modul-152-Website))
+  * Projekt: Website ([Repository](https://github.com/severinkaderli/Modul-152-Website)).
