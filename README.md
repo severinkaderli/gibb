@@ -50,3 +50,4 @@ Dieses Repository beinhaltet alle Scripts, Programme & Dateien die ich während 
   * Diverse ASM Programme
 * Modul 152
   * Projekt: Website ([Repository](https://github.com/severinkaderli/Modul-152-Website)).
+* Spicker Abschlussprüfungen
